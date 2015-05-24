@@ -1,0 +1,13 @@
+@mixin attention() {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin svg($path, $background-repeat: no-repeat) {
+  background-image: image-url("svg/#{$path}.svg");
+  background-repeat: $background-repeat;
+  .no-svg & { background-image: image-url("#{$path}.png"); }
+}

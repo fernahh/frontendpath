@@ -1,0 +1,15 @@
+.guide-article {
+  padding: em($whitespace);
+
+  @include respond-to(em($bp-medium)) {
+    float: left;
+
+    width: 70%;
+    margin-left: 30%;
+    padding: em($whitespace * 2);
+  }
+
+  @include respond-to(em($bp-large)) {
+    padding: em($whitespace * 6);
+  }
+}

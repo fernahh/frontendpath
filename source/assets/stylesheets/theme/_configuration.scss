@@ -1,0 +1,42 @@
+// Colors
+
+$html5-color: #ec652b;
+$css3-color: #2baae1;
+$js-color: #f0db4e;
+
+$black: #666666;
+$blackB: #2b2a2f;
+$white: #ffffff;
+$gray: #f2f2f2;
+$grayA: #e7e7e7;
+$grayB: #79787d;
+
+$main-color: $black;
+$secondary-color: $white;
+
+$semantics-color: $html5-color;
+$accessibility-color: #0875c8;
+
+// Typography
+
+$font-sans-serif: "Paytone One", sans-serif;
+$font-cursive: "Share", cursive;
+$font-serif: "Bree Serif", serif;
+$font-serifB: "Merriweather", serif;
+
+$main-font: $font-serifB;
+$secondary-font: $font-serif;
+
+$font-size: 16px;
+$line-height: 24px;
+
+// Sizes
+
+$trailer: $line-height;
+$whitespace: 10px;
+$bp-medium: 720px;
+$bp-large: 960px;
+
+// Border
+
+$base-border-radius: 2px;

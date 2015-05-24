@@ -1,0 +1,268 @@
+$home-background: #e74c3c;
+$global-title-size: 80px;
+
+#home {
+  position: relative;
+
+  height: 100%;
+  margin-bottom: em($trailer);
+
+  text-align: center;
+
+  background-color: $home-background;
+
+  h1 {
+    $size: $global-title-size;
+
+    position: relative;
+
+    display: inline-block;
+    padding: {
+      top: em($whitespace * 2, $size);
+      bottom: em($whitespace * 2, $size);
+    }
+
+    text-align: center;
+
+    border: {
+      top: 1px solid $white;
+      bottom: 1px solid $white;
+    }
+  }
+
+  .home-brandIcon {
+    $size: 20px;
+    position: absolute;
+    top: -$size / 2;
+
+    display: block;
+    width: 100%;
+
+    color: $white;
+    font-family: $font-sans-serif;
+    font-size: em($size, $global-title-size);
+    line-height: em($size * 1.5, $size);
+    text-align: center;
+
+    &:before {
+      content: "< />";
+
+      display: inline-block;
+      width: 10%;
+      padding: {
+        left: em($whitespace, $size);
+        right: em($whitespace, $size);
+      }
+
+      background-color: $home-background;
+    }
+
+    @include respond-to(em($bp-medium)) {
+      top: -$size + 2px;
+    }
+  }
+
+  .home-brandA,
+  .home-brandB {
+    color: $white;
+  }
+
+  .home-brandA {
+    $size: $global-title-size;
+
+    margin-bottom: 0;
+
+    font: {
+      family: $font-sans-serif;
+      size: em($size, $size);
+    }
+    line-height: em($size - 10px, $size);
+    text-transform: uppercase;
+    @include text-shadow(4px 4px 1px rgba(192, 57, 43, 1));
+  }
+
+  .home-brandB {
+    $size: 70px;
+
+    font: {
+      family: $font-cursive;
+      size: em($size, $size);
+    }
+    line-height: em($size, $size);
+    text-transform: uppercase;
+    @include text-shadow(4px 4px 1px rgba(192, 57, 43, 1));
+  }
+
+  h1 {
+    $size: 44px;
+
+    color: $white;
+    font-size: em($size);
+    line-height: em($size / 4, $size);
+
+    @include respond-to(em($bp-medium)) {
+      $size: $global-title-size;
+
+      font-size: em($size);
+      line-height: em($size / 7, $size);
+    }
+  }
+
+  h2 {
+    $size: 20px;
+
+    font-size: em($size);
+    line-height: em($size + 4px, $size);
+    color: $gray;
+  }
+}
+
+  .home-header {
+    padding-top: em(100px);
+  }
+
+  .home-separator {
+    $size: 6px;
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: em($size);
+    margin: 0;
+
+    border: 0;
+    background-color: $css3-color;
+
+    @include box-shadow(0px -2px 5px -2px rgba(192, 57, 43, 1));
+
+    &:before,
+    &:after {
+      content: "";
+
+      height: em($size);
+      width: 33%;
+    }
+
+    &:before {
+      float: left;
+
+      background-color: $html5-color;
+    }
+
+    &:after {
+      float: right;
+
+      background-color: $js-color;
+    }
+  }
+
+
+#home-introduction {
+  margin-bottom: em($trailer * 2);
+
+  text-align: center;
+
+  .container {
+    @include clearfix;
+
+    max-width: em(1020px);
+    margin: 0 auto;
+  }
+
+  .strong--highlighted {
+    $size: 34px;
+
+    display: block;
+    padding-top: em($trailer, $size);
+
+    font-size: em($size);
+    line-height: em($size + 2, $size);
+  }
+
+  .button--large {
+    $size: 32px;
+
+    margin: {
+      top: em($trailer, $size);
+      bottom: em($trailer, $size);
+    }
+
+    font-size: em($size);
+  }
+}
+
+  .column-a,
+  .column-b {
+    padding: em($whitespace);
+
+    text: {
+      align: justify;
+      indent: em(30px);
+    }
+
+    @include respond-to(em($bp-medium)) {
+      float: left;
+
+      padding: 0;
+      margin-bottom: em($trailer);
+    }
+  }
+
+  .column-a {
+    @include respond-to(em($bp-medium)) {
+      float: left;
+
+      width: 46%;
+      margin-right: 4%;
+    }
+  }
+
+  .column-b {
+    @include respond-to(em($bp-medium)) {
+      float: left;
+
+      width: 50%;
+    }
+  }
+
+  #home-question {
+    $size: 20px;
+
+    font-size: em($size);
+    line-height: em($size * 2, $size);
+    text-align: center;
+
+    background-color: $gray;
+    border-top: 1px solid $grayA;
+    border-bottom: 1px solid $grayA;
+
+    @include respond-to(em($bp-medium)) {
+      $size: 34px;
+
+      font-size: em($size);
+      line-height: em($size * 3, $size);
+    }
+  }
+
+#home-footer {
+  width: 100%;
+  padding: em($whitespace * 3);
+
+  background-color: $gray;
+
+  p {
+    margin: 0;
+
+    color: $grayB;
+  }
+
+  a {
+    color: $css3-color;
+    text-decoration: none;
+
+    @include attention() {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<section id="home">
+  <header class="home-header">
+    <h1>
+      <span class="home-brandIcon"></span>
+      <span class="home-brandA">Front-end</span><br>
+      <span class="home-brandB">Path.com</span>
+    </h1>
+    <h2>O caminho correto para o desenvolvimento front-end.</h2>
+  </header>
+  <hr class="home-separator" />
+</section>
+
+<section id="home-introduction">
+  <article>
+    <div class="container">
+      <div class="column-a">
+        <p>A <i>WordWideWeb</i> foi um projeto que buscou conectar usuários para que eles pudessem trocar conteúdo de hipertexto. Felizmente o projeto tomou proporções gigantes em relação ao seu objetivo inicial.</p>
+        <p>A web hoje é uma das principais plataformas de desenvolvimento.</p>
+      </div>
+
+      <div class="column-b">
+        <p>Aplicações web cara vez mais ganham mercado. No servidor temos inúmeras linguagens para trabalhar, como <i>Java, Ruby, Python, etc.</i>. Mas apenas três linguagens interagem com os navegadores:  <strong><abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> e JavaScript</strong></p>
+
+        <p>Resumindo: precisamos aprender bem essas três linguagens para criar aplicações escaláveis, performáticas e que atendam o maior número de usuários.</p>
+      </div>
+    </div>
+
+    <div id="home-question">
+      <p>Por onde começo? Não é só usar frameworks, bibliotecas ou plugins?</p>
+    </div>
+
+    <div class="container">
+      <p><strong class="strong--highlighted">Não.</strong></p>
+
+      <div class="column-a">
+        <p>Na web há diversas páginas com o lado do cliente possuindo um grande número de problemas, otimizações a serem feitas e pouco performáticas.</p>
+
+        <blockquote cite="https://www.stevesouders.com">
+          <p>80-90% do tempo de carregamento de uma página é gasto no front-end. (Steve Sounders, 2007).</p>
+        </blockquote>
+
+        <p>Todo mundo sabe disso. Mas como vamos resolver? São muitos caminhos a serem seguidos.</p>
+      </div>
+
+      <div class="column-b">
+        <p>Talvez a saída seja irmos na raíz do problema e ensinar padrões ao invés de ir diretamente para <i>frameworks</i> ou bibliotecas.</p>
+        <p>Hoje temos um problema com excesso de informação. Mesmo com bastante recursos, fica difícil saber o mais simples que é <strong>por onde começar</strong>. É isso que vamos mostrar aqui, o caminho correto para um bom desenvolvimento front-end.</p>
+      </div>
+    </div>
+
+    <%= link_to "Comece por aqui &#8594;", "/guia/a-semantica.html", class: "button--html5 button--large", title: "Link para o primeiro caminho do guia." %>
+  </article>
+</section>
+
+<footer id="home-footer">
+  <p>Criado por <%= link_to "Luiz F. Rodrigues", "http://blog.fernahh.com.br",
+    target: "_blank", title: "Link para o site do autor, Luiz Fernando Rodrigues." %>.</p>
+</footer>

@@ -1,0 +1,12 @@
+#progress-cont {
+  height: 5px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#progress-bar {
+  height: 100%;
+  background-color: $html5-color;
+}
