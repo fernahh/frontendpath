@@ -13,3 +13,15 @@
     padding: em($whitespace * 6);
   }
 }
+
+#guide-content > p > code {
+  display: inline-block;
+  padding: 1px 5px;
+
+  color: $grayB;
+  font-family: monospace;
+  line-height: 18px;
+
+  background: $grayA;
+  @include border-radius(4px);
+}
