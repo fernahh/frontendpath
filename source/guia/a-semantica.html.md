@@ -5,9 +5,13 @@ introduction:
     <p>Muitas vezes desenvolvedores acabam deixando de lado uma boa marcação de suas páginas, porém, um bom trabalho nessa parte pode render bons resultados para a aplicação.</p>
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quas autem dolorem maiores, facere eius, tenetur, deserunt repellendus, quod assumenda accusamus quisquam hic architecto ullam dignissimos? Eaque repellendus excepturi illum!
+## A Semântica é importante, pô!
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate velit maxime deserunt, delectus error perspiciatis consectetur rem, corporis aspernatur.
+Alguns desenvolvedores não dão importância para semântica porque o resultado final renderizado usando uma tag `header` ou `div` é o mesmo. Porém, a semântica é muito importante para que robôs possam interpretar os dados do seu web site de forma correta.
+
+Ter um site escrito de forma semântica é um passo importante para que seu site seja encontrado pelos principais buscadores, como Google e Bing.
+
+Vamos aprender aqui os principais elementos do HTML. Lembre-se: **sem HTML a web não existe.**
 
 ## Elementos básicos
 Uma página é formada de elementos básicos necessários para seu funcionamento. Exemplo:
@@ -52,13 +56,13 @@ O principal atributo desse elemento é o `lang`, que especifica a língua da pá
 <html lang="pt-br">
 ```
 
-Simples, né?
+Especificar um valor para o atributo `lang` é muito importante. É através deles que leitores de telas definem em qual idioma que irão ler o conteúdo para o usuário.
 
 ### O elemento `<head>`
-O elemento `<head> ` não mudou nada desde sua primeira versão. Ele contém uma coleção de informações (metadados) sobre a página HTML.
+O elemento `<head> ` não mudou nada desde sua primeira versão. Ele contém uma coleção de informações (metadados) sobre a página HTML. Dentro dele é que especificamos manifestos e arquivos que mudaram a forma com que a página será renderizada.
 
 #### Metadados
-Elemento `<meta>` tem a missão de representar dados que não são expressíveis com outros elementos, como `<link>` e `<title>`. Ele serve também para passar informações à *user agents* e navegadores. 
+O elemento `<meta>` tem a missão de representar dados que não são expressíveis com outros elementos, como `<link>` e `<title>`.
 
 Existem inúmeros atributos disponíveis para `<meta>` , entre eles o `charset` é indispensável, pois é ele quem recebe a definição do da codificação de caracteres *(character encoding)*.
 
@@ -80,7 +84,7 @@ O atributo `type` indica, obviamente, o tipo de arquivo referenciado, e `href` r
 O elemento `<script>` funciona para referenciar e permitir escrita de códigos *JavaScript* no documento HTML. Ele pode aparecer dentro do `<head>` ou do `<body>`.
 
 ```html
-<script type="text/javascript" src="/jquery.js"></script>
+<script type="text/javascript" src="/script.js"></script>
 <script>
   // código javascript...
 </script>
@@ -98,25 +102,91 @@ O elemento `<body>` possui o conteúdo do documento HTML. Nele é que estão os 
 </body>
 ```
 
+É sempre importante todo e qualquer conteúdo dentro do `<body>` sempre estar dentro de outra tag, ou seja, um conteúdo nunca deve estar diretamente escrito no `<body>`,
+
 #### Principais elementos
 
+##### `<a>`
+Usamos a tag `<a>` para demarcar um *link*. Ela possui o atributo obrigatório `href`, que recebe o endereço que você deseja referenciar.
+
+##### `<abbr>`
+Representa uma abreviação. Uma boa prática é usar o atributo `title`, que receberá o significado da abreviação.
+
+##### `<blockquote>`
+Esse elemento pode ser usado representação uma citação. Se essa citação tiver um endereço na web, pode-se referenciar através da tag `<cite>`. Exemplo:
+
+```html
+<blockquote>
+  <p>Nós amamos a web!</p>
+  <footer>- <cite>Luiz Fernando Rodrigues</cite></footer>
+</blockquote>
+```
+
+##### `<code>`
+A tag `<code>` serve para representarmos alguma informação que pode ser interpretada por um computador. Se você usar o inspector de código, pode ver que cada vez que citamos alguma tag ou snippet, usamos esse elemento.
+
+##### `<div>` e `<span>`
+Tentamos representar a maioria dos elementos semânticamente, mas obviamente não é possível representar tudo. Para isso, temos duas tags estruturais: `<div>` e `<span>`. Semânticamente elas não representam nada. Mesmo assim, a tag `<div>` é um dos elementos que mais usamos no desenvolvimento de uma aplicação.
+
+##### `<em>`, `<small>` e `<strong>`
+Podemos expressar diferentes ênfases em um texto usando essas tags. Com a tag `<em>` indicamos um conteúdo acentuado. Com `<strong>` deixamos o texto mais "forte". Já com a tag `<small>` podemos diminuir a ênfase para um conteúdo não tão importante em um texto.
+
+É importante lembrar que todas essas tags geralmente os navegadores adicionam um estilo diferente.
+
+##### `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` e `<h6>`
+As tags *headings* são usadas para representar os títulos de uma página. O `<h1>` representa o maior valor, sendo `<h6>` o título de menor importância. Em um exemplo prático, o título de uma página é seria escrito com `<h1>` e um subtítulo com `<h2>`.
+
+##### `<img>`
+Para inserir imagem em um documento HTML, usamos a tag `<img>`. Porém, ela necessita de dois atributos: `src` e `alt`. O primeiro é quem recebe o endereço para a imagem, o segundo recebe uma frase que será apresentada caso a imagem não seja carregada. Um exemplo:
+
+```html
+<img src="/logo.jpg" alt="Logo da empresa">
+```
+
+##### `<ol>`, `<ul>`, `<li>`, `<dl>`, `<dt>`, `<dd>`
+Possuímos três tipos de listas para trabalharmos. `<ol>` e `<ul>` possuem apenas uma diferença. A primeira representa uma lista ordenada, e a segunda não.
+
+Para representar um item de uma lista, usamos a tag `<li>`.
+
+Diferentemente das duas primeiras tags que mostramos, temos um tipo de lista para definir itens semânticamente. Podemos declarar repespectivamente termo e definição. Por exemplo:
+
+```html
+<dl>
+  <dt>Dog</dt>
+  <dd>Palavra cachorro em inglês.</dd>
+
+  <dt>Cat</dt>
+  <dd>Palavra gato em inglês.</dd>
+</dl>
+```
+
+##### `<p>`
+A tag `<p>` representa um parágrafo qualquer dentro de uma página web. Sem dúvidas é a tag que mais usamos no desenvolvimento de um web site.
+
 #### `<section>`
-//todo
+Uma tag `<section>` pode ser usada para agrupar conteúdos e assim representar algo na web. Em um exemplo prática, essa tag pode agrupar em um site de notícia, as próprias notícias. Exemplo:
+
+```html
+<section id="news-section">
+  <div class="news">...</div>
+  <div class="news">...</div>
+</section>
+```
 
 #### `<nav>`
-//todo
+O `<nav>` é usado para representar a navegação principal de um documento. Ele pode agrupar links que irão referenciar páginas do mesmo site ou não.
 
 #### `<article>`
-//todo
+A tag `<article>` pode representar um conteúdo independente em um documento. Por exemplo, uma notícia em um portal de informação, um post em um blog ou até mesmo um comentário de usuário.
 
 #### `<aside>`
-//todo
+O `<aside>` representa um conteúdo relacionado ao conteúdo principal da página, mas que pode ser mostrado independentemente do mesmo.
 
 ####`<header>`
-//todo
+Como diz seu nome, a tag `<header>` representa o cabeçalho de um documento. Ele receberá os títulos e subtítulos da página.
 
 #### `<footer>`
-//todo
+O `<footer>` receberá um grupo de elementos que representará, geralmente, informações sobre a autoria do conteúdo de um documento.
 
 ## Não pare por aqui
 
