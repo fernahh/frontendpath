@@ -10,6 +10,7 @@
   }
 
   @include respond-to(em($bp-large)) {
+    max-width: 940px;
     padding: em($whitespace * 6);
   }
 }

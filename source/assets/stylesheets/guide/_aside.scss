@@ -20,6 +20,7 @@ $g-aside-adjacent: $html5-color;
   }
 
   @include respond-to(em($bp-large)) {
+    max-width: 410px;
     padding: em($whitespace * 6);
   }
 
