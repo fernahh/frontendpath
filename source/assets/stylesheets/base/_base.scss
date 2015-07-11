@@ -30,6 +30,11 @@ blockquote {
   border-left: 2px solid $grayB;
 }
 
+code, kbd, pre, samp {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 #main {
   height: 100%;
 }
