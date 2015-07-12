@@ -377,20 +377,64 @@ var armazem = {
 ```
 
 ### Objetos
-// todo
+
+Em JavaScript todo valor se comporta como objeto, e isso é muito bom. Dessa forma, podemos usar funções disponíveis na linguagem para manipular valores. Por exemplo:
+
+```javascript
+'Foobar'.toUpperCase(); // FOOBAR
+```
 
 **Criando objetos**
 
+Existem duas formas de criarmos objetos em JavaScript, notação literal ou com uma função construtora.
+
+Na notação literal, criamos objeto com um duas chaves `{ }`. Já para criar com uma função construtora, usamos o chave `new`.
+
+```javascript
+// notação literal
+var cao = {
+  nome: "Castor",
+  raca: "Labrador"
+}
+
+// função construtora
+var cao = new Object();
+
+cao.nome = "Castor";
+cao.raca = "Labrador";
+```
+
 **Propriedades e métodos**
 
+Podemos acessar as propriedades de um objeto de duas formas, com `.` e `[]`.
+
+```javascript
+cao.nome // Castor
+cao[raca] // Labrador
+```
+
+Para declarar métodos, usamos a mesma notação que usamos para para proprideades, com `:`.
+
+```javascript
+var cao = {
+  nome: "Castor",
+  raca: "Labrador",
+  andar: function() {
+    console.log(this.nome + " está andando");
+  }
+}
+```
+
 ## DOM
-// todo
+O DOM, *Document Object Model* é uma interface de programação para documentos HTML. É através desse recurso que podemos manipular interfaces com JavaScript.
 
-## Boas partes
-// todo
+Como o DOM representa a árvore do HTML, podemos manipular as tags que estão lá. Por exemplo, digamos que eu quero que toda as tags com o `id` "internacional" tenha a cor vermelha:
 
-## Bad parts
-// todo
+```javascript
+document.getElementById("internacional").style.color = "red";
+```
+
+Não é fácil manipular o DOM. Sempre envolve muito custo. Porém, é necessário. Pensando nisso, surgiram várias bibliotecas para manipulá-lo. As mais populares são [jQuery](http://jquery.com/) e [YUI](http://yuilibrary.com/). Com uma pequena busca no Google e você já terá inúmeras alternativas.
 
 ## Não pare por aqui
 // todo
