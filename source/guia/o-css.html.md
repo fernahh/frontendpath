@@ -216,47 +216,82 @@ Em poucas palavras, **CSS3 revolucionou** o desenvolvimento de interfaces web, p
 
 O CSS3 permite que o desenvolvedor use cada vez menos ferramentas de design para exportar imagens que serão usadas em um documento. Sombras, gradientes, diferentes tipos de bordas e fontes hoje funcionam de forma nativa dos browser, sem precisarmos de imagens. Com isso, menos requisições, menos assets, logo, mais performance.
 
-**Gradientes**
-// todo
-
-**border-radius**
-// todo
-
-**font-face**
-// todo
-
-**text-shadow**
-// todo
-
-**box-shadow**
-// todo
-
-**border-radius**
-// todo
-
-**Animações e transições**
-// todo
-
-**Media queries**
-// todo
+Para ver mais sobre as novas propriedades do CSS, [acesse o MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3).
 
 ## Pré-processadores
-// todo
+
+Bons desenvolvedores nunca se contentam com o que tem para trabalhar. Estão sempre reinventando a roda, e isso é ótimo.
+
+Apesar das últimas evoluções do CSS em sua terceira versão, ele ainda continua com algumas limitações. Pensando nisso, surgiram linguagens que são compiladas para CSS.
+
+Hoje em dia as principais são [Sass](http://sass-lang.com/) e [Less](http://lesscss.org/). Vamos ver aqui suas principais características.
 
 **Variáveis**
-// todo
+
+CSS é extremamente repetitivo. Se você já escreve folhas de estilo deve ter percebido o quanto isso é ruim para a produtividade. Pois bem, Sass e Less resolveram isso nos dando variáveis.
+
+```scss
+// Scss (Sass)
+$base-color: black;
+
+body { color: $base-color; }
+```
+
+```less
+// Less
+@base-color: black;
+
+body { color: @base-color; }
+```
 
 **Nesting**
-// todo
+
+Aplicar regras a elementos de um mesmo seletor pai também nos faz repetir muito no CSS. Porém, com pré-processadores podemos usar *nesting*. Mas tome cuidado, desenvolvedores não recomendam usar mais de três níveis desse recurso.
+
+Nesse caso, as duas linguagens usam a mesma sintaxe:
+
+```scss
+// Scss e Less
+#header {
+  a { color: blue; }
+
+  p { color: black; }
+}
+```
 
 **Mixins**
-// todo
 
-**Funções**
-// todo
+Como o nome sugere, *mixins* "mixam" algo em uma regra. Isso nos ajuda muito na reutilização de código. Se preciso, você pode adicionar parâmetros em um mixin.
 
-**Operadores**
-// todo
+```scss
+// Scss
+@mixin border-radius(value) {
+  -webkit-border-radius: value;
+     -moz-border-radius: value;
+          border-radius: value;
+}
+
+// Para usar o mixin acima em uma regra:
+div {
+  @include border-radius(3px);
+}
+```
+
+```less
+// Less
+.border-radius(@value) {
+  -webkit-border-radius: @value;
+     -moz-border-radius: @value;
+          border-radius: @value;
+}
+
+// Para usar o mixin acima em uma regra:
+div {
+  .border-radius(3px);
+}
+```
+
+Existem outras features nas duas linguagens, principalmente no Sass, que possui estruturas de controle, condicionais e funções.
 
 ## Arquitetura de CSS
 // todo
