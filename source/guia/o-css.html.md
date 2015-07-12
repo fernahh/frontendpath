@@ -181,6 +181,9 @@ O segundo valor mais usado para essa propriedade sem dúvidas é o posicionament
 
 Por último, podemos posicionar um elemento de forma fixa em um documento com a propriedade  `position: fixed`. Dessa forma o elemento será posicionado de acordo com o `body`.
 
+**Flutuando elementos**
+// todo
+
 #### Box-model
 
 Uma das coisas que você mais vai ouvir é que **todo elemento** em um documento é um "box". Sendo assim, as propriedades que inferem no tamanho de um box-model são:
@@ -208,15 +211,51 @@ Exitem poucas propriedades para lidarmos com fontes na web. As principais são:
 Respectivavemente, as propriedades da lista acima definem peso, estilo, família, tamanho e o tamanho da linha.
 
 ## CSS3
+
+Em poucas palavras, **CSS3 revolucionou** o desenvolvimento de interfaces web, principalmente tratando-se de performance e produtividade.
+
+O CSS3 permite que o desenvolvedor use cada vez menos ferramentas de design para exportar imagens que serão usadas em um documento. Sombras, gradientes, diferentes tipos de bordas e fontes hoje funcionam de forma nativa dos browser, sem precisarmos de imagens. Com isso, menos requisições, menos assets, logo, mais performance.
+
+**Gradientes**
+// todo
+
+**border-radius**
+// todo
+
+**font-face**
+// todo
+
+**text-shadow**
+// todo
+
+**box-shadow**
+// todo
+
+**border-radius**
+// todo
+
+**Animações e transições**
+// todo
+
+**Media queries**
 // todo
 
 ## Pré-processadores
 // todo
 
-### Sass
+**Variáveis**
 // todo
 
-### Less
+**Nesting**
+// todo
+
+**Mixins**
+// todo
+
+**Funções**
+// todo
+
+**Operadores**
 // todo
 
 ## Arquitetura de CSS
