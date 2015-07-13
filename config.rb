@@ -31,13 +31,10 @@ end
 # Sintax
 activate :syntax
 
-
 # Assets
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
-
-activate :directory_indexes
 
 sprockets.append_path File.join root.to_s, "source/assets/components"
 
