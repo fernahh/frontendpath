@@ -5,15 +5,18 @@ introduction:
     <p>Muitas vezes desenvolvedores acabam deixando de lado uma boa marcação de suas páginas, porém, um bom trabalho nessa parte pode render bons resultados para a aplicação.</p>
 ---
 
-## A Semântica é importante, pô!
+## Sim, a semântica é importante!
 
-Alguns desenvolvedores não dão importância para semântica porque o resultado final renderizado usando uma tag `header` ou `div` é o mesmo. Porém, a semântica é muito importante para que robôs possam interpretar os dados do seu web site de forma correta.
+Alguns desenvolvedores não dão importância para semântica porque o resultado final renderizado usando uma tag `<header>` ou `<div>` é o mesmo. Porém, a semântica é muito importante para que robôs ou softwares (como leitores de tela) possam interpretar os dados do seu web site de forma correta.
 
-Ter um site escrito de forma semântica é um passo importante para que seu site seja encontrado pelos principais buscadores, como Google e Bing.
+Ter um site escrito de forma semântica também é um passo importante para que seu site seja encontrado pelos principais buscadores, como Google e Bing.
 
-Vamos aprender aqui os principais elementos do HTML. Lembre-se: **sem HTML a web não existe.**
+Vamos aprender aqui os principais elementos do HTML. Usando uma marcação correta, teremos um site mais acessível e competitivo.
+
+Ah, lembre-se: **sem CSS e JavaScript a web existe, sem HTML não.**
 
 ## Elementos básicos
+
 Uma página é formada de elementos básicos necessários para seu funcionamento. Exemplo:
 
 ```html
@@ -187,8 +190,3 @@ Como diz seu nome, a tag `<header>` representa o cabeçalho de um documento. Ele
 
 #### `<footer>`
 O `<footer>` receberá um grupo de elementos que representará, geralmente, informações sobre a autoria do conteúdo de um documento.
-
-## Não pare por aqui
-
-//todo
-

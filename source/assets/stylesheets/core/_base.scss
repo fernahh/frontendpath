@@ -19,6 +19,20 @@ body {
   background: $secondary-color;
 }
 
+a {
+  color: $semantics-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  color: $grayB;
+}
+
 blockquote {
   $size: 14px;
 
@@ -35,6 +49,6 @@ code, kbd, pre, samp {
   line-height: 20px;
 }
 
-#main {
+main {
   height: 100%;
 }
