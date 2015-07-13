@@ -67,7 +67,7 @@ O elemento `<head> ` não mudou nada desde sua primeira versão. Ele contém uma
 #### Metadados
 O elemento `<meta>` tem a missão de representar dados que não são expressíveis com outros elementos, como `<link>` e `<title>`.
 
-Existem inúmeros atributos disponíveis para `<meta>` , entre eles o `charset` é indispensável, pois é ele quem recebe a definição do da codificação de caracteres *(character encoding)*.
+Existem inúmeros atributos disponíveis para `<meta>` , entre eles o `charset` é indispensável, pois é ele quem recebe a definição da codificação de caracteres *(character encoding)* utilizada pela página.
 
 ```html
 <meta charset="utf-8" />
