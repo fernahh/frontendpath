@@ -23,6 +23,10 @@
   @include border-radius($base-border-radius * 2);
 
   @include transition(all 300ms ease 0ms);
+
+  @include attention() {
+    text-decoration: none;
+  }
 }
 
 .button--large {

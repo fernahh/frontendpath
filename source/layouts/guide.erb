@@ -7,7 +7,8 @@
       <ul class="guide-topics-list">
         <% chapters(current_page).each do |chapter| -%>
           <li class="guide-topics-item">
-            <%= link_to chapter, "##{chapter.downcase.gsub(/\s/, "-")}", class: "guide-topics-link" %>
+            <%= link_to chapter, "##{chapter.downcase.gsub(/\s/, "-")}",
+              class: "guide-topics-link", data: { scroll: true } %>
           </li>
         <% end -%>
       </ul>

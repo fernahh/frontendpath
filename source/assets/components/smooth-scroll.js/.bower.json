@@ -1,0 +1,15 @@
+{
+  "name": "smooth-scroll.js",
+  "homepage": "https://github.com/cferdinandi/smooth-scroll",
+  "version": "7.0.2",
+  "_release": "7.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v7.0.2",
+    "commit": "15e7f2b83596c3b47377d50f2be0d48d86336aa1"
+  },
+  "_source": "git://github.com/cferdinandi/smooth-scroll.git",
+  "_target": "~7.0.2",
+  "_originalSource": "smooth-scroll.js",
+  "_direct": true
+}
