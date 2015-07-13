@@ -2,7 +2,9 @@
 
 The correct path to front-end development.
 
-![image](http://i.imgur.com/WNqDGmi.png)
+![brand](http://i.imgur.com/WNqDGmi.png)
+
+*The project is still not 100% ready, I ask for patience.*
 
 ## Contributing
 
