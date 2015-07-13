@@ -44,11 +44,12 @@ $g-aside-adjacent: $html5-color;
 .guide-topics-link {
   $size: 14px;
 
-  font-size: em($size);
   color: $g-aside-adjacent;
+  font-size: em($size);
+  line-height: em($size, $size);
   text-decoration: none;
 
   @include attention() {
-    color: $g-aside-adjacent;
+    text-decoration: underline;
   }
 }

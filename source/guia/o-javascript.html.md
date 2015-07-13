@@ -350,6 +350,9 @@ Se você não sabe, o `this` é dinâmico, ou seja, ele recebe seu valor em temp
 Em Arrow Functions o escopo do `this` é estático, ou seja, sempre irá referenciar o objeto pai. Vamos comparar:
 
 ```javascript
+// Exemplo do site Loop Infinito
+// http://loopinfinito.com.br/2013/08/20/ecmascript-6-arrow-function
+
 // Sem arrow function
 var armazem = {
   estabelecimentoNome: 'Armazém do Chico',

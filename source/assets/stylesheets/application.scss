@@ -7,15 +7,12 @@
 @import "helpers/debug";
 @import "helpers/app";
 
+// Core
+@import "core/settings";
+@import "core/base";
+
 // Libs
 @import "lib/github";
-
-// Theme
-@import "theme/configuration";
-@import "theme/headings";
-
-// Base
-@import "base/base";
 
 // Modules
 @import "modules/home";
