@@ -181,9 +181,6 @@ O segundo valor mais usado para essa propriedade sem dúvidas é o posicionament
 
 Por último, podemos posicionar um elemento de forma fixa em um documento com a propriedade  `position: fixed`. Dessa forma o elemento será posicionado de acordo com o `body`.
 
-**Flutuando elementos**
-// todo
-
 #### Box-model
 
 Uma das coisas que você mais vai ouvir é que **todo elemento** em um documento é um "box". Sendo assim, as propriedades que inferem no tamanho de um box-model são:
@@ -294,16 +291,47 @@ div {
 Existem outras features nas duas linguagens, principalmente no Sass, que possui estruturas de controle, condicionais e funções.
 
 ## Arquitetura de CSS
-// todo
+
+Com o crescimento de aplicações aplicações web e as novas demandas do mercado, mudamos a forma de escrever CSS. Surgiu então a necessidade de planejarmos a arquitetura de nossas folhas de estilo. Através disso podemos mirar um futuro escalável para nossas aplicações.
+
+Com esse objetivo, surgiram alguns paradigmas muito interessantes. Os principais, OOCSS, SMACSS e BEM é o que vamos ver aqui.
 
 ### OOCSS
-// todo
+
+Criado pela [Nicole Sullivan](http://www.stubbornella.org), OOCSS significa *Object Oriented CSS*. 
+
+Esse paradigma preza que as classes devam receber nomes baseado em seu padrão visiual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como `background`, `color`. Devemos externar o padrão de estilo para outras classes. Por exemplo:
+
+```css
+alert {
+  font-weight: bold;
+}
+
+alert-danger {
+  color: red;
+}
+```
 
 ### SMACSS
-// todo
+
+SMACSS, *Scaleble and Modular Architeture for CSS* foi criado por John Snook para resolver problemas de arquitetura do app de e-mail do Yahoo. Ele é baseado em cinco grandes categorias: *base*, *layout*, *module*, *state* e o opcional *theme*.
+
+As folhas de estilo do *base* devem receber apenas regras atreladas a seletores globais, isso é: `body`, `p`, `a`, etc.
+
+Na categoria *layout*, o SMACSS recomenda que sejam usadas elementos agregadores que não repetem na aplicação, como `header` e `footer`. É importante lembrar que o autor recomenda utilizar o prefixo `.l-` para as classes de layout.
+
+Já em *module*, serão elementos que representam componentes de uma aplicação. Se tivermos seletores filhos desse módulo, o SMACSS recomenda que sejam criados uma classe para esse seletor. É preferível usar `.box-title` ao invés de `.box h2`.
+
+A categoria *state* agregam classes que indicam o estado de um componente, por exemplo `.is-active`.
+
+Por último temos a categoria `theme`, que funciona como um `skin`. Essa categoria não é obrigatória no SMACSS.
 
 ### BEM
-// todo
 
-## Não pare por aqui
-// todo
+BEM, *Block, element, modifier*, foi criado por desenvolvedores da empresa [Yandex](https://company.yandex.com/).
+
+*block*, segundo o BEM, é o nível mais alto de um componente. Por exemplo, `header` e `footer`.
+
+*element* é um filho de um *block* que posssui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `menu`, vamos ter seu filho que é `menu__item`.
+
+*state* também usa `_` para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos `menu__item`, teremos `menu__item_active`.
