@@ -45,7 +45,7 @@ li {
 }
 ```
 
-Agora pare e pense. Já pensou ter um arquivo de CSS com 30, 40 ou 50 mil linhas de código desorganizado? A manutenção será terrível. Se esse arquivo for desenvolvido com mais de uma pessoa, multiple seus problemas por mil.
+Agora pare e pense. Já pensou ter um arquivo de CSS com 30, 40 ou 50 mil linhas de código desorganizado? A manutenção será terrível. Se esse arquivo for desenvolvido com mais de uma pessoa, multiplique seus problemas por mil.
 
 Enfim.
 
@@ -67,11 +67,11 @@ a {
 }
 ```
 
-O código acima irá aplicar a cor vermelha para todas as tags `<a>` de um documento. Mas não são só tags HTML que são estilizáveis. Existem diversos tipos de seletores:
+O código acima irá aplicar a cor vermelha para todas as tags `<a>` de um documento. Mas não são só tags HTML que são estilizáveis. Existem diversos tipos de seletores.
 
 **Type selector**
 
-As tags do HTML são type selectors, ou seja, seletores simples. O seletor de uma tag `<p>` é o `p`, assim como o de uma tag `<div>` é `div`.</dd>
+As tags do HTML são type selectors, ou seja, seletores simples. O seletor de uma tag `<p>` é o `p`, assim como o de uma tag `<div>` é `div`.
 
 **Class selector**
 
@@ -90,7 +90,7 @@ Esse será o tipo que você mais usará no desenvolvimento de folhas de estilo. 
 
 **ID selector**
 
-O seletor de ID funciona de forma parecida com o class selector. É através de um atributo "id" em uma tag HTML que podemos criá-lo. Você deve estar se perguntando: *qual a diferença de `id` para `class`?* 
+O seletor de ID funciona de forma parecida com o class selector. É através de um atributo `id` em uma tag HTML que podemos criá-lo. Você deve estar se perguntando: *qual a diferença de `id` para `class`?* 
 
 A diferença entre `id` e `class` é que o primeiro é menos flexível e mais específico. Ou seja, na dúvida, (quase) sempre vá de `class`!
 
@@ -205,7 +205,7 @@ Exitem poucas propriedades para lidarmos com fontes na web. As principais são:
 - `font-size`
 - `line-height`
 
-Respectivavemente, as propriedades da lista acima definem peso, estilo, família, tamanho e o tamanho da linha.
+Respectivamente, as propriedades da lista acima definem peso, estilo, família, tamanho e o tamanho da linha.
 
 ## CSS3
 
@@ -332,6 +332,6 @@ BEM, *Block, element, modifier*, foi criado por desenvolvedores da empresa [Yand
 
 *block*, segundo o BEM, é o nível mais alto de um componente. Por exemplo, `header` e `footer`.
 
-*element* é um filho de um *block* que posssui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `menu`, vamos ter seu filho que é `menu__item`.
+*element* é um filho de um *block* que possui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `menu`, vamos ter seu filho que é `menu__item`.
 
 *state* também usa `_` para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos `menu__item`, teremos `menu__item_active`.

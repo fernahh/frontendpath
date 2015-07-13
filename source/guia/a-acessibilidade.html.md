@@ -120,8 +120,3 @@ Por exemplo, muitas vezes utilizamos uma tag `<a>` com comportamento de uma tag 
 ```html
 <a href="#" role="button">Fechar</a>
 ```
-
-## Não pare por aqui
-
-// todo
-

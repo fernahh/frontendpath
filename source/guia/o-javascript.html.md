@@ -9,10 +9,10 @@ introduction:
 
 Sem sobra de dúvidas JavaScript é uma das linguagens que mais foi odiada por desenvolvedores web. Tipagem fraca, orientação objetos com funcionamento totalmente diferente de linguagens "tradicionais", e inúmeras pegadinhas frustaram desenvolvedores por muito tempo. Mas esse cenário vem mudando.
 
-Hoje em dia, dificilmente uma ferramenta de sucesso terá uma boa experiência sem o uso de JavaScript. Porém, para isso precisamos conhecer suas principais características, suas boas partes e as partes ruins.
+Hoje em dia, dificilmente uma ferramenta de sucesso terá uma boa experiência sem o uso de JavaScript. Porém, para isso precisamos conhecer suas principais características.
 
 Bora lá?
-
+  
 ## Principais características
 
 ### Variáveis, tipos e valores
@@ -123,11 +123,11 @@ Assim como em outras linguagens, operadores de comparação no JavaScript usam o
 
 ### Estruturas de controle
 
-Estruturas de controle são imprecindíveis em qualquer linguagem. Com ela conseguimos manipular os dados de uma aplicação, desenvolver algoritmos entre outras vantagens. Vamos aqui todas as estruturas de controle de JavaScript.
+Estruturas de controle são imprescindíveis em qualquer linguagem. Com ela conseguimos manipular os dados de uma aplicação, desenvolver algoritmos entre outras vantagens. Vamos aqui todas as estruturas de controle de JavaScript.
 
 **Condicionais**
 
-Sem dúvidas o condicionais que mais usamos em qualquer linguagem de programação é o `if...else`. Com ele podemos testar se um valor é verdadeiro ou false:
+Sem dúvidas o condicionais que mais usamos em qualquer linguagem de programação é o `if...else`. Com ele podemos testar se um valor é verdadeiro ou falso:
 
 ```javascript
 if (condicao) {
@@ -228,6 +228,7 @@ while(i <= 5) {
 ```
 
 **for...in**
+
 Usamos o `for...in` para iterar objetos. Fica mais fácil entender se visualizarmos um exemplo:
 
 ```javascript
@@ -256,7 +257,7 @@ for (let i of arr) {
 
 ### Funções
 
-Funções sem dúdivas faz parte da principal funcionalidade do JavaScript. Sem dúvidas, quando pensamos na linguagem logo nos vem a cabeça a palavra `function()`. 
+Funções sem dúvidas fazem parte da principal funcionalidade do JavaScript. Sem dúvidas, quando pensamos na linguagem logo nos vem a cabeça a palavra `function()`. 
 
 Eis aqui um ponto chave para entendimento de JavaScript. Preste bastante atenção e invista seu tempo para aprender sobre funções.
 
@@ -413,7 +414,7 @@ cao.nome // Castor
 cao[raca] // Labrador
 ```
 
-Para declarar métodos, usamos a mesma notação que usamos para para proprideades, com `:`.
+Para declarar métodos, usamos a mesma notação que usamos para para propriedades, com `:`.
 
 ```javascript
 var cao = {
@@ -426,6 +427,7 @@ var cao = {
 ```
 
 ## DOM
+
 O DOM, *Document Object Model* é uma interface de programação para documentos HTML. É através desse recurso que podemos manipular interfaces com JavaScript.
 
 Como o DOM representa a árvore do HTML, podemos manipular as tags que estão lá. Por exemplo, digamos que eu quero que toda as tags com o `id` "internacional" tenha a cor vermelha:
@@ -435,6 +437,3 @@ document.getElementById("internacional").style.color = "red";
 ```
 
 Não é fácil manipular o DOM. Sempre envolve muito custo. Porém, é necessário. Pensando nisso, surgiram várias bibliotecas para manipulá-lo. As mais populares são [jQuery](http://jquery.com/) e [YUI](http://yuilibrary.com/). Com uma pequena busca no Google e você já terá inúmeras alternativas.
-
-## Não pare por aqui
-// todo

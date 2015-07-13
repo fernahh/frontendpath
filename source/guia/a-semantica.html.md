@@ -190,8 +190,3 @@ Como diz seu nome, a tag `<header>` representa o cabeçalho de um documento. Ele
 
 #### `<footer>`
 O `<footer>` receberá um grupo de elementos que representará, geralmente, informações sobre a autoria do conteúdo de um documento.
-
-## Não pare por aqui
-
-//todo
-
