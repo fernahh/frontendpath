@@ -18,22 +18,31 @@ This project has dependencies and [Middleman](https://middlemanapp.com/).
 
 1. First, install last version of [Ruby](https://www.ruby-lang.org/en/downloads/)
 2. Install [Bundler](http://bundler.io/):
+
     ```
     $ gem install bundler
     ```
+
 3. Clone it:
+
     ```
     $ git clone git@github.com:fernahh/frontendpath.git
     ```
+
 4. Go to project's folder:
+
     ```
     $ cd frontendpath
     ```
+
 5. Install dependencies
+
     ```
     $ bundle
     ```
+
 6. Run the project
+
     ```
     $ middleman server
     ```
