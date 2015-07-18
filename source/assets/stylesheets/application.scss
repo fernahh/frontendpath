@@ -10,6 +10,7 @@
 // Core
 @import "core/settings";
 @import "core/base";
+@import "core/layout";
 
 // Libs
 @import "lib/github";
@@ -21,5 +22,4 @@
 
 // Guide
 @import "guide/navigation";
-@import "guide/aside";
 @import "guide/article";

@@ -8,5 +8,9 @@
 
 #progress-bar {
   height: 100%;
-  background-color: $html5-color;
+
+  .guia_a-semantica & { background-color: $html5-color; }
+  .guia_o-css & { background-color: $css3-color; }
+  .guia_a-acessibilidade & { background-color: $accessibility-color; }
+  .guia_o-javascript & { background-color: $js-color; }
 }

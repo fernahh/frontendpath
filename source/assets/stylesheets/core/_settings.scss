@@ -7,13 +7,14 @@ $accessibility-color: #0875c8;
 
 $black: #666666;
 $blackB: #2b2a2f;
+$blackC: #3d464d;
 $white: #ffffff;
 $gray: #f2f2f2;
 $grayA: #e7e7e7;
 $grayB: #79787d;
 
-$main-color: $black;
-$secondary-color: $white;
+$base-main-color: $black;
+$base-secondary-color: $white;
 
 $semantics-color: $html5-color;
 
@@ -24,18 +25,20 @@ $font-cursive: "Share", cursive;
 $font-serif: "Bree Serif", serif;
 $font-serifB: "Merriweather", serif;
 
-$main-font: $font-serifB;
-$secondary-font: $font-serif;
+$base-main-font: $font-serifB;
+$base-secondary-font: $font-serif;
 
-$font-size: 16px;
-$line-height: 24px;
+$base-font-size: 16px;
+$base-line-height: 24px;
 
 // Sizes
 
-$trailer: $line-height;
-$whitespace: 10px;
+$base-trailer: $base-line-height;
+$base-whitespace: 10px;
 $bp-medium: 720px;
 $bp-large: 960px;
+$bp-largeB: 1024px;
+$bp-largeC: 1260px;
 
 // Border
 

@@ -1,109 +1,127 @@
 .guide-navigation {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
-  width: 100%;
+  width: 65px;
+  height: 100%;
 
-  background-color: rgba($grayB, .5);
+  background-color: $blackB;
 
-  @include respond-to(em($bp-medium)) {
-    background-color: transparent;
+  @include respond-to(em($bp-large)) {
+    width: 95px;
   }
 }
 
 .guide-navigation-list {
+  margin: 0;
   padding-left: 0;
 
   list-style-type: none;
   text-align: center;
-
-  @include respond-to(em($bp-medium)) {
-    margin: 0;
-    padding: em($whitespace);
-  }
 }
 
   .guide-navigation-item {
-    display: inline-block;
-    margin: 0 em(2px);
-
-    @include respond-to(em($bp-medium)) {
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+    display: block;
   }
 
     .guide-navigation-link {
-      $size: 44px;
+      display: block;
+      width: 100%;
+      height: 65px;
 
-      display: inline-block;
-      width: $size;
-      height: $size;
+      background-position: center center;
+      background-size: 25px;
 
       @include hide-text();
 
-      border: 2px solid $grayA;
-      @include border-radius(2px);
+      @include transition(all 200ms ease-in-out);
+      @include box-sizing(content-box);
 
-      @include transition(all 400ms ease-in-out);
+      @include attention() {
+        border-right: 4px solid $white;
+      }
+
+      @include respond-to(em($bp-medium)) {
+        height: 100px;
+        background-size: 35px;
+      }
     }
 
     .introduction-link {
       @include svg("introduction-logo");
-      background: {
-        color: $black;
-        position: center center;
-        size: 35px;
-      }
 
       @include attention() {
-        border-color: $black;
+        background-color: $black;
+        border-color: darken($black, 3%);
       }
     }
 
     .semantics-link {
       @include svg("semantics-logo");
-      background-color: $semantics-color;
+      background-size: 25px;
+      background-position: center center;
+
+      .guia_a-semantica & {
+        background-color: $semantics-color;
+        border-right: 4px solid darken($semantics-color, 3%);
+      }
 
       @include attention() {
-        border-color: $semantics-color;
+        background-color: $semantics-color;
+        border-color: darken($semantics-color, 3%);
+      }
+
+      @include respond-to(em($bp-medium)) {
+        background-size: 35px;
       }
     }
 
     .accessibility-link {
       @include svg("accessibility-logo");
-      background: {
-        color: $accessibility-color;
-        position: center center;
-        size: 25px;
+
+      .guia_a-acessibilidade & {
+        background-color: $accessibility-color;
+        border-right: 4px solid darken($accessibility-color, 5%);
       }
 
       @include attention() {
-        border-color: $accessibility-color;
+        background-color: $accessibility-color;
+        border-right: 4px solid darken($accessibility-color, 5%);
       }
     }
 
     .css-link {
       @include svg("css3-logo");
-      background: {
-        color: $css3-color;
-        position: center center;
-        size: 30px;
+
+      .guia_o-css & {
+        background-color: $css3-color;
+        border-right: 4px solid darken($css3-color, 5%);
       }
 
       @include attention() {
-        border-color: $css3-color;
+        background-color: $css3-color;
+        border-color: darken($css3-color, 5%);
       }
     }
 
     .js-link {
       @include svg("javascript-logo");
+      background-size: 30px;
+      background-position: 15px 14px;
 
       @include attention() {
-        border-color: $js-color;
+        background-color: $js-color;
+        border-color: darken($js-color, 5%);
+      }
+
+      .guia_o-javascript & {
+        background-color: $js-color;
+        border-right: 4px solid darken($js-color, 5%)
+      }
+
+      @include respond-to(em($bp-medium)) {
+        background-size: 50px;
       }
     }

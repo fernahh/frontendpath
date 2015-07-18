@@ -5,7 +5,7 @@ $global-title-size: 80px;
   position: relative;
 
   height: 100%;
-  margin-bottom: em($trailer);
+  margin-bottom: em($base-trailer);
 
   text-align: center;
 
@@ -18,8 +18,8 @@ $global-title-size: 80px;
 
     display: inline-block;
     padding: {
-      top: em($whitespace * 2, $size);
-      bottom: em($whitespace * 2, $size);
+      top: em($base-whitespace * 2, $size);
+      bottom: em($base-whitespace * 2, $size);
     }
 
     text-align: center;
@@ -50,8 +50,8 @@ $global-title-size: 80px;
       display: inline-block;
       width: 10%;
       padding: {
-        left: em($whitespace, $size);
-        right: em($whitespace, $size);
+        left: em($base-whitespace, $size);
+        right: em($base-whitespace, $size);
       }
 
       background-color: $home-background;
@@ -159,7 +159,7 @@ $global-title-size: 80px;
 
 
 #home-introduction {
-  margin-bottom: em($trailer * 2);
+  margin-bottom: em($base-trailer * 2);
 
   text-align: center;
 
@@ -174,7 +174,7 @@ $global-title-size: 80px;
     $size: 34px;
 
     display: block;
-    padding-top: em($trailer, $size);
+    padding-top: em($base-trailer, $size);
 
     font-size: em($size);
     line-height: em($size + 2, $size);
@@ -184,8 +184,8 @@ $global-title-size: 80px;
     $size: 32px;
 
     margin: {
-      top: em($trailer, $size);
-      bottom: em($trailer, $size);
+      top: em($base-trailer, $size);
+      bottom: em($base-trailer, $size);
     }
 
     font-size: em($size);
@@ -194,7 +194,7 @@ $global-title-size: 80px;
 
   .column-a,
   .column-b {
-    padding: em($whitespace);
+    padding: em($base-whitespace);
 
     text: {
       align: justify;
@@ -205,7 +205,7 @@ $global-title-size: 80px;
       float: left;
 
       padding: 0;
-      margin-bottom: em($trailer);
+      margin-bottom: em($base-trailer);
     }
   }
 
@@ -247,7 +247,7 @@ $global-title-size: 80px;
 
 #home-footer {
   width: 100%;
-  padding: em($whitespace * 3);
+  padding: em($base-whitespace * 3);
 
   background-color: $gray;
 

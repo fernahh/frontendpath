@@ -1,10 +1,9 @@
 <% wrap_layout :layout do %>
-  <aside class="guide-aside" id="guide-aside">
-    <header class="guide-header">
-      <h2><%= current_page.data.title %></h2>
-      <section><%= current_page.data.introduction %></section>
-      <h3>Navegue por tópicos:</h3>
+  <%= partial "shared/navigation" %>
+  <div class="l-container">
+    <aside class="guide-aside">
       <ul class="guide-topics-list">
+        <h3>Capítulos:</h3>
         <% chapters(current_page).each do |chapter| -%>
           <li class="guide-topics-item">
             <%= link_to chapter, "##{chapter.downcase.gsub(/\s/, "-")}",
@@ -12,14 +11,12 @@
           </li>
         <% end -%>
       </ul>
-    </header>
-    <footer>
-      <%= partial "shared/navigation" %>
-    </footer>
-  </aside>
-  <main class="guide-article" id="guide-article">
-    <article id="guide-content">
-      <%= yield %>
-    </article>
-  </main>
+    </aside>
+    <main class="guide-article" id="guide-article">
+      <article id="guide-content">
+        <h1 class="guide-article-title"><%= current_page.data.title %></h1>
+        <%= yield %>
+      </article>
+    </main>
+  </div>
 <% end %>

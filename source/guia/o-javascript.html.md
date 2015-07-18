@@ -12,10 +12,8 @@ Sem sobra de dúvidas JavaScript é uma das linguagens que mais foi odiada por d
 Hoje em dia, dificilmente uma ferramenta de sucesso terá uma boa experiência sem o uso de JavaScript. Porém, para isso precisamos conhecer suas principais características.
 
 Bora lá?
-  
-## Principais características
 
-### Variáveis, tipos e valores
+## Variáveis, tipos e valores
 
 Podemos declarar variáveis de duas formas: com ou sem palavra reservada `var`.
 
@@ -93,7 +91,7 @@ Falando de valores, JavaScript reconhece 6 tipos primitivos:
 - `undefined` (quando uma variável tem valor indefinido)
 - `symbol` (`Symbol("foobar")`)
 
-### Operadores
+## Operadores
 
 Temos vários operadores para trabalhar em JavaScript:
 
@@ -121,7 +119,7 @@ Assim como em outras linguagens, operadores de comparação no JavaScript usam o
 3 !== "3" // true
 ```
 
-### Estruturas de controle
+## Estruturas de controle
 
 Estruturas de controle são imprescindíveis em qualquer linguagem. Com ela conseguimos manipular os dados de uma aplicação, desenvolver algoritmos entre outras vantagens. Vamos aqui todas as estruturas de controle de JavaScript.
 
@@ -195,7 +193,7 @@ var p = Promise.reject().then(function() {
 
 Leia mais sobre Promises no site da [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-### Laços e iteradores
+## Laços e iteradores
 
 Laços e iteradores são imprescindível quando trabalhamos com coleções, objetos ou arrays. Vamos ver aqui todas as formas de laços que temos no JavaScript.
 
@@ -255,7 +253,7 @@ for (let i of arr) {
 }
 ```
 
-### Funções
+## Funções
 
 Funções sem dúvidas fazem parte da principal funcionalidade do JavaScript. Sem dúvidas, quando pensamos na linguagem logo nos vem a cabeça a palavra `function()`. 
 
@@ -341,7 +339,7 @@ Assim como os Default Parameters, Rest Parameters surgiram na versão 2015 do EC
 function (a, b, ...theArgs) { }
 ```
 
-#### Arrow Functions
+### Arrow Functions
 
 Arrow Functions foram criadas na versão 2015 do ECMAScript. Elas vieram para solucionar um problema antigo do JavaScript, o escopo do `this`.
 
@@ -380,7 +378,7 @@ var armazem = {
 }
 ```
 
-### Objetos
+## Objetos
 
 Em JavaScript todo valor se comporta como objeto, e isso é muito bom. Dessa forma, podemos usar funções disponíveis na linguagem para manipular valores. Por exemplo:
 

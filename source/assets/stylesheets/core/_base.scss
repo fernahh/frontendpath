@@ -9,14 +9,14 @@ html {
 body {
   height: 100%;
 
-  color: $main-color;
+  color: $base-main-color;
   font: {
-    family: $main-font;
-    size: em($font-size);
+    family: $base-main-font;
+    size: em($base-font-size);
   };
-  line-height: em($line-height + 6px);
+  line-height: em($base-line-height + 6px);
 
-  background: $secondary-color;
+  background: $base-secondary-color;
 }
 
 a {
@@ -26,21 +26,26 @@ a {
   &:hover {
     text-decoration: underline;
   }
+
+  .guia_a-semantica & { color: $html5-color; }
+  .guia_o-css & { color: $css3-color; }
+  .guia_a-acessibilidade & { color: $accessibility-color; }
+  .guia_o-javascript & { color: darken($js-color, 5%); }
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-  color: $grayB;
+  color: $blackC;
 }
 
 blockquote {
   $size: 14px;
 
-  padding: 0 em($whitespace * 1.5, $size);
+  padding: 0 em($base-whitespace * 1.5, $size);
 
   font-size: em($size);
   font-style: italic;
-  line-height: em($line-height, $size);
+  line-height: em($base-line-height, $size);
   border-left: 2px solid $grayB;
 }
 
@@ -51,4 +56,8 @@ code, kbd, pre, samp {
 
 main {
   height: 100%;
+}
+
+ul {
+  list-style-type: circle;
 }

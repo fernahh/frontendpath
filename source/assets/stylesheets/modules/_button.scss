@@ -4,12 +4,12 @@
   display: inline-block;
   width: auto;
   padding: {
-    left: em($whitespace, $context);
-    right: em($whitespace, $context);
+    left: em($base-whitespace, $context);
+    right: em($base-whitespace, $context);
   }
 
   font: {
-    family: $main-font;
+    family: $base-main-font;
     size: em($context);
   }
   line-height: em($context * 2, $context);
