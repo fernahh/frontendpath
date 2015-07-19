@@ -120,3 +120,9 @@ Por exemplo, muitas vezes utilizamos uma tag `<a>` com comportamento de uma tag 
 ```html
 <a href="#" role="button">Fechar</a>
 ```
+
+## De humanos para humanos
+
+Como foi dito no [caminho da semântica](/guia/a-semantica.html), não há diferença visual entre um conteúdo expressado com um `div` ou `header`, e mesmo sendo errado, você pode escrever dessa forma. Porém com acessibilidade é diferente. Usar os elementos corretos para seu uso é de extrema importântica.
+
+Por exemplo, evite usar um `<a>` como um `<button>`. A web por si só é minimamente acessível. Não vamos [quebrar a web](http://tableless.com.br/nos-quebramos-web/). Se você estiver na "web pública", desenvolva produtos acessíveis. Os usuários agradecem!
