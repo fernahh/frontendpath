@@ -190,3 +190,44 @@ Como diz seu nome, a tag `<header>` representa o cabeçalho de um documento. Ele
 
 #### `<footer>`
 O `<footer>` receberá um grupo de elementos que representará, geralmente, informações sobre a autoria do conteúdo de um documento.
+
+## Melhorando a semântica com microdata
+
+Já vimos que na última versão do HTML tivemos um grande esforço para melhorar a representação de dados na web. Além das tags, também temos o *microdata*. Eles funcionam como atributos em nosso documento, onde podemos expressar de melhorar forma o conteúdo para robos (sim, como o Google!).
+
+Para usar, o primeiro passo é pensarmos no escopo do conteúdo. Precisamos de uma tag para representá-lo, que terá o atributo `itemscope` e o seu tipo, representado pelo atributo `itemtype`. Se fossemos representar o álbum de um artista, nosso primeiro passo seria o seguinte:
+
+```html
+<div itemscope itemtype="http://schema.org/MusicAlbum"></div>
+```
+
+Dentro de nosso escopo usaremos outras tags com os mesmos atributos. Resumindo:
+
+- `itemprop`: representa a propriedade de um elemento (nome, telefone, endereço, etc)
+- `itemtype`: recebe o valor de um microdata.
+
+Nosso exemplo de forma completa ficaria assim:
+
+```html
+<div itemscope itemtype="http://schema.org/MusicAlbum">
+  <h1 itemprop="name">Mondo Bizarro</h1>
+  <h2 itemprop="byArtist">Ramones</h2>
+  <div itemprop="track" itemscope itemtype="http://schema.org/ItemList">
+    <span itemprop="numberOfItems" content=14 />
+    <div itemprop="itemListElement itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="position">1</span>
+      <div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording">
+        <span itemprop="name">Censorshit</span>
+      </div>
+    </div>
+    <div itemprop="itemListElement itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="position">2</span>
+      <div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording">
+        <span itemprop="name">The Job That Ate My Brain</span>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+Existem inúmeras representações, você pode encontrá-las no [Schema.org](http://schema.org/).
