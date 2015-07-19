@@ -231,3 +231,11 @@ Nosso exemplo de forma completa ficaria assim:
 ```
 
 Existem inúmeras representações, você pode encontrá-las no [Schema.org](http://schema.org/).
+
+## A melhor ferramenta para HTML é você!
+
+Hoje em dia com uma rápida busca na internet você encontra validadores, editores que ajudam a escrever HTML mais rápido (conheça o [Emmet](http://emmet.io/)!), entre outros facilitadores. Mas o ponto principal que você precisa entender: **não há como automatizar um bom trabalho**.
+
+A semântica deve ser feita de humanos para máquinas. Precisamos fazer com que algoritmos entando nosso código. Dessa forma todo mundo ganha, incluindo seu produto, os buscadores, o mercado e a web.
+
+Tudo pronto. Vamos ser mais semânticos?
