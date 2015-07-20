@@ -438,3 +438,135 @@ document.getElementById("internacional").style.color = "red";
 ```
 
 Não é fácil manipular o DOM. Sempre envolve muito custo. Porém, é necessário. Pensando nisso, surgiram várias bibliotecas para manipulá-lo. As mais populares são [jQuery](http://jquery.com/) e [YUI](http://yuilibrary.com/). Com uma pequena busca no Google e você já terá inúmeras alternativas.
+
+## Modularização 
+
+Se você é desenvolvedor, provavelmente já ouviu falar em DRY: **D**on't **R**epeat **Y**ourself.
+
+Independente da linguagem, sempre buscamos otimizar nosso tempo e não escrever toda vez o mesmo código. Há alguns anos na web ouvimos falar sobre componentes e módulos. Sem dúvidas, é uma das partes mais importante no desenvolimento de aplicações web. Através de uma boa organização, além da reutilização, módulos e componentes ajudam muito a desenvolvermos de forma escalável.
+
+**Module Pattern**
+
+Qualquer desenvolvedor web um dia já sofreu com o escopo bizarro das variáveis no JavaScript. Através da modularização podemos contornar esse problema. Com o *module pattern* podemos simular privacidade no JavaScript, logo, também previnir que o escopo de variáveis não façam parte do escopo global.
+
+Provavelmente você já se deparou o seguinte código diversas vezes:
+
+```javascript
+(function(){
+  // ...
+})();
+```
+
+Trata-se de uma função auto-executável. O código que estará dentro da função está encapsulado. Isso acontece porque englobando a função com parênteses, estamos executando ela antes mesmo de ser atribuída a uma variável ou o escopo global.
+
+Usando uma função auto-executável podemos criar um encapsulamento para manipular atributos de um objeto. Por exemplo:
+
+```javascript
+// Exemplo sem emcapsulamento
+var Obj = {
+  prop: 0,
+  incrementProp: function() {
+    return this.prop += 1;
+  }
+}
+
+Obj.incrementProp();
+Obj.prop; // 1;
+
+// Exemplo com Module Pattern
+var Obj = (function () {
+    var prop = 0;
+
+    return {
+      prop: function() {
+        return prop;
+      },
+
+      incrementProp: function() {
+        return prop += 1;
+      }
+    };
+  })();
+```
+
+**AMD**
+
+Usar módulos é muito melhorar do que desenvolver sem nenhum design pattern. Porém, é preciso cuidado, pois facilmente teremos casos em que um depende do outro. O AMD, *Asyncronous Module Definition* vem para evitar esse problema. Através dele podemos definir as dependências de um módulo.
+
+```javascript
+define(
+  ['dependecy1', 'dependecy2', 'dependecy3'], 
+  function(dependecy1, dependecy2, dependecy3) {
+    //...
+  }
+);
+```
+
+Também podemos expressar quando um módulo requisita uma dependencia:
+
+```javascript
+require(
+  ['dependecy1', 'dependecy2', 'dependecy3'], 
+  function(dependecy1, dependecy2, dependecy3) {
+    //...
+  }
+);
+```
+
+Você deve estar se perguntando de onde vem as funções `define()` e `require()`. Existem diversos loaders AMD, o mais popular é o [Require.js](http://requirejs.org/). Juntamente com essa bliblioteca, é recomendado o uso da [r.js](https://github.com/jrburke/r.js), a qual irá entregar um único arquivo de JavaScript para o browser.
+
+**CommonJS**
+
+Esse padrão de módulos ficou ~famoso~ porque foi adotado pelo [Node.js](https://nodejs.org/). No browser podemos ajudar ele com o [Browserify](http://browserify.org/).
+
+A sintaxe dele é mais simples e mais próxima da sintaxe de módulos do futuro do JavaScript. Temos três keywords: `require`, `import` e `export`. 
+
+```javascript
+var lbx = require('libx');
+function myMod() {
+  // ...
+}
+module.exports = myMod;
+```
+
+No código acima, estamos dizendo que um módulo depende de `libx` e ele está exportando a função `myMod()`.
+
+**ES6 Modules**
+
+Na última versão do ECMAScript, o JavaScript ganhou sua própria forma de definir módulos. Basicamente cada módulo é definido em um arquivo, e seus atributos (variáveis ou funções) são expostos somente se isso for feito de forma explícita, com a keyword `export`. Para consumir variáveis de outro módulos, usamos a keyword `import`.
+
+Exemplo:
+
+**util.js**:
+
+```javascript
+function multiplicacao(a, b) {
+    return a * b;
+}
+ 
+export { multiplicacao }
+```
+
+Dessa forma, estamos deixando a função `multiplicacao()` visível a outros módulos.
+
+Para usar essa função em outro módulo, faríamos isso:
+
+```javascript
+import { multiplicacao } from 'util';
+```
+
+Simples. Muito simples.
+
+## Tenha cuidado com o JavaScript
+
+JavaScript é incrível e com ele temos muito controle da experiência de nosso usuário. Porém, com grandes poderes vem grandes responsabilidades.
+
+Minhas dicas de bolso seriam:
+
+- Sempre tenha em mente onde você quer chegar com sua aplicação. 
+- Opte pelas boas práticas e uso o mínimo necessário.
+- Entregue o conteúdo independente se o JavaScript estiver disposível ou não. A web funciona sem JavaScript.
+- Conheça o [suporte](http://www.caniuse.com/) de API's e novas features JavaScript.
+
+
+
