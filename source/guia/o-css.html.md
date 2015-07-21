@@ -328,10 +328,18 @@ Por último temos a categoria `theme`, que funciona como um `skin`. Essa categor
 
 ### BEM
 
-BEM, *Block, element, modifier*, foi criado por desenvolvedores da empresa [Yandex](https://company.yandex.com/).
+BEM, *Block, Element, Modifier*, foi criado por desenvolvedores da empresa [Yandex](https://company.yandex.com/).
 
 *block*, segundo o BEM, é o nível mais alto de um componente. Por exemplo, `header` e `footer`.
 
-*element* é um filho de um *block* que possui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `menu`, vamos ter seu filho que é `menu__item`.
+*element* é um filho de um *block* que possui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `.menu`, vamos ter seu filho que é `menu__i.tem`.
 
-*state* também usa `_` para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos `menu__item`, teremos `menu__item_active`.
+*state* também usa `_` para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos `.menu__item`, teremos `.menu__item_active`.
+
+## Nunca subestime o CSS
+
+A última dica sobre CSS é: **nunca o subestime**. Escrever folhas de estilo não é fácil.
+
+Estude arquitetura de CSS e formas de escrita antes de aprender frameworks. Se for usar um pré-compilador, tome cuidado com o que ele está gerando.
+
+Planejar bem seu desenvolvimento de CSS fará você economizar bastante tempo ao longo do projeto.
