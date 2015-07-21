@@ -1,5 +1,6 @@
 ---
 title: A Semântica
+description: Semântica é uma das principais vantagens da plataforma web em relação às outras. Aprenda como desenvolver sites semânticos e assim criar aplicações competitivas.
 ---
 
 ## Sim, a semântica é importante!
