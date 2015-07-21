@@ -1,8 +1,5 @@
 ---
 title: O JavaScript
-introduction: 
-    <p>JavaScript é uma linguagem de script criada para melhorar a experiência do usuário na web. Apesar de seu nome ser semelhante a linguagem Java, as duas linguagens possuem mínimas semelhanças.</p>
-    <p>Com característica interpretada e suporte a orientação objetos através de protótipo, o JavaScript é desenvolvido baseado no padrão ECMAScript. Vamos conhecer aqui suas principais características e como fazer um bom uso para desenvolvimento de interfaces.</p>
 ---
 
 ## O JavaScript não tem limites!

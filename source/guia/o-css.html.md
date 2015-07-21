@@ -1,15 +1,14 @@
 ---
 title: O CSS
-introduction: 
-    <p>CSS <i>(Cascading Style Sheets)</i> é uma linguagem de marcação de estilo. Através dela é possível personalizar páginas web usando seletores disponíveis no HTML da aplicação.</p>
-    <p>Pelo fato de ela nunca lançar exceções, acabamos subestimando sua complexidade. Porém, hoje há diversas aplicações grandes que precisam de arquiteturas de CSS para desenvolver um projeto escalável, principalmente para o trabalho em equipe.</p>
 ---
 
 ## CSS é fácil, mas desenvolver projetos escaláveis é difícil!
 
-CSS é uma das partes mais importantes e complexas de uma interface web. É através dele que podemos chegar a um design de projeto, muitas vezes com muito pouco esforço. Você deve estar se perguntando: *"porque o CSS é uma parte complexa?"* Eu explico.
+CSS, *Cascading Style Sheets* é uma das partes mais importantes e complexas de uma interface web. É através dele que podemos chegar a um design de projeto, muitas vezes com muito pouco esforço. Você deve estar se perguntando: *"porque o CSS é uma parte complexa?"* Eu explico.
 
-Como já dito, CSS não lança exceções. Você pode escrever ele de diversas formas e o resultado final será o mesmo. Por exemplo, o código abaixo terá o mesmo resultado na renderização do navegador.
+Pelo fato de ela nunca lançar exceções, acabamos subestimando sua complexidade. Porém, hoje há diversas aplicações grandes que precisam de arquiteturas de CSS para desenvolver um projeto escalável, principalmente para o trabalho em equipe.
+
+Você pode escrever CSS de diversas formas e o resultado final será o mesmo. Por exemplo, o código abaixo terá o mesmo resultado na renderização do navegador.
 
 ```css
 /*

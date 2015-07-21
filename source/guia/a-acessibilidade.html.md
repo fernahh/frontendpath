@@ -1,8 +1,5 @@
 ---
 title: A Acessibilidade
-introduction: 
-    <p>A web foi feita para todos. Todas as pessoas, todos os browsers, todos os sistemas operacionais, todos os computadores e dispositivos com acesso a internet.</p>
-    <p>Porém, os desenvolvedores fazem uma web inclusiva?</p>
 ---
 
 ## A web deve ser para todos!
