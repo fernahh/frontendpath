@@ -9,9 +9,11 @@
     <meta name="keywords" content="front-end, css, semântica, html, acessibilidade, javascript" />
 
     <meta itemprop="name" content="Front-end Path | <%= current_page.data.description.present? ? current_page.data.title : 'Um caminho correto para o desenvolvimento front-end' %>" />
-    <meta itemprop="url" content="http://www.frontendpath.com" />
-    <meta itemprop="description" content="Um caminho correto para o desenvolvimento front-end">
+    <meta itemprop="url" content="http://www.frontendpath.com<%= current_page.url %>" />
+    <meta itemprop="description" content="Um caminho correto para o desenvolvimento front-end" />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.frontendpath.com<%= current_page.url %>" />
     <meta property="og:title" content="Front-end Path | <%= current_page.data.description.present? ? current_page.data.title : "Um caminho correto para o desenvolvimento front-end" %>" />
     <meta property="og:site_name" content="Front-end Path" />
     <meta property="og:description" content="<%= current_page.data.description.present? ? current_page.data.description : "Um caminho correto para o desenvolvimento front-end"  %>" />
