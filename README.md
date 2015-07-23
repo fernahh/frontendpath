@@ -53,6 +53,26 @@ This project was developed in a static generator, the [Middleman](https://middle
     $ middleman server
     ```
 
+## References
+
+Without these references, no doubt the guide could not be possible. Thanks to all the authors.
+
+- Introduction
+    + High Performance Web Sites, *by Steve Sounders* 
+    + HTML5: Up and Running, *by Mark Pilgrim*.
+- Semantic
+    + About HTML semantics and front-end architecture, *by Nicolas Gallagher*.
+    + HTML5 For Web Designers, *by Jeremy Keith*.
+- Acessibility
+    + Web Content Accessibility Guidelines, *by W3C*.
+    + Coletânea Front-end, *by Reinaldo Ferraz*.
+- CSS
+    + Object Oriented CSS, *by Nicole Sullivan*.
+    + Scaleble and Modular Architetura for CSS, *by Jonathan Snook*.
+- JavaScript
+    + High Perfomance JavaScript, *by Nicholas Zakas*.
+    + Secrets of JavaScript Ninja, *by John Resig and Bear Bibeault*.
+
 ## Maintainer
 
 Luiz Fernando Rodrigues - http://blog.fernahh.com.br
