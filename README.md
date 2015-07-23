@@ -1,6 +1,7 @@
 # Front-end Path
 
-A path to front-end development.
+A corret path to front-end development - http://www.frontendpath.com
+
 
 ![brand](http://i.imgur.com/WNqDGmi.png)
 
