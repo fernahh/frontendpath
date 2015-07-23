@@ -14,7 +14,7 @@ Once you've made your great commits:
 
 1. Fork the project
 2. Create your feature branch: `git checkout -b my_feature`
-3. Push to the branch - `git push origin my_feature`
+3. Push to the branch: `git push origin my_feature`
 4. Submit a pull request!
 
 ## Run locally the project
