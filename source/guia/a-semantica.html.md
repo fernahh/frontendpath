@@ -33,7 +33,7 @@ Uma página é formada de elementos básicos necessários para seu funcionamento
 ```
 
 ### DOCTYPE
-O *Document Type Defination* (DTD ou Doctype) é quem informa ao navegador a versão do HTML que está sendo utilizada, ele vem antes de qualquer outro elemento do documento, até mesmo antes do `<html>`. Antes da especificação HTML 5 existiram várias notações para o `<doctype>`. Por exemplo:
+O *Document Type Definition* (DTD ou Doctype) é quem informa ao navegador a versão do HTML que está sendo utilizada, ele vem antes de qualquer outro elemento do documento, até mesmo antes do `<html>`. Antes da especificação HTML 5 existiram várias notações para o `<doctype>`. Por exemplo:
 
 ```html
 <!DOCTYPE html
@@ -49,9 +49,9 @@ Na quinta versão, o `<doctype>` ficou menor e melhor.
 <!DOCTYPE html>
 ```
 
-#### O elemento `<html>` 
+#### O elemento `<html>`
 
-Uma analogia constante em relação ao HTML é que ele é composto por uma série de elementos estruturado como uma árvore. Levando isso em conta, o elemento `<html>` é a raiz de nossa árvore. Todos os elementos estarão dentro dele.
+Uma analogia constante em relação ao HTML é que ele é composto por uma série de elementos estruturados como uma árvore. Levando isso em conta, o elemento `<html>` é a raiz de nossa árvore. Todos os elementos estarão dentro dele.
 
 O principal atributo desse elemento é o `lang`, que especifica a língua da página HTML.
 
@@ -62,7 +62,7 @@ O principal atributo desse elemento é o `lang`, que especifica a língua da pá
 Especificar um valor para o atributo `lang` é muito importante. É através deles que leitores de telas definem em qual idioma que irão ler o conteúdo para o usuário.
 
 ### O elemento `<head>`
-O elemento `<head> ` não mudou nada desde sua primeira versão. Ele contém uma coleção de informações (metadados) sobre a página HTML. Dentro dele é que especificamos manifestos e arquivos que mudaram a forma com que a página será renderizada.
+O elemento `<head> ` não mudou nada desde sua primeira versão. Ele contém uma coleção de informações (metadados) sobre a página HTML. Dentro dele é que especificamos manifestos e arquivos que mudarão a forma com que a página será renderizada.
 
 #### Metadados
 O elemento `<meta>` tem a missão de representar dados que não são expressíveis com outros elementos, como `<link>` e `<title>`.
@@ -73,9 +73,9 @@ Existem inúmeros atributos disponíveis para `<meta>` , entre eles o `charset` 
 <meta charset="utf-8" />
 ```
 
-#### Elemento `<link>` 
-O elemento `<link>` (não confunda com o `<a>`!) pode ser usado para referenciar outro recurso. 
-Usando o atributo `rel`, temos *link relations*, que é uma maneira de explicar a referência que o mesmo contém. Por exemplo, se o atributo `rel` conter o valor `stylesheet`, significa que o *link* possui uma referência para uma folha de estilo. 
+#### Elemento `<link>`
+O elemento `<link>` (não confunda com o `<a>`!) pode ser usado para referenciar outro recurso.
+Usando o atributo `rel`, temos *link relations*, que é uma maneira de explicar a referência que o mesmo contém. Por exemplo, se o atributo `rel` conter o valor `stylesheet`, significa que o *link* possui uma referência para uma folha de estilo.
 
 ```html
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -93,7 +93,7 @@ O elemento `<script>` funciona para referenciar e permitir escrita de códigos *
 </script>
 ```
 
-Uma regra básica para decidir onde carregar uma *tag script*: se influi na renderização do documento (como *shiv* do HTML 5), carregue no `<head>`, senão, carregue no `<body>`.
+Uma regra básica para decidir onde carregar uma *tag script*: se influi na renderização do documento (como *shiv* do HTML 5), carregue no `<head>`, senão, carregue no `<body>`. Carregar scripts que influenciam na renderização do documento no `<head>` evita o <abbr title="Flash of unstyled content">FOUC</abbr>, que faz com que o conteúdo sem estilo apareça por um momento, antes do estilo final ser aplicado.
 
 ### O elemento `<body>`
 
@@ -134,7 +134,7 @@ Tentamos representar a maioria dos elementos semânticamente, mas obviamente nã
 ##### `<em>`, `<small>` e `<strong>`
 Podemos expressar diferentes ênfases em um texto usando essas tags. Com a tag `<em>` indicamos um conteúdo acentuado. Com `<strong>` deixamos o texto mais "forte". Já com a tag `<small>` podemos diminuir a ênfase para um conteúdo não tão importante em um texto.
 
-É importante lembrar que todas essas tags geralmente os navegadores adicionam um estilo diferente.
+É importante lembrar que os navegadores adicionam estilos diferentes para essas tags.
 
 ##### `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` e `<h6>`
 As tags *headings* são usadas para representar os títulos de uma página. O `<h1>` representa o maior valor, sendo `<h6>` o título de menor importância. Em um exemplo prático, o título de uma página é seria escrito com `<h1>` e um subtítulo com `<h2>`.
@@ -151,7 +151,7 @@ Possuímos três tipos de listas para trabalharmos. `<ol>` e `<ul>` possuem apen
 
 Para representar um item de uma lista, usamos a tag `<li>`.
 
-Diferentemente das duas primeiras tags que mostramos, temos um tipo de lista para definir itens semânticamente. Podemos declarar repespectivamente termo e definição. Por exemplo:
+Diferentemente das duas primeiras tags que mostramos, temos um tipo de lista para definir itens semânticamente. Podemos declarar respectivamente termo e definição. Por exemplo:
 
 ```html
 <dl>
@@ -167,7 +167,7 @@ Diferentemente das duas primeiras tags que mostramos, temos um tipo de lista par
 A tag `<p>` representa um parágrafo qualquer dentro de uma página web. Sem dúvidas é a tag que mais usamos no desenvolvimento de um web site.
 
 #### `<section>`
-Uma tag `<section>` pode ser usada para agrupar conteúdos e assim representar algo na web. Em um exemplo prática, essa tag pode agrupar em um site de notícia, as próprias notícias. Exemplo:
+Uma tag `<section>` pode ser usada para agrupar conteúdos e assim representar algo na web. Em um exemplo prático, essa tag pode agrupar em um site de notícias, as próprias notícias. Exemplo:
 
 ```html
 <section id="news-section">
@@ -193,7 +193,7 @@ O `<footer>` receberá um grupo de elementos que representará, geralmente, info
 
 ## Melhorando a semântica com microdata
 
-Já vimos que na última versão do HTML tivemos um grande esforço para melhorar a representação de dados na web. Além das tags, também temos o *microdata*. Eles funcionam como atributos em nosso documento, onde podemos expressar de melhorar forma o conteúdo para robos (sim, como o Google!).
+Já vimos que na última versão do HTML tivemos um grande esforço para melhorar a representação de dados na web. Além das tags, também temos o *microdata*. Eles funcionam como atributos em nosso documento, onde podemos expressar de melhorar forma o conteúdo para robôs (sim, como o Google!).
 
 Para usar, o primeiro passo é pensarmos no escopo do conteúdo. Precisamos de uma tag para representá-lo, que terá o atributo `itemscope` e o seu tipo, representado pelo atributo `itemtype`. Se fossemos representar o álbum de um artista, nosso primeiro passo seria o seguinte:
 
@@ -236,6 +236,6 @@ Existem inúmeras representações, você pode encontrá-las no [Schema.org](htt
 
 Hoje em dia com uma rápida busca na internet você encontra validadores, editores que ajudam a escrever HTML mais rápido (conheça o [Emmet](http://emmet.io/)!), entre outros facilitadores. Mas o ponto principal que você precisa entender: **não há como automatizar um bom trabalho**.
 
-A semântica deve ser feita de humanos para máquinas. Precisamos fazer com que algoritmos entando nosso código. Dessa forma todo mundo ganha, incluindo seu produto, os buscadores, o mercado e a web.
+A semântica deve ser feita de humanos para máquinas. Precisamos fazer com que algoritmos entendam nosso código. Dessa forma todo mundo ganha, incluindo seu produto, os buscadores, o mercado e a web.
 
 Tudo pronto. Vamos ser mais semânticos?

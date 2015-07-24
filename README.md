@@ -7,7 +7,7 @@ A corret path to front-end development - http://www.frontendpath.com
 
 ## Contributing
 
-Besides being large, the web also evolves constantly. Therefore, this project has a long way to go.The guide's content is in the folder [source/guia](https://github.com/fernahh/frontendpath/tree/master/source/guia).
+Besides being large, the web also evolves constantly. Therefore, this project has a long way to go. The guide's content is in the folder [source/guia](https://github.com/fernahh/frontendpath/tree/master/source/guia).
 
 Soon I will open issues for collaboration.
 
@@ -59,7 +59,7 @@ This project was developed in a static generator, the [Middleman](https://middle
 Without these references, no doubt the guide could not be possible. Thanks to all the authors.
 
 - Introduction
-    + High Performance Web Sites, *by Steve Sounders* 
+    + High Performance Web Sites, *by Steve Souders*
     + HTML5: Up and Running, *by Mark Pilgrim*.
 - Semantic
     + About HTML semantics and front-end architecture, *by Nicolas Gallagher*.
