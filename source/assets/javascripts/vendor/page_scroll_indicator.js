@@ -7,13 +7,10 @@
 
 var PageScrollIndicator = PageScrollIndicator || {};
 
-PageScrollIndicator.createProgressBar = function(progressBarLocation, contentToTrack) {
-
-  // Create the container div
+PageScrollIndicator.createIndicator = function(progressBarLocation, contentToTrack) {
   var progressContElement = document.createElement("div");
   progressContElement.id = "progress-cont";
 
-  // Create the progress bar itself
   var progressBarElement = document.createElement("div");
   progressBarElement.id = "progress-bar";
   progressBarElement.style.width = "0%";
@@ -28,8 +25,6 @@ PageScrollIndicator.createProgressBar = function(progressBarLocation, contentToT
     locationObject.insertBefore(progressContElement, locationObject.firstChild);
   }
 
-  // Event handler that updates the width of the progress bar based
-  // on how far the contentToTrack elemt has been scrolled
   window.onscroll = function(event) {
     var pageHeight = window.innerHeight;
     var container = document.getElementById(contentToTrack);
@@ -41,4 +36,3 @@ PageScrollIndicator.createProgressBar = function(progressBarLocation, contentToT
     progressBarElement.style.width = progress + "%";
   }
 }
-
