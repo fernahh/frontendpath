@@ -32,11 +32,11 @@ Para ser sincero, acho que a linguagem utilizada pela W3C possa ser algo que cri
 
 Os **princípios** têm a finalidade de prospectar requisitos para uma página ou aplicação web ser acessível. Caminhando ao lado deles, existem as **diretrizes**, que nada mais são que objetivos básicos para se desenvolver conteúdo acessível na web. Para que o essas diretrizes sejam atingidas, existem **critérios de sucesso** e **técnicas de tipo suficiente e aconselhadas**.
 
-Vamos ver aqui os princípios estabelidos pela W3C.
+Vamos ver aqui os princípios estabelecidos pela W3C.
 
 ### Princípio perceptível
 
-Como o próprio nome diz, toda informação que a aplicação dispõe, deve ser **percebida por todos os sentidos** do seu usuário. Além disso, toda e qualquer alteração ou ação na interface deve ser percebida pelos sentidos do usuário da aplicação. 
+Como o próprio nome diz, toda informação que a aplicação dispõe, deve ser **percebida por todos os sentidos** do seu usuário. Além disso, toda e qualquer alteração ou ação na interface deve ser percebida pelos sentidos do usuário da aplicação.
 
 Por exemplo, no uso de imagens, deve ser usado o atributo `alt` para descrever uma alternativa ao usuário que tem problema de visão.
 
@@ -48,7 +48,7 @@ Por exemplo, no uso de imagens, deve ser usado o atributo `alt` para descrever u
 
 Todas as operações que o usuário precisa fazer para ter acesso a uma informação devem ser acessíveis. Uma interface não pode depender de uma operação que um usuário com certa deficiência não consiga realizar.
 
-Um exemplo disso, é que toda operação deve ter um tempo suficiente para o usuário completá-la, seja usando o mouse ou o teclado. 
+Um exemplo disso, é que toda operação deve ter um tempo suficiente para o usuário completá-la, seja usando o mouse ou o teclado.
 
 Exemplificando, através de CSS podemos fazer uma navegação mais básica de forma simples ao usuário, permitindo que o mesmo possa navegar pela aplicação com o teclado:
 
@@ -63,9 +63,9 @@ a:focus {
 
 Esse princípio diz que a aplicação deve ter seu conteúdo de forma compreensível, assim como seu funcionamento.
 
-A maioria dos usuários que possuem algum tipo de deficiência visual, usam leitores de tela para navegar na web. 
+A maioria dos usuários que possuem algum tipo de deficiência visual, usam leitores de tela para navegar na web.
 
-Uma boa prática, além de manter um bom desenvolvimento semântico, é por exemplo, indicar o idioma que está escrito na página com o atributo `lang`. Perceba que dentro do conteúdo outro idiomá é utilizado.
+Uma boa prática, além de manter um bom desenvolvimento semântico é, por exemplo, indicar o idioma que está escrito na página com o atributo `lang`. Perceba que dentro do conteúdo outro idioma é utilizado.
 
 ```html
 <!DOCTYPE html>
@@ -77,28 +77,28 @@ Uma boa prática, além de manter um bom desenvolvimento semântico, é por exem
   <body>
   <p>Essa página está em pt <span lang="en">and in english</span></p>
   </body>
-</html> 
+</html>
 ```
 
 ### Princípio robusto
 
-O princípio robusto diz que toda aplicação deve-se manter com conteúdo acessível tanto para usuários sem necessidades especiais, quanto para tecnologias assistivas, mesmo com a evolução das tecnologias isso possa se tornar defasado. 
+O princípio robusto diz que toda aplicação deve-se manter com conteúdo acessível tanto para usuários sem necessidades especiais, quanto para tecnologias assistivas, mesmo que com a evolução das tecnologias isso possa se tornar defasado.
 
 Uma forma de manter esse princípio é sempre desenvolver de acordo com padrões validados pela W3C.
 
-Na prática, o *web design responsivo* (RWD), pode ajudar a entregar conteúdo acessível independente do dispositivo que o usuário está usando.
+Na prática, o *web design responsivo* (<abbr title="Responsive Web Design">RWD</abbr>), pode ajudar a entregar conteúdo acessível independente do dispositivo que o usuário está usando.
 
 ## Enriquecendo a acessibilidade com WAI-ARIA
 
 Vivemos em uma época em que a web é uma das principais plataformas para desenvolvimento de aplicações, quiçá a principal.
 
-O conteúdo entregue ao usuário nem sempre é entregue de forma simples de texto. Conteúdos dinâmicos cada vez mais fazem parte do ciclo de vida de uma aplicação web. Levando esse dentre outros aspectos, a semântica básica do HTML não cobre todas as lacunas que precisamos para tornar uma aplicação moderna acessível. Pensando nisso temos uma recomendação da W3C chamada WAI-ARIA *(WAI - Web Acessibility Initiative, ARIA - Acessible Rich Internet Applications)*.
+O conteúdo entregue ao usuário nem sempre é entregue na forma de texto simples. Conteúdos dinâmicos cada vez mais fazem parte do ciclo de vida de uma aplicação web. Levando esse dentre outros aspectos, a semântica básica do HTML não cobre todas as lacunas que precisamos para tornar uma aplicação moderna acessível. Pensando nisso temos uma recomendação da W3C chamada WAI-ARIA *(WAI - Web Acessibility Initiative, ARIA - Acessible Rich Internet Applications)*.
 
 ### Atributos aria-* e Roles
 
-Os atributos `aria-*` são responsáveis por extender a semântica de elementos HTML. Dessa forma, leitores de tela podem compreender melhor a interação de uma interface. 
+Os atributos `aria-*` são responsáveis por extender a semântica de elementos HTML. Dessa forma, leitores de tela podem compreender melhor a interação de uma interface.
 
-Existem [inúmeros tipos de atributos](http://www.w3.org/TR/wai-aria/states_and_properties) para representação de estados e propriedades. 
+Existem [inúmeros tipos de atributos](http://www.w3.org/TR/wai-aria/states_and_properties) para representação de estados e propriedades.
 
 E na prática, como fica? Vamos ver o exemplo de uma barra de progresso, que apesar de ser escrita uma tag `<div>`, que não possui valor semântico, é acessível:
 

@@ -30,14 +30,14 @@ font-weight: bold;
  * Agora sim, melhorou!
  */
 table.hl {
-  margin: 2em 0; 
+  margin: 2em 0;
 }
 
 table.hl td.ln {
   text-align: right;
 }
 
-li { 
+li {
   font-family: serif;
   font-weight: bold;
   font-size: 1.2em;
@@ -48,7 +48,7 @@ Agora pare e pense. Já pensou ter um arquivo de CSS com 30, 40 ou 50 mil linhas
 
 Enfim.
 
-Existem outras dezenas de problemas com essa linguage. Exageiros a parte, podemos perceber que temos um longo caminho para frente.
+Existem outras dezenas de problemas com essa linguagem. Exageiros a parte, podemos perceber que temos um longo caminho pela frente.
 
 ## Regras básicas
 
@@ -89,13 +89,13 @@ Esse será o tipo que você mais usará no desenvolvimento de folhas de estilo. 
 
 **ID selector**
 
-O seletor de ID funciona de forma parecida com o class selector. É através de um atributo `id` em uma tag HTML que podemos criá-lo. Você deve estar se perguntando: *qual a diferença de `id` para `class`?* 
+O seletor de ID funciona de forma parecida com o class selector. É através de um atributo `id` em uma tag HTML que podemos criá-lo. Você deve estar se perguntando: *qual a diferença de `id` para `class`?*
 
 A diferença entre `id` e `class` é que o primeiro é menos flexível e mais específico. Ou seja, na dúvida, (quase) sempre vá de `class`!
 
-**Atribute selector**
+**Attribute selector**
 
-Existem inúmeros tipos de atributes selectors. Eles são referentes a todos os elementos que podem ter um atributo e até um valor. Por exemplo, se quisermos adicionar estilo aos links que abrem em uma nova janela, podemos fazer o seguinte:
+Existem inúmeros tipos de attributes selectors. Eles são referentes a todos os elementos que podem ter um atributo e até um valor. Por exemplo, se quisermos adicionar estilo aos links que abrem em uma nova janela, podemos fazer o seguinte:
 
 ```css
 a[target="_blank"] {
@@ -105,7 +105,7 @@ a[target="_blank"] {
 
 **Pseudo-class selector**
 
-Geralmente usamos pseudo-class selectors para referenciar o estado ou posição de um elemento em uma coleção. Sem dúvidas, os mais usados são `:focus`, `:hover`, `:checked`, `:first-child` e `:last-child`. 
+Geralmente usamos pseudo-class selectors para referenciar o estado ou posição de um elemento em uma coleção. Sem dúvidas, os mais usados são `:focus`, `:hover`, `:checked`, `:first-child` e `:last-child`.
 
 Usá-los é muito simples:
 
@@ -166,7 +166,7 @@ Funciona como um seletor global, ou seja, aplica a regra recebida por ele para t
 
 Se você é programador, podemos fazer uma analogia simples. Pense que os seletores são variáveis, propriedades são seus atributos e esses possuem valores. Certo?
 
-Cada seletor pode possui no mínimo uma propriedade e seu respectivo valor. Aqui iremos dividir as propriedades em três seções, posicionamento, box-model e fontes.
+Cada seletor possui no mínimo uma propriedade e seu respectivo valor. Aqui iremos dividir as propriedades em três seções, posicionamento, box-model e fontes.
 
 #### Posicionamento
 
@@ -199,7 +199,7 @@ Não vamos explicar aqui o que cada uma dessas propriedades faz. Se você entend
 Exitem poucas propriedades para lidarmos com fontes na web. As principais são:
 
 - `font-weight`
-- `font-style`, 
+- `font-style`,
 - `font-family`
 - `font-size`
 - `line-height`
@@ -210,7 +210,7 @@ Respectivamente, as propriedades da lista acima definem peso, estilo, família, 
 
 Em poucas palavras, **CSS3 revolucionou** o desenvolvimento de interfaces web, principalmente tratando-se de performance e produtividade.
 
-O CSS3 permite que o desenvolvedor use cada vez menos ferramentas de design para exportar imagens que serão usadas em um documento. Sombras, gradientes, diferentes tipos de bordas e fontes hoje funcionam de forma nativa dos browser, sem precisarmos de imagens. Com isso, menos requisições, menos assets, logo, mais performance.
+O CSS3 permite que o desenvolvedor use cada vez menos ferramentas de design para exportar imagens que serão usadas em um documento. Sombras, gradientes, diferentes tipos de bordas e fontes hoje funcionam de forma nativa nos browsers, sem precisarmos de imagens. Com isso, menos requisições, menos assets, logo, mais performance.
 
 Para ver mais sobre as novas propriedades do CSS, [acesse o MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3).
 
@@ -297,9 +297,9 @@ Com esse objetivo, surgiram alguns paradigmas muito interessantes. Os principais
 
 ### OOCSS
 
-Criado pela [Nicole Sullivan](http://www.stubbornella.org), OOCSS significa *Object Oriented CSS*. 
+Criado pela [Nicole Sullivan](http://www.stubbornella.org), OOCSS significa *Object Oriented CSS*.
 
-Esse paradigma preza que as classes devam receber nomes baseado em seu padrão visiual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como `background`, `color`. Devemos externar o padrão de estilo para outras classes. Por exemplo:
+Esse paradigma preza que as classes devam receber nomes baseados em seu padrão visual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como `background`, `color`. Devemos externar o padrão de estilo para outras classes. Por exemplo:
 
 ```css
 alert {
@@ -313,7 +313,7 @@ alert-danger {
 
 ### SMACSS
 
-SMACSS, *Scaleble and Modular Architeture for CSS* foi criado por John Snook para resolver problemas de arquitetura do app de e-mail do Yahoo. Ele é baseado em cinco grandes categorias: *base*, *layout*, *module*, *state* e o opcional *theme*.
+SMACSS, *Scalable and Modular Architeture for CSS* foi criado por John Snook para resolver problemas de arquitetura do app de e-mail do Yahoo. Ele é baseado em cinco grandes categorias: *base*, *layout*, *module*, *state* e o opcional *theme*.
 
 As folhas de estilo do *base* devem receber apenas regras atreladas a seletores globais, isso é: `body`, `p`, `a`, etc.
 
@@ -331,7 +331,7 @@ BEM, *Block, Element, Modifier*, foi criado por desenvolvedores da empresa [Yand
 
 *block*, segundo o BEM, é o nível mais alto de um componente. Por exemplo, `header` e `footer`.
 
-*element* é um filho de um *block* que possui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `.menu`, vamos ter seu filho que é `menu__i.tem`.
+*element* é um filho de um *block* que possui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `.menu`, vamos ter seu filho que é `.menu__item`.
 
 *state* também usa `_` para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos `.menu__item`, teremos `.menu__item_active`.
 

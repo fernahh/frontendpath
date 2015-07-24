@@ -4,7 +4,7 @@ title: O JavaScript
 
 ## O JavaScript não tem limites!
 
-Sem sobra de dúvidas JavaScript é uma das linguagens que mais foi odiada por desenvolvedores web. Tipagem fraca, orientação objetos com funcionamento totalmente diferente de linguagens "tradicionais", e inúmeras pegadinhas frustaram desenvolvedores por muito tempo. Mas esse cenário vem mudando.
+Sem sombra de dúvidas o JavaScript é uma das linguagens que mais foi odiada por desenvolvedores web. Tipagem fraca, orientação objetos com funcionamento totalmente diferente de linguagens "tradicionais" e inúmeras pegadinhas frustaram desenvolvedores por muito tempo. Mas esse cenário vem mudando.
 
 Hoje em dia, dificilmente uma ferramenta de sucesso terá uma boa experiência sem o uso de JavaScript. Porém, para isso precisamos conhecer suas principais características.
 
@@ -103,7 +103,7 @@ Temos vários operadores para trabalhar em JavaScript:
 - Unary operators
 - Relational operator
 
-Não vamos explicar detalhadamente todas suas características. Vamos focar aqui nos principais casos de uso. Você pode ler mais a fundo sobre esse assunto no [Mozzila Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+Não vamos explicar detalhadamente todas suas características. Vamos focar aqui nos principais casos de uso. Você pode ler mais a fundo sobre esse assunto no [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
 
 **Comparison operators**
 
@@ -144,10 +144,10 @@ Se tivermos que testar muitos casos, podemos usar o `switch`:
 
 ```javascript
 switch (condicao) {
-  case case_1: 
+  case case_1:
     return 1
     break;
-  case case_2: 
+  case case_2:
     return 2
     break;
   default:
@@ -160,9 +160,9 @@ switch (condicao) {
 
 Promises é uma nova feature que faz parte do ECMAScript 6. Ela nada mais é um objeto que representa uma operação que não foi concluída, mas mesmo assim espera-se um fim. Você usuará muito essa feature para operações assíncronas.
 
-Uma Promise tem seus estados representados em *pending*, *fulfilled* e *rejected*. 
+Uma Promise tem seus estados representados em *pending*, *fulfilled* e *rejected*.
 
-*peding* é o estado inicial de uma Promise, mas também diz que ela não foi completada ou que foi rejeitada.
+*pending* é o estado inicial de uma Promise, mas também diz que ela ainda não foi completada ou rejeitada.
 *fulfilled* nos diz que a operação está completa.
 *rejected*, como o nome sugere, nos diz que a operação falhou.
 
@@ -243,7 +243,7 @@ arr.foo = "bar";
 
 for (let i in arr) {
    console.log(i); // "0", "1", "2", "foo"
-}    
+}
 
 for (let i of arr) {
    console.log(i); // "3", "5", "7"
@@ -252,7 +252,7 @@ for (let i of arr) {
 
 ## Funções
 
-Funções sem dúvidas fazem parte da principal funcionalidade do JavaScript. Sem dúvidas, quando pensamos na linguagem logo nos vem a cabeça a palavra `function()`. 
+Funções sem dúvidas fazem parte da principal funcionalidade do JavaScript. Sem dúvidas, quando pensamos na linguagem logo nos vem a cabeça a palavra `function()`.
 
 Eis aqui um ponto chave para entendimento de JavaScript. Preste bastante atenção e invista seu tempo para aprender sobre funções.
 
@@ -299,7 +299,7 @@ multiplicacao(); // 200
 
 Para lidar com escopo, podemos trabalhar com **closures**. Se você trabalha com JavaScript, precisa conhecer closures.
 
-Closure é uma forma de manter um código privado. Em uma função dessa, closure tem acesso às variáveis fora de seu escopo, mas o escopo de fora não possui acesso a essas variáveis.
+Closures são uma forma de manter um código privado. Em uma função dessa, a closure tem acesso às variáveis fora de seu escopo, mesmo após a função externa tendo terminado a sua execução, mas o escopo de fora não possui acesso a essas variáveis.
 
 ```javascript
 var counter = (function () {
@@ -428,7 +428,7 @@ var cao = {
 
 O DOM, *Document Object Model* é uma interface de programação para documentos HTML. É através desse recurso que podemos manipular interfaces com JavaScript.
 
-Como o DOM representa a árvore do HTML, podemos manipular as tags que estão lá. Por exemplo, digamos que eu quero que toda as tags com o `id` "internacional" tenha a cor vermelha:
+Como o DOM representa a árvore do HTML, podemos manipular as tags que estão lá. Por exemplo, digamos que eu quero que toda as tags com o `id` "internacional" tenham a cor vermelha:
 
 ```javascript
 document.getElementById("internacional").style.color = "red";
@@ -436,7 +436,7 @@ document.getElementById("internacional").style.color = "red";
 
 Não é fácil manipular o DOM. Sempre envolve muito custo. Porém, é necessário. Pensando nisso, surgiram várias bibliotecas para manipulá-lo. As mais populares são [jQuery](http://jquery.com/) e [YUI](http://yuilibrary.com/). Com uma pequena busca no Google e você já terá inúmeras alternativas.
 
-## Modularização 
+## Modularização
 
 Se você é desenvolvedor, provavelmente já ouviu falar em DRY: **D**on't **R**epeat **Y**ourself.
 
@@ -492,7 +492,7 @@ Usar módulos é muito melhorar do que desenvolver sem nenhum design pattern. Po
 
 ```javascript
 define(
-  ['dependecy1', 'dependecy2', 'dependecy3'], 
+  ['dependecy1', 'dependecy2', 'dependecy3'],
   function(dependecy1, dependecy2, dependecy3) {
     //...
   }
@@ -503,7 +503,7 @@ Também podemos expressar quando um módulo requisita uma dependencia:
 
 ```javascript
 require(
-  ['dependecy1', 'dependecy2', 'dependecy3'], 
+  ['dependecy1', 'dependecy2', 'dependecy3'],
   function(dependecy1, dependecy2, dependecy3) {
     //...
   }
@@ -516,7 +516,7 @@ Você deve estar se perguntando de onde vem as funções `define()` e `require()
 
 Esse padrão de módulos ficou ~famoso~ porque foi adotado pelo [Node.js](https://nodejs.org/). No browser podemos ajudar ele com o [Browserify](http://browserify.org/).
 
-A sintaxe dele é mais simples e mais próxima da sintaxe de módulos do futuro do JavaScript. Temos três keywords: `require`, `import` e `export`. 
+A sintaxe dele é mais simples e mais próxima da sintaxe de módulos do futuro do JavaScript. Temos três keywords: `require`, `import` e `export`.
 
 ```javascript
 var lbx = require('libx');
@@ -540,7 +540,7 @@ Exemplo:
 function multiplicacao(a, b) {
     return a * b;
 }
- 
+
 export { multiplicacao }
 ```
 
@@ -560,10 +560,10 @@ JavaScript é incrível e com ele temos muito controle da experiência de nosso 
 
 Minhas dicas de bolso seriam:
 
-- Sempre tenha em mente onde você quer chegar com sua aplicação. 
+- Sempre tenha em mente onde você quer chegar com sua aplicação.
 - Opte pelas boas práticas e uso o mínimo necessário.
 - Entregue o conteúdo independente se o JavaScript estiver disposível ou não. A web funciona sem JavaScript.
-- Conheça o [suporte](http://www.caniuse.com/) de API's e novas features JavaScript.
+- Conheça o [suporte](http://www.caniuse.com/) de APIs e novas features JavaScript.
 
 
 
