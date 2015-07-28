@@ -6,12 +6,17 @@
   @include respond-to(em($bp-large)) {
     float: left;
 
-    width: 35%;
+    width: 40%;
     height: 100%;
     padding-left: 100px;
   }
 
+  @include respond-to(em($bp-largeB)) {
+    width: 38%;
+  }
+
   @include respond-to(em($bp-largeC)) {
+    width: 35%;
     padding-left: 0;
   }
 }
@@ -69,9 +74,17 @@
   @include respond-to(em($bp-large)) {
     float: left;
 
-    width: 65%;
+    width: 60%;
     padding-left: 0;
     padding: em($base-whitespace);
+  }
+
+  @include respond-to(em($bp-largeC)) {
+    width: 62%;
+  }
+
+  @include respond-to(em($bp-largeC)) {
+    width: 65%;
   }
 }
 
