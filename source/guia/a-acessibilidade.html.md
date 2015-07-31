@@ -30,7 +30,7 @@ A primeira versão das **Diretrizes de Acessibilidade para Conteúdo na Web** fo
 
 Para ser sincero, acho que a linguagem utilizada pela W3C possa ser algo que crie uma barreira entre a documentação e os desenvolvedores. Entendo que a formalidade é importante, mas não deve ser mais importe que a adesão de desenvolvedores às boas práticas de acessibilidade.
 
-Os **princípios** têm a finalidade de prospectar requisitos para uma página ou aplicação web ser acessível. Caminhando ao lado deles, existem as **diretrizes**, que nada mais são que objetivos básicos para se desenvolver conteúdo acessível na web. Para que o essas diretrizes sejam atingidas, existem **critérios de sucesso** e **técnicas de tipo suficiente e aconselhadas**.
+Os **princípios** têm a finalidade de prospectar requisitos para uma página ou aplicação web ser acessível. Caminhando ao lado deles, existem as **diretrizes**, que nada mais são que objetivos básicos para se desenvolver conteúdo acessível na web. Para que essas diretrizes sejam atingidas, existem **critérios de sucesso** e **técnicas de tipo suficiente e aconselhadas**.
 
 Vamos ver aqui os princípios estabelecidos pela W3C.
 
