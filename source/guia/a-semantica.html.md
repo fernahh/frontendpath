@@ -116,7 +116,7 @@ Usamos a tag `<a>` para demarcar um *link*. Ela possui o atributo obrigatório `
 Representa uma abreviação. Uma boa prática é usar o atributo `title`, que receberá o significado da abreviação.
 
 ##### `<blockquote>`
-Esse elemento pode ser usado representação uma citação. Se essa citação tiver um endereço na web, pode-se referenciar através da tag `<cite>`. Exemplo:
+Esse elemento pode ser usado para a representação de uma citação. Se essa citação tiver um endereço na web, pode-se referenciar através da tag `<cite>`. Exemplo:
 
 ```html
 <blockquote>
