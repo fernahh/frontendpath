@@ -454,7 +454,7 @@ Provavelmente você já se deparou o seguinte código diversas vezes:
 })();
 ```
 
-Trata-se de uma função auto-executável. O código que estará dentro da função está encapsulado. Isso acontece porque englobando a função com parênteses, estamos executando ela antes mesmo de ser atribuída a uma variável ou o escopo global.
+Trata-se de uma função auto-executável, conhecida como [IIFE](http://goo.gl/Aw3Krx) *Immediately-invoked function expression*. O código que estará dentro da função está encapsulado. Isso acontece porque englobando a função com parênteses, estamos executando ela antes mesmo de ser atribuída a uma variável ou o escopo global.
 
 Usando uma função auto-executável podemos criar um encapsulamento para manipular atributos de um objeto. Por exemplo:
 
