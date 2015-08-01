@@ -1,0 +1,75 @@
+<section id="home">
+  <header class="home-header">
+    <h1>
+      <span class="home-brandIcon"></span>
+      <span class="home-brandA">Front-end</span><br>
+      <span class="home-brandB">Path.com</span>
+    </h1>
+    <h2>Um caminho correto para o desenvolvimento front-end.</h2>
+  </header>
+  <hr class="home-separator" />
+</section>
+
+<section id="home-introduction">
+  <article>
+    <div class="container">
+      <div class="column-a">
+        <p>A <i>WorldWideWeb</i> foi um projeto que buscou conectar usuários para que eles pudessem trocar conteúdo de hipertexto. Felizmente o projeto tomou proporções gigantescas em relação ao seu objetivo inicial.</p>
+        <p>Sem dúvidas hoje a web é uma das principais plataformas de desenvolvimento.</p>
+      </div>
+
+      <div class="column-b">
+        <p>No servidor temos inúmeras linguagens para trabalhar, como <i>Java, Ruby, Python, etc</i>. Porém, apenas três linguagens interagem com os navegadores:  <strong><abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> e JavaScript</strong>.</p>
+
+        <p>Resumindo: precisamos aprender bem essas três linguagens para criar aplicações escaláveis, performáticas e que atendam um maior número de usuários.</p>
+      </div>
+    </div>
+
+    <div id="home-question">
+      <p>Por onde começo? Não é só usar frameworks, bibliotecas ou templates?</p>
+    </div>
+
+    <div class="container">
+      <p><strong class="strong--highlighted">Não.</strong></p>
+
+      <div class="column-a">
+        <p>Na web há diversas páginas com o lado do cliente possuindo um grande número de problemas, com otimizações a serem feitas e pouco performáticas.</p>
+
+        <blockquote cite="https://www.stevesouders.com">
+          <p>80-90% do tempo de carregamento de uma página é gasto no front-end. (Steve Souders, 2007).</p>
+        </blockquote>
+
+        <p>Todo mundo sabe disso. Mas como vamos resolver? São muitos caminhos a serem seguidos.</p>
+      </div>
+
+      <div class="column-b">
+        <p>Talvez a saída seja irmos na raíz do problema e ensinar padrões ao invés de irmos diretamente para <i>frameworks</i> ou bibliotecas.</p>
+        <p>Hoje temos um problema com excesso de informação. O grande número de informações dificulta o início do aprendizado, muitas vezes deixando desenvolvedores sem saber <strong>por onde começar</strong>. É isso que vamos mostrar aqui, um caminho correto para um bom desenvolvimento front-end.</p>
+      </div>
+    </div>
+
+    <%= link_to "Comece por aqui &#8594;", "/guia/a-semantica.html", class: "button--html5 button--large", title: "Link para o primeiro caminho do guia." %>
+  </article>
+</section>
+
+<footer id="home-footer">
+  <p>Criado por <%= link_to "@fernahh", "http://blog.fernahh.com.br",
+    target: "_blank", title: "Link para o site do autor, Luiz Fernando Rodrigues." %>.</p>
+
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.frontendpath.com" data-text="Front-end Path | Um caminho correto para o desenvolvimento front-end." data-hashtags="frontendpath">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <div class="fb-like" style="overflow: hidden; position: relative; top: auto; bottom: 0px; left: 0px; margin: 0 10px;" data-href="http://www.frontendpath.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
+  <iframe src="https://ghbtns.com/github-btn.html?user=fernahh&repo=frontendpath&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+</footer>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

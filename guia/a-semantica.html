@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Front-end Path | A Semântica</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,700,400italic|Share:400,700|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="guia guia_a-semantica">
+    <main id="main">
+        <nav class="guide-navigation">
+  <ul class="guide-navigation-list">
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link introduction-link" title="Introdução à Web" href="/">Introdução à web</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link semantics-link" title="A Semântica" href="/guia/a-semantica.html">A semântica</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link accessibility-link" title="A acessibilidade" href="/guia/a-acessibilidade.html">A acessibilidade</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link css-link" title="O CSS" href="/guia/o-css.html">O CSS</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link js-link" title="O JavaScript" href="/guia/o-javascript.html">O JavaScript</a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="l-container">
+    <aside class="guide-aside">
+      <ul class="guide-topics-list">
+        <h3>Capítulos:</h3>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#sim,-a-semântica-é-importante!">Sim, a semântica é importante!</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#elementos-básicos">Elementos básicos</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#melhorando-a-semântica-com-microdata">Melhorando a semântica com microdata</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#a-melhor-ferramenta-para-html-é-você!">A melhor ferramenta para HTML é você!</a>
+          </li>
+      </ul>
+    </aside>
+    <main class="guide-article" id="guide-article">
+      <article id="guide-content">
+        <h1 class="guide-article-title">A Semântica</h1>
+        <h2 id="sim,-a-semântica-é-importante!">Sim, a semântica é importante!</h2>
+
+<p>Semântica é uma das principais vantagens da plataforma web em relação às outras. É através da semântica que terceiros, mecanismos de busca e ferramentas de leitura de telas podem fazer uso do conteúdo disponibilizado em páginas web.</p>
+
+<p>Alguns desenvolvedores não dão importância para semântica porque o resultado final renderizado usando uma tag <code>&lt;header&gt;</code> ou <code>&lt;div&gt;</code> é o mesmo. Porém um bom trabalho nessa parte pode render bons resultados para a aplicação.</p>
+
+<p>Ter um site escrito de forma semântica também é um passo importante para que seu site seja encontrado pelos principais buscadores, como Google e Bing.</p>
+
+<p>Vamos aprender aqui os principais elementos do HTML. Usando uma marcação correta, teremos um site mais acessível e competitivo.</p>
+
+<p>Ah, lembre-se: <strong>sem CSS e JavaScript a web existe, sem HTML não.</strong></p>
+
+<h2 id="elementos-básicos">Elementos básicos</h2>
+
+<p>Uma página é formada de elementos básicos necessários para seu funcionamento. Exemplo:</p>
+<pre class="highlight html"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"pt-BR"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Documento<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Olá, mundo!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+
+<h3 id="doctype">DOCTYPE</h3>
+
+<p>O <em>Document Type Defination</em> (DTD ou Doctype) é quem informa ao navegador a versão do HTML que está sendo utilizada, ele vem antes de qualquer outro elemento do documento, até mesmo antes do <code>&lt;html&gt;</code>. Antes da especificação HTML 5 existiram várias notações para o <code>&lt;doctype&gt;</code>. Por exemplo:</p>
+<pre class="highlight html"><code><span class="cp">&lt;!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span>
+</code></pre>
+
+<p>Nesse tempo a notação era muito importante porque só assim os navegadores conseguiram resolver problemas de compatibilidade de diferentes versões do HTML.</p>
+
+<p>Na quinta versão, o <code>&lt;doctype&gt;</code> ficou menor e melhor.</p>
+<pre class="highlight html"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</code></pre>
+
+<h4 id="o-elemento-&lt;html&gt;">O elemento <code>&lt;html&gt;</code></h4>
+
+<p>Uma analogia constante em relação ao HTML é que ele é composto por uma série de elementos estruturado como uma árvore. Levando isso em conta, o elemento <code>&lt;html&gt;</code> é a raiz de nossa árvore. Todos os elementos estarão dentro dele.</p>
+
+<p>O principal atributo desse elemento é o <code>lang</code>, que especifica a língua da página HTML.</p>
+<pre class="highlight html"><code><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"pt-br"</span><span class="nt">&gt;</span>
+</code></pre>
+
+<p>Especificar um valor para o atributo <code>lang</code> é muito importante. É através deles que leitores de telas definem em qual idioma que irão ler o conteúdo para o usuário.</p>
+
+<h3 id="o-elemento-&lt;head&gt;">O elemento <code>&lt;head&gt;</code></h3>
+
+<p>O elemento <code>&lt;head&gt;</code> não mudou nada desde sua primeira versão. Ele contém uma coleção de informações (metadados) sobre a página HTML. Dentro dele é que especificamos manifestos e arquivos que mudaram a forma com que a página será renderizada.</p>
+
+<h4 id="metadados">Metadados</h4>
+
+<p>O elemento <code>&lt;meta&gt;</code> tem a missão de representar dados que não são expressíveis com outros elementos, como <code>&lt;link&gt;</code> e <code>&lt;title&gt;</code>.</p>
+
+<p>Existem inúmeros atributos disponíveis para <code>&lt;meta&gt;</code> , entre eles o <code>charset</code> é indispensável, pois é ele quem recebe a definição da codificação de caracteres <em>(character encoding)</em> utilizada pela página.</p>
+<pre class="highlight html"><code><span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+</code></pre>
+
+<h4 id="elemento-&lt;link&gt;">Elemento <code>&lt;link&gt;</code></h4>
+
+<p>O elemento <code>&lt;link&gt;</code> (não confunda com o <code>&lt;a&gt;</code>!) pode ser usado para referenciar outro recurso. 
+Usando o atributo <code>rel</code>, temos <em>link relations</em>, que é uma maneira de explicar a referência que o mesmo contém. Por exemplo, se o atributo <code>rel</code> conter o valor <code>stylesheet</code>, significa que o <em>link</em> possui uma referência para uma folha de estilo. </p>
+<pre class="highlight html"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+</code></pre>
+
+<p>O atributo <code>type</code> indica, obviamente, o tipo de arquivo referenciado, e <code>href</code> referencia o caminho do <em>link</em>. No HTML 5 o atributo <code>type</code> é opcional.</p>
+
+<h4 id="scripts">Scripts</h4>
+
+<p>O elemento <code>&lt;script&gt;</code> funciona para referenciar e permitir escrita de códigos <em>JavaScript</em> no documento HTML. Ele pode aparecer dentro do <code>&lt;head&gt;</code> ou do <code>&lt;body&gt;</code>.</p>
+<pre class="highlight html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="c1">// código javascript...</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+
+<p>Uma regra básica para decidir onde carregar uma <em>tag script</em>: se influi na renderização do documento (como <em>shiv</em> do HTML 5), carregue no <code>&lt;head&gt;</code>, senão, carregue no <code>&lt;body&gt;</code>.</p>
+
+<h3 id="o-elemento-&lt;body&gt;">O elemento <code>&lt;body&gt;</code></h3>
+
+<p>O elemento <code>&lt;body&gt;</code> possui o conteúdo do documento HTML. Nele é que estão os elementos que são diretamente renderizados ao usuário.</p>
+<pre class="highlight html"><code><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Hello, World!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre>
+
+<p>É sempre importante todo e qualquer conteúdo dentro do <code>&lt;body&gt;</code> sempre estar dentro de outra tag, ou seja, um conteúdo nunca deve estar diretamente escrito no <code>&lt;body&gt;</code>,</p>
+
+<h4 id="principais-elementos">Principais elementos</h4>
+
+<h5 id="&lt;a&gt;"><code>&lt;a&gt;</code></h5>
+
+<p>Usamos a tag <code>&lt;a&gt;</code> para demarcar um <em>link</em>. Ela possui o atributo obrigatório <code>href</code>, que recebe o endereço que você deseja referenciar.</p>
+
+<h5 id="&lt;abbr&gt;"><code>&lt;abbr&gt;</code></h5>
+
+<p>Representa uma abreviação. Uma boa prática é usar o atributo <code>title</code>, que receberá o significado da abreviação.</p>
+
+<h5 id="&lt;blockquote&gt;"><code>&lt;blockquote&gt;</code></h5>
+
+<p>Esse elemento pode ser usado representação uma citação. Se essa citação tiver um endereço na web, pode-se referenciar através da tag <code>&lt;cite&gt;</code>. Exemplo:</p>
+<pre class="highlight html"><code><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Nós amamos a web!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>- <span class="nt">&lt;cite&gt;</span>Luiz Fernando Rodrigues<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre>
+
+<h5 id="&lt;code&gt;"><code>&lt;code&gt;</code></h5>
+
+<p>A tag <code>&lt;code&gt;</code> serve para representarmos alguma informação que pode ser interpretada por um computador. Se você usar o inspector de código, pode ver que cada vez que citamos alguma tag ou snippet, usamos esse elemento.</p>
+
+<h5 id="&lt;div&gt;-e-&lt;span&gt;"><code>&lt;div&gt;</code> e <code>&lt;span&gt;</code></h5>
+
+<p>Tentamos representar a maioria dos elementos semânticamente, mas obviamente não é possível representar tudo. Para isso, temos duas tags estruturais: <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code>. Semânticamente elas não representam nada. Mesmo assim, a tag <code>&lt;div&gt;</code> é um dos elementos que mais usamos no desenvolvimento de uma aplicação.</p>
+
+<h5 id="&lt;em&gt;,-&lt;small&gt;-e-&lt;strong&gt;"><code>&lt;em&gt;</code>, <code>&lt;small&gt;</code> e <code>&lt;strong&gt;</code></h5>
+
+<p>Podemos expressar diferentes ênfases em um texto usando essas tags. Com a tag <code>&lt;em&gt;</code> indicamos um conteúdo acentuado. Com <code>&lt;strong&gt;</code> deixamos o texto mais &quot;forte&quot;. Já com a tag <code>&lt;small&gt;</code> podemos diminuir a ênfase para um conteúdo não tão importante em um texto.</p>
+
+<p>É importante lembrar que todas essas tags geralmente os navegadores adicionam um estilo diferente.</p>
+
+<h5 id="&lt;h1&gt;,-&lt;h2&gt;,-&lt;h3&gt;,-&lt;h4&gt;,-&lt;h5&gt;-e-&lt;h6&gt;"><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code> e <code>&lt;h6&gt;</code></h5>
+
+<p>As tags <em>headings</em> são usadas para representar os títulos de uma página. O <code>&lt;h1&gt;</code> representa o maior valor, sendo <code>&lt;h6&gt;</code> o título de menor importância. Em um exemplo prático, o título de uma página é seria escrito com <code>&lt;h1&gt;</code> e um subtítulo com <code>&lt;h2&gt;</code>.</p>
+
+<h5 id="&lt;img&gt;"><code>&lt;img&gt;</code></h5>
+
+<p>Para inserir imagem em um documento HTML, usamos a tag <code>&lt;img&gt;</code>. Porém, ela necessita de dois atributos: <code>src</code> e <code>alt</code>. O primeiro é quem recebe o endereço para a imagem, o segundo recebe uma frase que será apresentada caso a imagem não seja carregada. Um exemplo:</p>
+<pre class="highlight html"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/logo.jpg"</span> <span class="na">alt=</span><span class="s">"Logo da empresa"</span><span class="nt">&gt;</span>
+</code></pre>
+
+<h5 id="&lt;ol&gt;,-&lt;ul&gt;,-&lt;li&gt;,-&lt;dl&gt;,-&lt;dt&gt;,-&lt;dd&gt;"><code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></h5>
+
+<p>Possuímos três tipos de listas para trabalharmos. <code>&lt;ol&gt;</code> e <code>&lt;ul&gt;</code> possuem apenas uma diferença. A primeira representa uma lista ordenada, e a segunda não.</p>
+
+<p>Para representar um item de uma lista, usamos a tag <code>&lt;li&gt;</code>.</p>
+
+<p>Diferentemente das duas primeiras tags que mostramos, temos um tipo de lista para definir itens semânticamente. Podemos declarar repespectivamente termo e definição. Por exemplo:</p>
+<pre class="highlight html"><code><span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>Dog<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Palavra cachorro em inglês.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt&gt;</span>Cat<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Palavra gato em inglês.<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre>
+
+<h5 id="&lt;p&gt;"><code>&lt;p&gt;</code></h5>
+
+<p>A tag <code>&lt;p&gt;</code> representa um parágrafo qualquer dentro de uma página web. Sem dúvidas é a tag que mais usamos no desenvolvimento de um web site.</p>
+
+<h4 id="&lt;section&gt;"><code>&lt;section&gt;</code></h4>
+
+<p>Uma tag <code>&lt;section&gt;</code> pode ser usada para agrupar conteúdos e assim representar algo na web. Em um exemplo prática, essa tag pode agrupar em um site de notícia, as próprias notícias. Exemplo:</p>
+<pre class="highlight html"><code><span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"news-section"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"news"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"news"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre>
+
+<h4 id="&lt;nav&gt;"><code>&lt;nav&gt;</code></h4>
+
+<p>O <code>&lt;nav&gt;</code> é usado para representar a navegação principal de um documento. Ele pode agrupar links que irão referenciar páginas do mesmo site ou não.</p>
+
+<h4 id="&lt;article&gt;"><code>&lt;article&gt;</code></h4>
+
+<p>A tag <code>&lt;article&gt;</code> pode representar um conteúdo independente em um documento. Por exemplo, uma notícia em um portal de informação, um post em um blog ou até mesmo um comentário de usuário.</p>
+
+<h4 id="&lt;aside&gt;"><code>&lt;aside&gt;</code></h4>
+
+<p>O <code>&lt;aside&gt;</code> representa um conteúdo relacionado ao conteúdo principal da página, mas que pode ser mostrado independentemente do mesmo.</p>
+
+<h4 id="&lt;header&gt;"><code>&lt;header&gt;</code></h4>
+
+<p>Como diz seu nome, a tag <code>&lt;header&gt;</code> representa o cabeçalho de um documento. Ele receberá os títulos e subtítulos da página.</p>
+
+<h4 id="&lt;footer&gt;"><code>&lt;footer&gt;</code></h4>
+
+<p>O <code>&lt;footer&gt;</code> receberá um grupo de elementos que representará, geralmente, informações sobre a autoria do conteúdo de um documento.</p>
+
+<h2 id="melhorando-a-semântica-com-microdata">Melhorando a semântica com microdata</h2>
+
+<p>Já vimos que na última versão do HTML tivemos um grande esforço para melhorar a representação de dados na web. Além das tags, também temos o <em>microdata</em>. Eles funcionam como atributos em nosso documento, onde podemos expressar de melhorar forma o conteúdo para robos (sim, como o Google!).</p>
+
+<p>Para usar, o primeiro passo é pensarmos no escopo do conteúdo. Precisamos de uma tag para representá-lo, que terá o atributo <code>itemscope</code> e o seu tipo, representado pelo atributo <code>itemtype</code>. Se fossemos representar o álbum de um artista, nosso primeiro passo seria o seguinte:</p>
+<pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/MusicAlbum"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre>
+
+<p>Dentro de nosso escopo usaremos outras tags com os mesmos atributos. Resumindo:</p>
+
+<ul>
+<li><code>itemprop</code>: representa a propriedade de um elemento (nome, telefone, endereço, etc)</li>
+<li><code>itemtype</code>: recebe o valor de um microdata.</li>
+</ul>
+
+<p>Nosso exemplo de forma completa ficaria assim:</p>
+<pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/MusicAlbum"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>Mondo Bizarro<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">itemprop=</span><span class="s">"byArtist"</span><span class="nt">&gt;</span>Ramones<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">itemprop=</span><span class="s">"track"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ItemList"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"numberOfItems"</span> <span class="na">content=</span><span class="s">14</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">itemprop=</span><span class="s">"itemListElement itemscope itemtype="</span><span class="na">http:</span><span class="err">//</span><span class="na">schema</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">ListItem</span><span class="err">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"position"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">itemprop=</span><span class="s">"item"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/MusicRecording"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>Censorshit<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">itemprop=</span><span class="s">"itemListElement itemscope itemtype="</span><span class="na">http:</span><span class="err">//</span><span class="na">schema</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">ListItem</span><span class="err">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"position"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">itemprop=</span><span class="s">"item"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/MusicRecording"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>The Job That Ate My Brain<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+<p>Existem inúmeras representações, você pode encontrá-las no <a href="http://schema.org/">Schema.org</a>.</p>
+
+<h2 id="a-melhor-ferramenta-para-html-é-você!">A melhor ferramenta para HTML é você!</h2>
+
+<p>Hoje em dia com uma rápida busca na internet você encontra validadores, editores que ajudam a escrever HTML mais rápido (conheça o <a href="http://emmet.io/">Emmet</a>!), entre outros facilitadores. Mas o ponto principal que você precisa entender: <strong>não há como automatizar um bom trabalho</strong>.</p>
+
+<p>A semântica deve ser feita de humanos para máquinas. Precisamos fazer com que algoritmos entando nosso código. Dessa forma todo mundo ganha, incluindo seu produto, os buscadores, o mercado e a web.</p>
+
+<p>Tudo pronto. Vamos ser mais semânticos?</p>
+
+      </article>
+    </main>
+  </div>
+
+    </main>
+  </body>
+</html>

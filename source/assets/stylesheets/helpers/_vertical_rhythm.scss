@@ -1,0 +1,13 @@
+/*
+ * Vertical rhythm mixins, placeholders and functions
+ */
+
+// em
+@function em($target, $context: $base-font-size) {
+  @if $target == 0 {
+    @return 0;
+  }
+  @else {
+    @return #{$target / $context}em;
+  }
+}

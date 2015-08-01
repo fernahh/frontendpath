@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+  color: $base-main-color;
+  font: {
+    family: $base-main-font;
+    size: em($base-font-size);
+  };
+  line-height: em($base-line-height + 6px);
+
+  background: $base-secondary-color;
+}
+
+a {
+  color: $semantics-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .guia_a-semantica & { color: $html5-color; }
+  .guia_o-css & { color: $css3-color; }
+  .guia_a-acessibilidade & { color: $accessibility-color; }
+  .guia_o-javascript & { color: darken($js-color, 5%); }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  color: $blackC;
+}
+
+blockquote {
+  $size: 14px;
+
+  padding: 0 em($base-whitespace * 1.5, $size);
+
+  font-size: em($size);
+  font-style: italic;
+  line-height: em($base-line-height, $size);
+  border-left: 2px solid $grayB;
+}
+
+code, kbd, pre, samp {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+main {
+  height: 100%;
+}
+
+ul {
+  list-style-type: circle;
+}

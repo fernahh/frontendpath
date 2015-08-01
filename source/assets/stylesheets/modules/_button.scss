@@ -1,0 +1,52 @@
+.button {
+  $context: $base-font-size;
+
+  display: inline-block;
+  width: auto;
+  padding: {
+    left: em($base-whitespace, $context);
+    right: em($base-whitespace, $context);
+  }
+
+  font: {
+    family: $base-main-font;
+    size: em($context);
+  }
+  line-height: em($context * 2, $context);
+  text: {
+    decoration: none;
+    transform: none;
+  }
+
+  border: 0;
+  border-bottom: 3px solid;
+  @include border-radius($base-border-radius * 2);
+
+  @include transition(all 300ms ease 0ms);
+
+  @include attention() {
+    text-decoration: none;
+  }
+}
+
+.button--large {
+  $context: 26px;
+
+  font-size: em($context);
+  line-height: em($context * 2, $context);
+}
+
+.button--html5 {
+  @extend .button;
+
+  background: $html5-color;
+  border-color: darken($html5-color, 10%);
+  color: $white;
+
+  @include attention() {
+    $shade: darken($html5-color, 5%);
+
+    background: $shade;
+    color: $white;
+  }
+}

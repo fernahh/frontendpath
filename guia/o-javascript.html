@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Front-end Path | O JavaScript</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,700,400italic|Share:400,700|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="guia guia_o-javascript">
+    <main id="main">
+        <nav class="guide-navigation">
+  <ul class="guide-navigation-list">
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link introduction-link" title="Introdução à Web" href="/">Introdução à web</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link semantics-link" title="A Semântica" href="/guia/a-semantica.html">A semântica</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link accessibility-link" title="A acessibilidade" href="/guia/a-acessibilidade.html">A acessibilidade</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link css-link" title="O CSS" href="/guia/o-css.html">O CSS</a>
+    </li>
+    <li class="guide-navigation-item">
+      <a class="guide-navigation-link js-link" title="O JavaScript" href="/guia/o-javascript.html">O JavaScript</a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="l-container">
+    <aside class="guide-aside">
+      <ul class="guide-topics-list">
+        <h3>Capítulos:</h3>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#o-javascript-não-tem-limites!">O JavaScript não tem limites!</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#variáveis,-tipos-e-valores">Variáveis, tipos e valores</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#operadores">Operadores</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#estruturas-de-controle">Estruturas de controle</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#laços-e-iteradores">Laços e iteradores</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#funções">Funções</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#objetos">Objetos</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#dom">DOM</a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#modularização-">Modularização </a>
+          </li>
+          <li class="guide-topics-item">
+            <a class="guide-topics-link" data-scroll="true" href="#tenha-cuidado-com-o-javascript">Tenha cuidado com o JavaScript</a>
+          </li>
+      </ul>
+    </aside>
+    <main class="guide-article" id="guide-article">
+      <article id="guide-content">
+        <h1 class="guide-article-title">O JavaScript</h1>
+        <h2 id="o-javascript-não-tem-limites!">O JavaScript não tem limites!</h2>
+
+<p>Sem sobra de dúvidas JavaScript é uma das linguagens que mais foi odiada por desenvolvedores web. Tipagem fraca, orientação objetos com funcionamento totalmente diferente de linguagens &quot;tradicionais&quot;, e inúmeras pegadinhas frustaram desenvolvedores por muito tempo. Mas esse cenário vem mudando.</p>
+
+<p>Hoje em dia, dificilmente uma ferramenta de sucesso terá uma boa experiência sem o uso de JavaScript. Porém, para isso precisamos conhecer suas principais características.</p>
+
+<p>Bora lá?</p>
+
+<h2 id="variáveis,-tipos-e-valores">Variáveis, tipos e valores</h2>
+
+<p>Podemos declarar variáveis de duas formas: com ou sem palavra reservada <code>var</code>.</p>
+<pre class="highlight javascript"><code>
+<span class="c1">// O código abaixo terá o mesmo</span>
+<span class="c1">// resultado no browser.</span>
+
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// "0"</span>
+
+<span class="nx">foo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// "0"</span>
+</code></pre>
+
+<p>Você deve estar se perguntando qual a diferença das duas declarações. Quando você declara uma variável com <code>var</code>, ela será reduzida ao menor escopo possível. Caso você declare sem, a variável fará parte do escopo global, no browser, será do escopo do objeto <code>window</code>, o que é péssimo.</p>
+
+<p>Com a última versão do ECMAScript, já temos esse problema resolvido. Podemos declarar uma variável utilizando <code>let</code>, o que fará com que ela tenha escopo de bloco.</p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 2</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 2</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 3</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 2</span>
+</code></pre>
+
+<p>Além de <code>let</code>, na nova versão do JavaScript também ganhamos a palavra <code>const</code>. Com ela, podemos declarar uma variável <em>read-only</em>, ou seja, depois atribuir um valor a ela, não poderá ser mais alterado.</p>
+<pre class="highlight javascript"><code><span class="kr">const</span> <span class="nx">foobar</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">foobar</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foobar</span><span class="p">);</span> <span class="c1">// 1</span>
+</code></pre>
+
+<p>Como já dito, JavaScript é uma linguagem de tipagem fraca. Sendo assim, podemos definir o tipo de uma variável na atribuição de seu valor. Temos os seguintes tipos para trabalhar: <strong>Int</strong>, <strong>Float</strong>, <strong>String</strong>, <strong>Booleanos</strong>, <strong>Arrays</strong> e <strong>Objetos</strong>.</p>
+<pre class="highlight javascript"><code><span class="c1">// Int</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// Float</span>
+<span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span>
+
+<span class="c1">// String</span>
+<span class="kd">var</span> <span class="nx">foobar</span> <span class="o">=</span> <span class="s2">"foobar"</span><span class="p">;</span>
+
+<span class="c1">// Booleanos</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="c1">// Array</span>
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">];</span>
+
+<span class="c1">// Objeto</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">foo</span><span class="p">:</span> <span class="s2">"foo"</span><span class="p">,</span>
+  <span class="na">bar</span><span class="p">:</span> <span class="s2">"bar"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Falando de valores, JavaScript reconhece 6 tipos primitivos:</p>
+
+<ul>
+<li><code>number</code> (<code>1</code>, <code>2</code>, <code>3.14</code>, ...)</li>
+<li><code>boolean</code> (<code>true</code> ou <code>false</code>)</li>
+<li><code>string</code> (<code>&quot;foobar&quot;</code>)</li>
+<li><code>null</code> (valor ou objeto que não existe)</li>
+<li><code>undefined</code> (quando uma variável tem valor indefinido)</li>
+<li><code>symbol</code> (<code>Symbol(&quot;foobar&quot;)</code>)</li>
+</ul>
+
+<h2 id="operadores">Operadores</h2>
+
+<p>Temos vários operadores para trabalhar em JavaScript:</p>
+
+<ul>
+<li>Assignment operators</li>
+<li>Comparison operators</li>
+<li>Arithmetic operators</li>
+<li>Bitwise operators</li>
+<li>Logical operators</li>
+<li>String operators</li>
+<li>Conditional (ternary) operator</li>
+<li>Comma operator</li>
+<li>Unary operators</li>
+<li>Relational operator</li>
+</ul>
+
+<p>Não vamos explicar detalhadamente todas suas características. Vamos focar aqui nos principais casos de uso. Você pode ler mais a fundo sobre esse assunto no <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Mozzila Developer Network</a>.</p>
+
+<p><strong>Comparison operators</strong></p>
+
+<p>Assim como em outras linguagens, operadores de comparação no JavaScript usam o <code>==</code>. Porém, também temos <code>===</code>. A diferença é que o primeiro verifica se os operandos são iguais, o segundo além disso, também verifica se o tipo de objeto é o mesmo.</p>
+<pre class="highlight javascript"><code><span class="mi">3</span> <span class="o">==</span> <span class="s2">"3"</span> <span class="c1">// true</span>
+<span class="mi">3</span> <span class="o">===</span> <span class="s2">"3"</span> <span class="c1">// false</span>
+<span class="mi">3</span> <span class="o">!=</span> <span class="s2">"3"</span> <span class="c1">// false</span>
+<span class="mi">3</span> <span class="o">!==</span> <span class="s2">"3"</span> <span class="c1">// true</span>
+</code></pre>
+
+<h2 id="estruturas-de-controle">Estruturas de controle</h2>
+
+<p>Estruturas de controle são imprescindíveis em qualquer linguagem. Com ela conseguimos manipular os dados de uma aplicação, desenvolver algoritmos entre outras vantagens. Vamos aqui todas as estruturas de controle de JavaScript.</p>
+
+<p><strong>Condicionais</strong></p>
+
+<p>Sem dúvidas o condicionais que mais usamos em qualquer linguagem de programação é o <code>if...else</code>. Com ele podemos testar se um valor é verdadeiro ou falso:</p>
+<pre class="highlight javascript"><code><span class="k">if</span> <span class="p">(</span><span class="nx">condicao</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// true</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// false</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Além disso, também temos <code>else if</code>, se quisermos testar mais de uma condição. Aproveitando a deixa, lembramos aqui os valores que retornam <code>false</code> no JavaScript:</p>
+
+<ul>
+<li><code>false</code></li>
+<li><code>undefined</code></li>
+<li><code>0</code></li>
+<li><code>NaN</code></li>
+<li>string vazia (<code>&quot;&quot;</code>)</li>
+</ul>
+
+<p>Se tivermos que testar muitos casos, podemos usar o <code>switch</code>:</p>
+<pre class="highlight javascript"><code><span class="k">switch</span> <span class="p">(</span><span class="nx">condicao</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="nx">case_1</span><span class="err">:</span> 
+    <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="nx">case_2</span><span class="err">:</span> 
+    <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="nl">default</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Promises</strong></p>
+
+<p>Promises é uma nova feature que faz parte do ECMAScript 6. Ela nada mais é um objeto que representa uma operação que não foi concluída, mas mesmo assim espera-se um fim. Você usuará muito essa feature para operações assíncronas.</p>
+
+<p>Uma Promise tem seus estados representados em <em>pending</em>, <em>fulfilled</em> e <em>rejected</em>. </p>
+
+<p><em>peding</em> é o estado inicial de uma Promise, mas também diz que ela não foi completada ou que foi rejeitada.
+<em>fulfilled</em> nos diz que a operação está completa.
+<em>rejected</em>, como o nome sugere, nos diz que a operação falhou.</p>
+
+<p>Em seu protótipo, temos os métodos <code>catch()</code> e <code>then()</code>. Podemos usar esses métodos para controlar o fluxo de uma operação Promise. Além desses métodos, no próprio objeto <code>Promise</code>, temos os métodos <code>all()</code>, <code>race()</code>, <code>reject()</code> e <code>resolve()</code>.</p>
+
+<p>Para ficar mais simples de visualizar, vamos ver um simples exemplo de Promise:</p>
+<pre class="highlight javascript"><code><span class="cm">/*
+ * Exemplo do site da MDN:
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+ */</span>
+<span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Promise resolve callback'</span><span class="p">);</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Promise reject callback'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Promise resolve callback'</span><span class="p">);</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Promise reject callback'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+
+<p>Leia mais sobre Promises no site da <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN</a>.</p>
+
+<h2 id="laços-e-iteradores">Laços e iteradores</h2>
+
+<p>Laços e iteradores são imprescindível quando trabalhamos com coleções, objetos ou arrays. Vamos ver aqui todas as formas de laços que temos no JavaScript.</p>
+
+<p><strong>for</strong></p>
+
+<p>Funciona como em toda linguagem C like. Recebe o valor inicial do lado, a condição para continuar e o incremento:</p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 6</span>
+
+</code></pre>
+
+<p><strong>do...while e while</strong></p>
+
+<p>Esses dois laços, assim com o <code>for</code> funcionam também como em linguagens C like. O <code>while</code> recebe uma condição e o lado irá iterar até ela for falsa.</p>
+<pre class="highlight javascript"><code><span class="k">do</span> <span class="p">{</span>
+  <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">);</span>
+
+<span class="k">while</span><span class="p">(</span><span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>for...in</strong></p>
+
+<p>Usamos o <code>for...in</code> para iterar objetos. Fica mais fácil entender se visualizarmos um exemplo:</p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">a</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">b</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="na">c</span><span class="p">:</span><span class="mi">3</span><span class="p">};</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">prop</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"obj."</span> <span class="o">+</span> <span class="nx">prop</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]);</span>
+<span class="p">};</span>
+</code></pre>
+
+<p><strong>for...of</strong>
+Essa laço também ganhamos na versão 2015 do ECMAScript. Com ele podemos criar um loop em objetos iteráveis. Isso é muito útil, pois diferentemente do <code>for..in</code>, que itera sobre o nome das propriedades, o <code>for..of</code> itera sobre o valor das propriedades.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">];</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">foo</span> <span class="o">=</span> <span class="s2">"bar"</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span> <span class="c1">// "0", "1", "2", "foo"</span>
+<span class="p">}</span>    
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="nx">of</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span> <span class="c1">// "3", "5", "7"</span>
+<span class="p">}</span>
+</code></pre>
+
+<h2 id="funções">Funções</h2>
+
+<p>Funções sem dúvidas fazem parte da principal funcionalidade do JavaScript. Sem dúvidas, quando pensamos na linguagem logo nos vem a cabeça a palavra <code>function()</code>. </p>
+
+<p>Eis aqui um ponto chave para entendimento de JavaScript. Preste bastante atenção e invista seu tempo para aprender sobre funções.</p>
+
+<p><strong>Definindo funções</strong></p>
+
+<p>Podemos definir funções de três formas no JavaScript, de forma simples, como uma expressão ou como um método de um objeto.</p>
+<pre class="highlight javascript"><code><span class="c1">// Declaração simples</span>
+<span class="kd">function</span> <span class="nx">dobro</span><span class="p">(</span><span class="nx">valor</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">valor</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="c1">// Declaração como exepressão</span>
+<span class="kd">var</span> <span class="nx">dobro</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">dobro</span><span class="p">(</span><span class="nx">valor</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">valor</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Declarção como método</span>
+<span class="kd">var</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">dobro</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">valor</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">valor</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Escopo</strong></p>
+
+<p>Uma das vantagens do JavaScript é ter função de primeira classe. Isso é: elas são como qualquer outro objeto. Porém, precisamos ter cuidado com esse uso por causa do escopo. Qualquer função declarada fora de outra função faz parte do escopo global.</p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">val1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nx">val2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">multiplicacao</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">val1</span> <span class="o">*</span> <span class="nx">val2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Se chamarmos a função, ela vai retornar</span>
+<span class="c1">// as duas variáveis globais multiplicadas.</span>
+
+<span class="nx">multiplicacao</span><span class="p">();</span> <span class="c1">// 200</span>
+</code></pre>
+
+<p>Para lidar com escopo, podemos trabalhar com <strong>closures</strong>. Se você trabalha com JavaScript, precisa conhecer closures.</p>
+
+<p>Closure é uma forma de manter um código privado. Em uma função dessa, closure tem acesso às variáveis fora de seu escopo, mas o escopo de fora não possui acesso a essas variáveis.</p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">current</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="kd">function</span> <span class="nx">closure</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">current</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">})();</span>
+</code></pre>
+
+<p><strong>Default parameters</strong></p>
+
+<p>Apesar de ser algo comum em diversas linguagens, antes do ECMAScript 6, o JavaScript não tinha default parameters. Vamos ver um comparativo de como fazemos em versões antigas do ECMAScript e como fazemos na versão 6.</p>
+<pre class="highlight javascript"><code><span class="c1">// Solução antiga</span>
+<span class="kd">function</span> <span class="nx">multipicacao</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">b</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">b</span> <span class="o">!==</span> <span class="s2">"undefined"</span> <span class="p">?</span> <span class="nx">b</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Solução no ES6</span>
+<span class="kd">function</span> <span class="nx">multiplicacao</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Rest parameters</strong></p>
+
+<p>Assim como os Default Parameters, Rest Parameters surgiram na versão 2015 do ECMAScript. Ele serve para definirmos um número infinito de argumentos em uma função.</p>
+<pre class="highlight javascript"><code><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="p">...</span><span class="nx">theArgs</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre>
+
+<h3 id="arrow-functions">Arrow Functions</h3>
+
+<p>Arrow Functions foram criadas na versão 2015 do ECMAScript. Elas vieram para solucionar um problema antigo do JavaScript, o escopo do <code>this</code>.</p>
+
+<p>Se você não sabe, o <code>this</code> é dinâmico, ou seja, ele recebe seu valor em tempo de execução. Sendo assim, o <code>this</code> sempre irá apontar para o objeto da qual a função método pertence. Isso é, se a função pai do <code>this</code> não fazer parte de nenhum objeto, ele fará parte do escopo global.</p>
+
+<p>Em Arrow Functions o escopo do <code>this</code> é estático, ou seja, sempre irá referenciar o objeto pai. Vamos comparar:</p>
+<pre class="highlight javascript"><code><span class="c1">// Exemplo do site Loop Infinito</span>
+<span class="c1">// http://loopinfinito.com.br/2013/08/20/ecmascript-6-arrow-function</span>
+
+<span class="c1">// Sem arrow function</span>
+<span class="kd">var</span> <span class="nx">armazem</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">estabelecimentoNome</span><span class="p">:</span> <span class="s1">'Armazém do Chico'</span><span class="p">,</span>
+
+  <span class="na">logVendaDeCerveja</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cervejas</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// não gera erro</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">estabelecimentoNome</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="s1">'\n\n'</span><span class="p">);</span>
+    <span class="nx">cervejas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cerveja</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// gera erro, `this` aponta para `window`</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">estabelecimentoNome</span> <span class="o">+</span> <span class="s1">' vendeu '</span> <span class="o">+</span> <span class="nx">cerveja</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Com arrow function</span>
+<span class="kd">var</span> <span class="nx">armazem</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">estabelecimentoNome</span><span class="p">:</span> <span class="s1">'Armazém do Chico'</span><span class="p">,</span>
+
+  <span class="na">logVendaDeCerveja</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cervejas</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">estabelecimentoNome</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="s1">'\n\n'</span><span class="p">);</span>
+    <span class="nx">cervejas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">cerveja</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">estabelecimentoNome</span> <span class="o">+</span> <span class="s1">' vendeu '</span> <span class="o">+</span> <span class="nx">cerveja</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<h2 id="objetos">Objetos</h2>
+
+<p>Em JavaScript todo valor se comporta como objeto, e isso é muito bom. Dessa forma, podemos usar funções disponíveis na linguagem para manipular valores. Por exemplo:</p>
+<pre class="highlight javascript"><code><span class="s1">'Foobar'</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span> <span class="c1">// FOOBAR</span>
+</code></pre>
+
+<p><strong>Criando objetos</strong></p>
+
+<p>Existem duas formas de criarmos objetos em JavaScript, notação literal ou com uma função construtora.</p>
+
+<p>Na notação literal, criamos objeto com um duas chaves <code>{ }</code>. Já para criar com uma função construtora, usamos o chave <code>new</code>.</p>
+<pre class="highlight javascript"><code><span class="c1">// notação literal</span>
+<span class="kd">var</span> <span class="nx">cao</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">nome</span><span class="p">:</span> <span class="s2">"Castor"</span><span class="p">,</span>
+  <span class="na">raca</span><span class="p">:</span> <span class="s2">"Labrador"</span>
+<span class="p">}</span>
+
+<span class="c1">// função construtora</span>
+<span class="kd">var</span> <span class="nx">cao</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+
+<span class="nx">cao</span><span class="p">.</span><span class="nx">nome</span> <span class="o">=</span> <span class="s2">"Castor"</span><span class="p">;</span>
+<span class="nx">cao</span><span class="p">.</span><span class="nx">raca</span> <span class="o">=</span> <span class="s2">"Labrador"</span><span class="p">;</span>
+</code></pre>
+
+<p><strong>Propriedades e métodos</strong></p>
+
+<p>Podemos acessar as propriedades de um objeto de duas formas, com <code>.</code> e <code>[]</code>.</p>
+<pre class="highlight javascript"><code><span class="nx">cao</span><span class="p">.</span><span class="nx">nome</span> <span class="c1">// Castor</span>
+<span class="nx">cao</span><span class="p">[</span><span class="nx">raca</span><span class="p">]</span> <span class="c1">// Labrador</span>
+</code></pre>
+
+<p>Para declarar métodos, usamos a mesma notação que usamos para para propriedades, com <code>:</code>.</p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">cao</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">nome</span><span class="p">:</span> <span class="s2">"Castor"</span><span class="p">,</span>
+  <span class="na">raca</span><span class="p">:</span> <span class="s2">"Labrador"</span><span class="p">,</span>
+  <span class="na">andar</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nome</span> <span class="o">+</span> <span class="s2">" está andando"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<h2 id="dom">DOM</h2>
+
+<p>O DOM, <em>Document Object Model</em> é uma interface de programação para documentos HTML. É através desse recurso que podemos manipular interfaces com JavaScript.</p>
+
+<p>Como o DOM representa a árvore do HTML, podemos manipular as tags que estão lá. Por exemplo, digamos que eu quero que toda as tags com o <code>id</code> &quot;internacional&quot; tenha a cor vermelha:</p>
+<pre class="highlight javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"internacional"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s2">"red"</span><span class="p">;</span>
+</code></pre>
+
+<p>Não é fácil manipular o DOM. Sempre envolve muito custo. Porém, é necessário. Pensando nisso, surgiram várias bibliotecas para manipulá-lo. As mais populares são <a href="http://jquery.com/">jQuery</a> e <a href="http://yuilibrary.com/">YUI</a>. Com uma pequena busca no Google e você já terá inúmeras alternativas.</p>
+
+<h2 id="modularização">Modularização</h2>
+
+<p>Se você é desenvolvedor, provavelmente já ouviu falar em DRY: <strong>D</strong>on&#39;t <strong>R</strong>epeat <strong>Y</strong>ourself.</p>
+
+<p>Independente da linguagem, sempre buscamos otimizar nosso tempo e não escrever toda vez o mesmo código. Há alguns anos na web ouvimos falar sobre componentes e módulos. Sem dúvidas, é uma das partes mais importante no desenvolimento de aplicações web. Através de uma boa organização, além da reutilização, módulos e componentes ajudam muito a desenvolvermos de forma escalável.</p>
+
+<p><strong>Module Pattern</strong></p>
+
+<p>Qualquer desenvolvedor web um dia já sofreu com o escopo bizarro das variáveis no JavaScript. Através da modularização podemos contornar esse problema. Com o <em>module pattern</em> podemos simular privacidade no JavaScript, logo, também previnir que o escopo de variáveis não façam parte do escopo global.</p>
+
+<p>Provavelmente você já se deparou o seguinte código diversas vezes:</p>
+<pre class="highlight javascript"><code><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">// ...</span>
+<span class="p">})();</span>
+</code></pre>
+
+<p>Trata-se de uma função auto-executável. O código que estará dentro da função está encapsulado. Isso acontece porque englobando a função com parênteses, estamos executando ela antes mesmo de ser atribuída a uma variável ou o escopo global.</p>
+
+<p>Usando uma função auto-executável podemos criar um encapsulamento para manipular atributos de um objeto. Por exemplo:</p>
+<pre class="highlight javascript"><code><span class="c1">// Exemplo sem emcapsulamento</span>
+<span class="kd">var</span> <span class="nx">Obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">prop</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="na">incrementProp</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">prop</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">Obj</span><span class="p">.</span><span class="nx">incrementProp</span><span class="p">();</span>
+<span class="nx">Obj</span><span class="p">.</span><span class="nx">prop</span><span class="p">;</span> <span class="c1">// 1;</span>
+
+<span class="c1">// Exemplo com Module Pattern</span>
+<span class="kd">var</span> <span class="nx">Obj</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">prop</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">prop</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">prop</span><span class="p">;</span>
+      <span class="p">},</span>
+
+      <span class="na">incrementProp</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">prop</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+  <span class="p">})();</span>
+</code></pre>
+
+<p><strong>AMD</strong></p>
+
+<p>Usar módulos é muito melhorar do que desenvolver sem nenhum design pattern. Porém, é preciso cuidado, pois facilmente teremos casos em que um depende do outro. O AMD, <em>Asyncronous Module Definition</em> vem para evitar esse problema. Através dele podemos definir as dependências de um módulo.</p>
+<pre class="highlight javascript"><code><span class="nx">define</span><span class="p">(</span>
+  <span class="p">[</span><span class="s1">'dependecy1'</span><span class="p">,</span> <span class="s1">'dependecy2'</span><span class="p">,</span> <span class="s1">'dependecy3'</span><span class="p">],</span> 
+  <span class="kd">function</span><span class="p">(</span><span class="nx">dependecy1</span><span class="p">,</span> <span class="nx">dependecy2</span><span class="p">,</span> <span class="nx">dependecy3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre>
+
+<p>Também podemos expressar quando um módulo requisita uma dependencia:</p>
+<pre class="highlight javascript"><code><span class="nx">require</span><span class="p">(</span>
+  <span class="p">[</span><span class="s1">'dependecy1'</span><span class="p">,</span> <span class="s1">'dependecy2'</span><span class="p">,</span> <span class="s1">'dependecy3'</span><span class="p">],</span> 
+  <span class="kd">function</span><span class="p">(</span><span class="nx">dependecy1</span><span class="p">,</span> <span class="nx">dependecy2</span><span class="p">,</span> <span class="nx">dependecy3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre>
+
+<p>Você deve estar se perguntando de onde vem as funções <code>define()</code> e <code>require()</code>. Existem diversos loaders AMD, o mais popular é o <a href="http://requirejs.org/">Require.js</a>. Juntamente com essa bliblioteca, é recomendado o uso da <a href="https://github.com/jrburke/r.js">r.js</a>, a qual irá entregar um único arquivo de JavaScript para o browser.</p>
+
+<p><strong>CommonJS</strong></p>
+
+<p>Esse padrão de módulos ficou ~famoso~ porque foi adotado pelo <a href="https://nodejs.org/">Node.js</a>. No browser podemos ajudar ele com o <a href="http://browserify.org/">Browserify</a>.</p>
+
+<p>A sintaxe dele é mais simples e mais próxima da sintaxe de módulos do futuro do JavaScript. Temos três keywords: <code>require</code>, <code>import</code> e <code>export</code>. </p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">lbx</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'libx'</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">myMod</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">myMod</span><span class="p">;</span>
+</code></pre>
+
+<p>No código acima, estamos dizendo que um módulo depende de <code>libx</code> e ele está exportando a função <code>myMod()</code>.</p>
+
+<p><strong>ES6 Modules</strong></p>
+
+<p>Na última versão do ECMAScript, o JavaScript ganhou sua própria forma de definir módulos. Basicamente cada módulo é definido em um arquivo, e seus atributos (variáveis ou funções) são expostos somente se isso for feito de forma explícita, com a keyword <code>export</code>. Para consumir variáveis de outro módulos, usamos a keyword <code>import</code>.</p>
+
+<p>Exemplo:</p>
+
+<p><strong>util.js</strong>:</p>
+<pre class="highlight javascript"><code><span class="kd">function</span> <span class="nx">multiplicacao</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="p">{</span> <span class="nx">multiplicacao</span> <span class="p">}</span>
+</code></pre>
+
+<p>Dessa forma, estamos deixando a função <code>multiplicacao()</code> visível a outros módulos.</p>
+
+<p>Para usar essa função em outro módulo, faríamos isso:</p>
+<pre class="highlight javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">multiplicacao</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'util'</span><span class="p">;</span>
+</code></pre>
+
+<p>Simples. Muito simples.</p>
+
+<h2 id="tenha-cuidado-com-o-javascript">Tenha cuidado com o JavaScript</h2>
+
+<p>JavaScript é incrível e com ele temos muito controle da experiência de nosso usuário. Porém, com grandes poderes vem grandes responsabilidades.</p>
+
+<p>Minhas dicas de bolso seriam:</p>
+
+<ul>
+<li>Sempre tenha em mente onde você quer chegar com sua aplicação. </li>
+<li>Opte pelas boas práticas e uso o mínimo necessário.</li>
+<li>Entregue o conteúdo independente se o JavaScript estiver disposível ou não. A web funciona sem JavaScript.</li>
+<li>Conheça o <a href="http://www.caniuse.com/">suporte</a> de API&#39;s e novas features JavaScript.</li>
+</ul>
+
+      </article>
+    </main>
+  </div>
+
+    </main>
+  </body>
+</html>
