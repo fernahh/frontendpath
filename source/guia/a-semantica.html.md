@@ -193,7 +193,7 @@ O `<footer>` receberá um grupo de elementos que representará, geralmente, info
 
 ## Melhorando a semântica com microdata
 
-Já vimos que na última versão do HTML tivemos um grande esforço para melhorar a representação de dados na web. Além das tags, também temos o *microdata*. Eles funcionam como atributos em nosso documento, onde podemos expressar de melhorar forma o conteúdo para robôs (sim, como o Google!).
+Já vimos que na última versão do HTML tivemos um grande esforço para melhorar a representação de dados na web. Além das tags, também temos o *microdata*. Eles funcionam como atributos em nosso documento, onde podemos expressar da melhor forma o conteúdo para robôs (sim, como o Google!).
 
 Para usar, o primeiro passo é pensarmos no escopo do conteúdo. Precisamos de uma tag para representá-lo, que terá o atributo `itemscope` e o seu tipo, representado pelo atributo `itemtype`. Se fossemos representar o álbum de um artista, nosso primeiro passo seria o seguinte:
 
