@@ -70,6 +70,8 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
+    middleman-gh-pages (0.0.3)
+      rake (> 0.9.3)
     middleman-livereload (3.1.1)
       em-websocket (>= 0.2.0)
       middleman-core (>= 3.0.2)
@@ -100,6 +102,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.4.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -133,6 +136,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (~> 3.3.10)
+  middleman-gh-pages (~> 0.0.3)
   middleman-livereload (~> 3.1.0)
   middleman-syntax (~> 2.0.0)
   puma (~> 2.11.1)

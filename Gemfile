@@ -9,3 +9,4 @@ gem "middleman-livereload", "~> 3.1.0"
 
 gem "puma", "~> 2.11.1"
 gem "rack-contrib", "~> 1.2.0"
+gem "middleman-gh-pages", "~> 0.0.3"
