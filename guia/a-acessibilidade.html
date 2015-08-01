@@ -1,15 +1,29 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" itemscope itemtype="http://schema.org/CreativeWork">
   <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Front-end Path | Um caminho correto para o desenvolvimento front-end</title>
 
-    <title>Front-end Path | A Acessibilidade</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Um caminho correto para o desenvolvimento front-end" />
+    <meta name="keywords" content="front-end, css, semântica, html, acessibilidade, javascript" />
+
+    <meta itemprop="name" content="Front-end Path | Um caminho correto para o desenvolvimento front-end" />
+    <meta itemprop="url" content="http://www.frontendpath.com/guia/a-acessibilidade.html" />
+    <meta itemprop="description" content="Um caminho correto para o desenvolvimento front-end" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.frontendpath.com/guia/a-acessibilidade.html" />
+    <meta property="og:title" content="Front-end Path | Um caminho correto para o desenvolvimento front-end" />
+    <meta property="og:site_name" content="Front-end Path" />
+    <meta property="og:description" content="Um caminho correto para o desenvolvimento front-end" />
+    <meta property="og:image" content="http://www.frontendpath.com/assets/images/brand.png" />
 
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,700,400italic|Share:400,700|Paytone+One' rel='stylesheet' type='text/css'>
+
     <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
-    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
   </head>
 
   <body class="guia guia_a-acessibilidade">
@@ -53,7 +67,7 @@
       </ul>
     </aside>
     <main class="guide-article" id="guide-article">
-      <article id="guide-content">
+      <article id="guide-content" class="guide-content">
         <h1 class="guide-article-title">A Acessibilidade</h1>
         <h2 id="a-web-deve-ser-para-todos!">A web deve ser para todos!</h2>
 
@@ -87,13 +101,13 @@
 
 <p>Para ser sincero, acho que a linguagem utilizada pela W3C possa ser algo que crie uma barreira entre a documentação e os desenvolvedores. Entendo que a formalidade é importante, mas não deve ser mais importe que a adesão de desenvolvedores às boas práticas de acessibilidade.</p>
 
-<p>Os <strong>princípios</strong> têm a finalidade de prospectar requisitos para uma página ou aplicação web ser acessível. Caminhando ao lado deles, existem as <strong>diretrizes</strong>, que nada mais são que objetivos básicos para se desenvolver conteúdo acessível na web. Para que o essas diretrizes sejam atingidas, existem <strong>critérios de sucesso</strong> e <strong>técnicas de tipo suficiente e aconselhadas</strong>.</p>
+<p>Os <strong>princípios</strong> têm a finalidade de prospectar requisitos para uma página ou aplicação web ser acessível. Caminhando ao lado deles, existem as <strong>diretrizes</strong>, que nada mais são que objetivos básicos para se desenvolver conteúdo acessível na web. Para que essas diretrizes sejam atingidas, existem <strong>critérios de sucesso</strong> e <strong>técnicas de tipo suficiente e aconselhadas</strong>.</p>
 
-<p>Vamos ver aqui os princípios estabelidos pela W3C.</p>
+<p>Vamos ver aqui os princípios estabelecidos pela W3C.</p>
 
 <h3 id="princípio-perceptível">Princípio perceptível</h3>
 
-<p>Como o próprio nome diz, toda informação que a aplicação dispõe, deve ser <strong>percebida por todos os sentidos</strong> do seu usuário. Além disso, toda e qualquer alteração ou ação na interface deve ser percebida pelos sentidos do usuário da aplicação. </p>
+<p>Como o próprio nome diz, toda informação que a aplicação dispõe, deve ser <strong>percebida por todos os sentidos</strong> do seu usuário. Além disso, toda e qualquer alteração ou ação na interface deve ser percebida pelos sentidos do usuário da aplicação.</p>
 
 <p>Por exemplo, no uso de imagens, deve ser usado o atributo <code>alt</code> para descrever uma alternativa ao usuário que tem problema de visão.</p>
 <pre class="highlight html"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"foto.png"</span> <span class="na">alt=</span><span class="s">"Foto da Cascata do Caracol"</span><span class="nt">&gt;</span>
@@ -103,7 +117,7 @@
 
 <p>Todas as operações que o usuário precisa fazer para ter acesso a uma informação devem ser acessíveis. Uma interface não pode depender de uma operação que um usuário com certa deficiência não consiga realizar.</p>
 
-<p>Um exemplo disso, é que toda operação deve ter um tempo suficiente para o usuário completá-la, seja usando o mouse ou o teclado. </p>
+<p>Um exemplo disso, é que toda operação deve ter um tempo suficiente para o usuário completá-la, seja usando o mouse ou o teclado.</p>
 
 <p>Exemplificando, através de CSS podemos fazer uma navegação mais básica de forma simples ao usuário, permitindo que o mesmo possa navegar pela aplicação com o teclado:</p>
 <pre class="highlight css"><code><span class="nt">a</span><span class="nd">:hover</span><span class="o">,</span>
@@ -116,9 +130,9 @@
 
 <p>Esse princípio diz que a aplicação deve ter seu conteúdo de forma compreensível, assim como seu funcionamento.</p>
 
-<p>A maioria dos usuários que possuem algum tipo de deficiência visual, usam leitores de tela para navegar na web. </p>
+<p>A maioria dos usuários que possuem algum tipo de deficiência visual, usam leitores de tela para navegar na web.</p>
 
-<p>Uma boa prática, além de manter um bom desenvolvimento semântico, é por exemplo, indicar o idioma que está escrito na página com o atributo <code>lang</code>. Perceba que dentro do conteúdo outro idiomá é utilizado.</p>
+<p>Uma boa prática, além de manter um bom desenvolvimento semântico é, por exemplo, indicar o idioma que está escrito na página com o atributo <code>lang</code>. Perceba que dentro do conteúdo outro idioma é utilizado.</p>
 <pre class="highlight html"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"pt-br"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;head&gt;</span>
@@ -128,28 +142,28 @@
   <span class="nt">&lt;body&gt;</span>
   <span class="nt">&lt;p&gt;</span>Essa página está em pt <span class="nt">&lt;span</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>and in english<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span> 
+<span class="nt">&lt;/html&gt;</span>
 </code></pre>
 
 <h3 id="princípio-robusto">Princípio robusto</h3>
 
-<p>O princípio robusto diz que toda aplicação deve-se manter com conteúdo acessível tanto para usuários sem necessidades especiais, quanto para tecnologias assistivas, mesmo com a evolução das tecnologias isso possa se tornar defasado. </p>
+<p>O princípio robusto diz que toda aplicação deve-se manter com conteúdo acessível tanto para usuários sem necessidades especiais, quanto para tecnologias assistivas, mesmo que com a evolução das tecnologias isso possa se tornar defasado.</p>
 
 <p>Uma forma de manter esse princípio é sempre desenvolver de acordo com padrões validados pela W3C.</p>
 
-<p>Na prática, o <em>web design responsivo</em> (RWD), pode ajudar a entregar conteúdo acessível independente do dispositivo que o usuário está usando.</p>
+<p>Na prática, o <em>web design responsivo</em> (<abbr title="Responsive Web Design">RWD</abbr>), pode ajudar a entregar conteúdo acessível independente do dispositivo que o usuário está usando.</p>
 
 <h2 id="enriquecendo-a-acessibilidade-com-wai-aria">Enriquecendo a acessibilidade com WAI-ARIA</h2>
 
 <p>Vivemos em uma época em que a web é uma das principais plataformas para desenvolvimento de aplicações, quiçá a principal.</p>
 
-<p>O conteúdo entregue ao usuário nem sempre é entregue de forma simples de texto. Conteúdos dinâmicos cada vez mais fazem parte do ciclo de vida de uma aplicação web. Levando esse dentre outros aspectos, a semântica básica do HTML não cobre todas as lacunas que precisamos para tornar uma aplicação moderna acessível. Pensando nisso temos uma recomendação da W3C chamada WAI-ARIA <em>(WAI - Web Acessibility Initiative, ARIA - Acessible Rich Internet Applications)</em>.</p>
+<p>O conteúdo entregue ao usuário nem sempre é entregue na forma de texto simples. Conteúdos dinâmicos cada vez mais fazem parte do ciclo de vida de uma aplicação web. Levando esse dentre outros aspectos, a semântica básica do HTML não cobre todas as lacunas que precisamos para tornar uma aplicação moderna acessível. Pensando nisso temos uma recomendação da W3C chamada WAI-ARIA <em>(WAI - Web Acessibility Initiative, ARIA - Acessible Rich Internet Applications)</em>.</p>
 
 <h3 id="atributos-aria-*-e-roles">Atributos aria-* e Roles</h3>
 
-<p>Os atributos <code>aria-*</code> são responsáveis por extender a semântica de elementos HTML. Dessa forma, leitores de tela podem compreender melhor a interação de uma interface. </p>
+<p>Os atributos <code>aria-*</code> são responsáveis por extender a semântica de elementos HTML. Dessa forma, leitores de tela podem compreender melhor a interação de uma interface.</p>
 
-<p>Existem <a href="http://www.w3.org/TR/wai-aria/states_and_properties">inúmeros tipos de atributos</a> para representação de estados e propriedades. </p>
+<p>Existem <a href="http://www.w3.org/TR/wai-aria/states_and_properties">inúmeros tipos de atributos</a> para representação de estados e propriedades.</p>
 
 <p>E na prática, como fica? Vamos ver o exemplo de uma barra de progresso, que apesar de ser escrita uma tag <code>&lt;div&gt;</code>, que não possui valor semântico, é acessível:</p>
 <pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"my-progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span>
@@ -176,5 +190,17 @@
   </div>
 
     </main>
+
+    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65362838-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>

@@ -1,15 +1,29 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" itemscope itemtype="http://schema.org/CreativeWork">
   <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Front-end Path | Um caminho correto para o desenvolvimento front-end</title>
 
-    <title>Front-end Path | O CSS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Um caminho correto para o desenvolvimento front-end" />
+    <meta name="keywords" content="front-end, css, semântica, html, acessibilidade, javascript" />
+
+    <meta itemprop="name" content="Front-end Path | Um caminho correto para o desenvolvimento front-end" />
+    <meta itemprop="url" content="http://www.frontendpath.com/guia/o-css.html" />
+    <meta itemprop="description" content="Um caminho correto para o desenvolvimento front-end" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.frontendpath.com/guia/o-css.html" />
+    <meta property="og:title" content="Front-end Path | Um caminho correto para o desenvolvimento front-end" />
+    <meta property="og:site_name" content="Front-end Path" />
+    <meta property="og:description" content="Um caminho correto para o desenvolvimento front-end" />
+    <meta property="og:image" content="http://www.frontendpath.com/assets/images/brand.png" />
 
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,700,400italic|Share:400,700|Paytone+One' rel='stylesheet' type='text/css'>
+
     <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
-    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
   </head>
 
   <body class="guia guia_o-css">
@@ -59,7 +73,7 @@
       </ul>
     </aside>
     <main class="guide-article" id="guide-article">
-      <article id="guide-content">
+      <article id="guide-content" class="guide-content">
         <h1 class="guide-article-title">O CSS</h1>
         <h2 id="css-é-fácil,-mas-desenvolver-projetos-escaláveis-é-difícil!">CSS é fácil, mas desenvolver projetos escaláveis é difícil!</h2>
 
@@ -87,14 +101,14 @@
  * Agora sim, melhorou!
  */</span>
 <span class="nt">table</span><span class="nc">.hl</span> <span class="p">{</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">2em</span> <span class="m">0</span><span class="p">;</span> 
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">2em</span> <span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">table</span><span class="nc">.hl</span> <span class="nt">td</span><span class="nc">.ln</span> <span class="p">{</span>
   <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">li</span> <span class="p">{</span> 
+<span class="nt">li</span> <span class="p">{</span>
   <span class="nl">font-family</span><span class="p">:</span> <span class="nb">serif</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.2em</span><span class="p">;</span>
@@ -105,7 +119,7 @@
 
 <p>Enfim.</p>
 
-<p>Existem outras dezenas de problemas com essa linguage. Exageiros a parte, podemos perceber que temos um longo caminho para frente.</p>
+<p>Existem outras dezenas de problemas com essa linguagem. Exageiros a parte, podemos perceber que temos um longo caminho pela frente.</p>
 
 <h2 id="regras-básicas">Regras básicas</h2>
 
@@ -138,13 +152,13 @@
 
 <p><strong>ID selector</strong></p>
 
-<p>O seletor de ID funciona de forma parecida com o class selector. É através de um atributo <code>id</code> em uma tag HTML que podemos criá-lo. Você deve estar se perguntando: <em>qual a diferença de <code>id</code> para <code>class</code>?</em> </p>
+<p>O seletor de ID funciona de forma parecida com o class selector. É através de um atributo <code>id</code> em uma tag HTML que podemos criá-lo. Você deve estar se perguntando: <em>qual a diferença de <code>id</code> para <code>class</code>?</em></p>
 
 <p>A diferença entre <code>id</code> e <code>class</code> é que o primeiro é menos flexível e mais específico. Ou seja, na dúvida, (quase) sempre vá de <code>class</code>!</p>
 
-<p><strong>Atribute selector</strong></p>
+<p><strong>Attribute selector</strong></p>
 
-<p>Existem inúmeros tipos de atributes selectors. Eles são referentes a todos os elementos que podem ter um atributo e até um valor. Por exemplo, se quisermos adicionar estilo aos links que abrem em uma nova janela, podemos fazer o seguinte:</p>
+<p>Existem inúmeros tipos de attributes selectors. Eles são referentes a todos os elementos que podem ter um atributo e até um valor. Por exemplo, se quisermos adicionar estilo aos links que abrem em uma nova janela, podemos fazer o seguinte:</p>
 <pre class="highlight css"><code><span class="nt">a</span><span class="o">[</span><span class="nt">target</span><span class="o">=</span><span class="err">"</span><span class="nt">_blank</span><span class="err">"</span><span class="o">]</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
 <span class="p">}</span>
@@ -152,7 +166,7 @@
 
 <p><strong>Pseudo-class selector</strong></p>
 
-<p>Geralmente usamos pseudo-class selectors para referenciar o estado ou posição de um elemento em uma coleção. Sem dúvidas, os mais usados são <code>:focus</code>, <code>:hover</code>, <code>:checked</code>, <code>:first-child</code> e <code>:last-child</code>. </p>
+<p>Geralmente usamos pseudo-class selectors para referenciar o estado ou posição de um elemento em uma coleção. Sem dúvidas, os mais usados são <code>:focus</code>, <code>:hover</code>, <code>:checked</code>, <code>:first-child</code> e <code>:last-child</code>.</p>
 
 <p>Usá-los é muito simples:</p>
 <pre class="highlight css"><code><span class="c">/*
@@ -213,7 +227,7 @@
 
 <p>Se você é programador, podemos fazer uma analogia simples. Pense que os seletores são variáveis, propriedades são seus atributos e esses possuem valores. Certo?</p>
 
-<p>Cada seletor pode possui no mínimo uma propriedade e seu respectivo valor. Aqui iremos dividir as propriedades em três seções, posicionamento, box-model e fontes.</p>
+<p>Cada seletor possui no mínimo uma propriedade e seu respectivo valor. Aqui iremos dividir as propriedades em três seções, posicionamento, box-model e fontes.</p>
 
 <h4 id="posicionamento">Posicionamento</h4>
 
@@ -249,7 +263,7 @@
 
 <ul>
 <li><code>font-weight</code></li>
-<li><code>font-style</code>, </li>
+<li><code>font-style</code>,</li>
 <li><code>font-family</code></li>
 <li><code>font-size</code></li>
 <li><code>line-height</code></li>
@@ -261,7 +275,7 @@
 
 <p>Em poucas palavras, <strong>CSS3 revolucionou</strong> o desenvolvimento de interfaces web, principalmente tratando-se de performance e produtividade.</p>
 
-<p>O CSS3 permite que o desenvolvedor use cada vez menos ferramentas de design para exportar imagens que serão usadas em um documento. Sombras, gradientes, diferentes tipos de bordas e fontes hoje funcionam de forma nativa dos browser, sem precisarmos de imagens. Com isso, menos requisições, menos assets, logo, mais performance.</p>
+<p>O CSS3 permite que o desenvolvedor use cada vez menos ferramentas de design para exportar imagens que serão usadas em um documento. Sombras, gradientes, diferentes tipos de bordas e fontes hoje funcionam de forma nativa nos browsers, sem precisarmos de imagens. Com isso, menos requisições, menos assets, logo, mais performance.</p>
 
 <p>Para ver mais sobre as novas propriedades do CSS, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">acesse o MDN</a>.</p>
 
@@ -338,9 +352,9 @@ div {
 
 <h3 id="oocss">OOCSS</h3>
 
-<p>Criado pela <a href="http://www.stubbornella.org">Nicole Sullivan</a>, OOCSS significa <em>Object Oriented CSS</em>. </p>
+<p>Criado pela <a href="http://www.stubbornella.org">Nicole Sullivan</a>, OOCSS significa <em>Object Oriented CSS</em>.</p>
 
-<p>Esse paradigma preza que as classes devam receber nomes baseado em seu padrão visiual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como <code>background</code>, <code>color</code>. Devemos externar o padrão de estilo para outras classes. Por exemplo:</p>
+<p>Esse paradigma preza que as classes devam receber nomes baseados em seu padrão visual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como <code>background</code>, <code>color</code>. Devemos externar o padrão de estilo para outras classes. Por exemplo:</p>
 <pre class="highlight css"><code><span class="nt">alert</span> <span class="p">{</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
 <span class="p">}</span>
@@ -352,7 +366,7 @@ div {
 
 <h3 id="smacss">SMACSS</h3>
 
-<p>SMACSS, <em>Scaleble and Modular Architeture for CSS</em> foi criado por John Snook para resolver problemas de arquitetura do app de e-mail do Yahoo. Ele é baseado em cinco grandes categorias: <em>base</em>, <em>layout</em>, <em>module</em>, <em>state</em> e o opcional <em>theme</em>.</p>
+<p>SMACSS, <em>Scalable and Modular Architeture for CSS</em> foi criado por John Snook para resolver problemas de arquitetura do app de e-mail do Yahoo. Ele é baseado em cinco grandes categorias: <em>base</em>, <em>layout</em>, <em>module</em>, <em>state</em> e o opcional <em>theme</em>.</p>
 
 <p>As folhas de estilo do <em>base</em> devem receber apenas regras atreladas a seletores globais, isso é: <code>body</code>, <code>p</code>, <code>a</code>, etc.</p>
 
@@ -370,7 +384,7 @@ div {
 
 <p><em>block</em>, segundo o BEM, é o nível mais alto de um componente. Por exemplo, <code>header</code> e <code>footer</code>.</p>
 
-<p><em>element</em> é um filho de um <em>block</em> que possui uma função. Para escrever um <em>element</em>, devemos usar <code>__</code> como separador. Por exemplo, se tiver uma classe <code>.menu</code>, vamos ter seu filho que é <code>menu__i.tem</code>.</p>
+<p><em>element</em> é um filho de um <em>block</em> que possui uma função. Para escrever um <em>element</em>, devemos usar <code>__</code> como separador. Por exemplo, se tiver uma classe <code>.menu</code>, vamos ter seu filho que é <code>.menu__item</code>.</p>
 
 <p><em>state</em> também usa <code>_</code> para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos <code>.menu__item</code>, teremos <code>.menu__item_active</code>.</p>
 
@@ -387,5 +401,17 @@ div {
   </div>
 
     </main>
+
+    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65362838-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
