@@ -1,18 +1,18 @@
 ---
-title: O CSS
+title: The CSS
 ---
 
-## CSS é fácil, mas desenvolver projetos escaláveis é difícil!
+## CSS is easy, but develop scalable projects is something hard!
 
-CSS, *Cascading Style Sheets* é uma das partes mais importantes e complexas de uma interface web. É através dele que podemos chegar a um design de projeto, muitas vezes com muito pouco esforço. Você deve estar se perguntando: *"porque o CSS é uma parte complexa?"* Eu explico.
+CSS, *Cascading Style Sheets* is one of the most complex and important parts of an web interface. Is through CSS that we can reach a project design, usually with not to much effort. You may wonder: *"Why CSS is a complex thing?"* and I will explain.
 
-Pelo fato de ela nunca lançar exceções, acabamos subestimando sua complexidade. Porém, hoje há diversas aplicações grandes que precisam de arquiteturas de CSS para desenvolver um projeto escalável, principalmente para o trabalho em equipe.
+Since CSS never come up with exceptions, we usually underestimate it's complexity. In this days there are lots of large applications that need a complex CSS architecture to provide scalability, mainly when large teams are involved.
 
-Você pode escrever CSS de diversas formas e o resultado final será o mesmo. Por exemplo, o código abaixo terá o mesmo resultado na renderização do navegador.
+CSS is a flexible language and because of that you can write it in several ways and the final rendering will be the same. For example, the code bellow will have the same rendering by the browser.
 
 ```css
 /*
- * Nossa, que código horrível!
+ * Wow, what a horrible code!
  */
 table.hl {
 margin: 2em 0; }
@@ -27,7 +27,7 @@ font-weight: bold;
 }
 
 /*
- * Agora sim, melhorou!
+ * No things are getting better.
  */
 table.hl {
   margin: 2em 0;
@@ -44,11 +44,10 @@ li {
 }
 ```
 
-Agora pare e pense. Já pensou ter um arquivo de CSS com 30, 40 ou 50 mil linhas de código desorganizado? A manutenção será terrível. Se esse arquivo for desenvolvido com mais de uma pessoa, multiplique seus problemas por mil.
+Now stop what you're doing and think. Do you even realize that sometimes you can have a CSS file with thousands and thousands of line that doesn't follow any standart?
 
-Enfim.
+There are a bunch of other issues with this language. Based on that you already realized that we have a long way to go.
 
-Existem outras dezenas de problemas com essa linguagem. Exageiros a parte, podemos perceber que temos um longo caminho pela frente.
 
 ## Regras básicas
 
