@@ -48,15 +48,14 @@ Now stop what you're doing and think. Do you even realize that sometimes you can
 
 There are a bunch of other issues with this language. Based on that you already realized that we have a long way to go.
 
+## Basic Rules
 
-## Regras básicas
+### Selectors
 
-### Seletores
-
-Como dito no [conteúdo sobre semântica](/guia/a-semantica.html), não existe web sem HTML, logo, de nada seria o CSS sem HTML. Seguindo essa lógica, já podemos chegar a conclusão de que as tags HTML são "estilizáveis" com CSS. Por exemplo:
+As we said in [semantics page](/guide/the-semantic.html), without HTML there's no web and CSS is fully related to HTML tags. The main purpose of CSS is provide "styles" to our webpage and it uses the page elements to do that. For example:
 
 ```html
-<a href="#">A maioria dos links na web deveriam ser vermelhos! Brincadeira...</a>
+<a href="#">Links on the web should be red! Just kidding...</a>
 ```
 
 ```css
@@ -65,15 +64,15 @@ a {
 }
 ```
 
-O código acima irá aplicar a cor vermelha para todas as tags `<a>` de um documento. Mas não são só tags HTML que são estilizáveis. Existem diversos tipos de seletores.
+The code bellow will apply a red color to all `<a>` tags in the document but not only HTML tags can be customized using CSS. Here there are some other selectors that can be used:
 
 **Type selector**
 
-As tags do HTML são type selectors, ou seja, seletores simples. O seletor de uma tag `<p>` é o `p`, assim como o de uma tag `<div>` é `div`.
+HTML tags are type selectors, this means that, when in CSS, the selector of an tag `<p>` is simply `p` as well as the selector of a tag `<div>` is `div`.
 
 **Class selector**
 
-Esse será o tipo que você mais usará no desenvolvimento de folhas de estilo. Usamos o atributo `class` associado a uma tag no HTML e o estilo aplicado a esse seletor poderá ser setado através de seu nome precedido de ponto. Ficou difícil de entender? Então vamos desenhar, quer dizer... codar.
+This will be the type of selectors that you will use more times during your development of stylesheets. In the HTML code the `class` attribute is associated to a tag so we can identify it. To set styles to this selector, in your css file, you will use the value of the `class` attribute preceded by a dot. Hard to understand? Let me draw it. I mean, code it to you...
 
 ```html
 <div class="banner"></div>
@@ -88,13 +87,13 @@ Esse será o tipo que você mais usará no desenvolvimento de folhas de estilo. 
 
 **ID selector**
 
-O seletor de ID funciona de forma parecida com o class selector. É através de um atributo `id` em uma tag HTML que podemos criá-lo. Você deve estar se perguntando: *qual a diferença de `id` para `class`?*
+The `id` selector works the same way that `class` selector. It is created through the `id` attribute in a HTML tag. Right now you're probably asking yourself: *What is the difference between `id` and `class`?*
 
-A diferença entre `id` e `class` é que o primeiro é menos flexível e mais específico. Ou seja, na dúvida, (quase) sempre vá de `class`!
+The difference between `id` and `class` selectors is that the first is more specific and less flexible. Based on it you should (almost always) use `class` when writing your code.
 
 **Attribute selector**
 
-Existem inúmeros tipos de attributes selectors. Eles são referentes a todos os elementos que podem ter um atributo e até um valor. Por exemplo, se quisermos adicionar estilo aos links que abrem em uma nova janela, podemos fazer o seguinte:
+There are a lot of attributes selectors. They are related to all elements that are able to have an attribute that may or may not have a value. For example, if you want to add a custom style to links that will open in a new window, do the follow:
 
 ```css
 a[target="_blank"] {
@@ -104,30 +103,29 @@ a[target="_blank"] {
 
 **Pseudo-class selector**
 
-Geralmente usamos pseudo-class selectors para referenciar o estado ou posição de um elemento em uma coleção. Sem dúvidas, os mais usados são `:focus`, `:hover`, `:checked`, `:first-child` e `:last-child`.
+Usually pseudo-classes selectors are used to refer to an element that is in a specific state, or in a position of a collection. The most common used are `:focus`, `:hover`, `:checked`, `:first-child` and `:last-child`.
 
-Usá-los é muito simples:
+It's easy to use them:
 
 ```css
 /*
- * O código abaixo irá fazer com que a
- * cor do link fique verde ao passar o
- * cursor.
- */
+The code below will turn the link
+color to green when the user hover
+the cursor on it
+*/
 
 a:hover {
   color: green;
 }
-
 ```
 
-Exitem inúmeros pseudo-class selectores, você pode ver uma [lista no MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
+There are tons of pseudo-class selectors and you can take a better look in the [MDN list of selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
 
 **Pseudo-element selector**
 
-Com funcionamento parecido dos pseudo-class selectores, os pseudo-elements selectors inserem um novo nodo no DOM, "simulando" um elemento.
+With a very similar syntax of pseudo-class selectors, the pseudo-elements selectors insert a new node in the DOM, "simulating" an element.
 
-Temos os seguintes seletores desse tipo:
+Here a list of those selectors:
 
 - `::after`
 - `::before`
@@ -138,7 +136,7 @@ Temos os seguintes seletores desse tipo:
 
 **Combinators**
 
-Como o nome já sugere, combinators são seletores que possuem a combinação de dois elementos. São eles:
+Like the name says, combinators are selectors that combine two or more elements. Here they are:
 
 - Adjacent sibling selectors `el + el`
 - General sibling selectors `el ~ el`
@@ -147,14 +145,14 @@ Como o nome já sugere, combinators são seletores que possuem a combinação de
 
 **Universal selector**
 
-Funciona como um seletor global, ou seja, aplica a regra recebida por ele para todos os outros elementos da página.
+A universal selector works in a global way. It apply the rules defined to it to all elements of the page.
 
 ```css
 /*
- * Essa regra diz que todos os
- * elementos da página terão
- * `display: block`.
- */
+This rule say that all
+elements in the page
+will be `display: block`.
+*/
 
 * {
   display: block
