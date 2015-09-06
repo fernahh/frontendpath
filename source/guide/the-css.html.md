@@ -159,11 +159,11 @@ will be `display: block`.
 }
 ```
 
-### Propriedades e valores
+### Properties and values
 
-Se você é programador, podemos fazer uma analogia simples. Pense que os seletores são variáveis, propriedades são seus atributos e esses possuem valores. Certo?
+If you're a programmer you can do a simple analogy. Think in the selectors as variables, properties are their attributes and these have a value. You got it?
 
-Cada seletor possui no mínimo uma propriedade e seu respectivo valor. Aqui iremos dividir as propriedades em três seções, posicionamento, box-model e fontes.
+Each selector have at least one property and its value. To understand it better we will divide properties in three different sections: positioning, box-model and fonts.
 
 #### Posicionamento
 
