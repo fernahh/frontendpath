@@ -165,17 +165,17 @@ If you're a programmer you can do a simple analogy. Think in the selectors as va
 
 Each selector have at least one property and its value. To understand it better we will divide properties in three different sections: positioning, box-model and fonts.
 
-#### Posicionamento
+#### Position
 
-Na web temos diversas formas de posicionar um elemento com base em eixos X, Y e Z.
+On the web there are some different ways to position an element based in X, Y and Z axis.
 
-A principal propriedade de posicionamento é `position`. Através dela, podemos escolher como nosso elemento irá se posicionar em seu container.
+The main property to do that is `position`. By using it we can choose how the element will be positioned in its container.
 
-Todo elemento por padrão possui posicionamento estático, `position: static`, ou seja, ele está posicionado na página de acordo com seu box-model (altura, largura, borda, margem e padding).
+By default all elements have a static position, `position: static`, it means that its position in the page is based on the box-model (height, width, border, margin and padding).
 
-O segundo valor mais usado para essa propriedade sem dúvidas é o posicionamento relativo. Ele funciona da mesma forma que o posicionamento estático, porém, é possível usar as propriedades `top`, `bottom`, `right`, `left` e `z-index`. Esses atributos também podem ser usados com a propriedade absoluta, `position: absolute`, porém ela tem uma grande diferença em relação aos posicionamentos até aqui apresentados. Isso deve-se porque elementos absolutos se posicionam relativamente ao seu elemento pai.
+Other commonly used value to this property is the relative position. Set an element as `position: relative` means that nothing will change at first but because of it you're now able to move your element around using `top`, `right`, `bottom`, `left` and move it in the Z axis using the `z-index` property. All those attributes can be used in combination with another position value, the absolute positioning. The big difference between `position: relative` and `position: absolute` is caused because when you have an absolute position set, the coordinates are now related to the parent element, not to the box-model anymore.
 
-Por último, podemos posicionar um elemento de forma fixa em um documento com a propriedade  `position: fixed`. Dessa forma o elemento será posicionado de acordo com o `body`.
+At last we can position an element fixed in the document using `position: fixed`. This way the element will be fixated in the screen based on the `<body>` dimensions.
 
 #### Box-model
 
