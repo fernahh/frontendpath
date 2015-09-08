@@ -203,11 +203,11 @@ There are not many properties to handle with fonts in CSS. The main ones used ar
 
 ## CSS3
 
-Em poucas palavras, **CSS3 revolucionou** o desenvolvimento de interfaces web, principalmente tratando-se de performance e produtividade.
+In a few words, **CSS3 revolutionized** the way that we work with web interfaces, mainly when we're speaking about development productivity and application performance.
 
-O CSS3 permite que o desenvolvedor use cada vez menos ferramentas de design para exportar imagens que serão usadas em um documento. Sombras, gradientes, diferentes tipos de bordas e fontes hoje funcionam de forma nativa nos browsers, sem precisarmos de imagens. Com isso, menos requisições, menos assets, logo, mais performance.
+CSS3 allow developers to use less design tools to export images, that reduces the amount of files that are used to build the interface. Shadows, gradients, custom borders and fonts now work natively in newest browsers. This change causes a significant reduction of assets used, consequently there are less requisitions and it turns in a performance gain.
 
-Para ver mais sobre as novas propriedades do CSS, [acesse o MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3).
+To learn more about it check [the MDN CSS3 page](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3).
 
 ## Pré-processadores
 
