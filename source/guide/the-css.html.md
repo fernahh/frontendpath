@@ -189,7 +189,7 @@ During your development time you will hear alot about **every element** be a "bo
 - `padding`
 - `content`
 
-Since the properties names are pretty intuitive we're not going to explain in details with each of one do.
+Since the properties names are pretty intuitive we're not going to explain in details what each of one does.
 
 #### Fontes
 
