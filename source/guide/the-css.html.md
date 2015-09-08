@@ -191,17 +191,15 @@ During your development time you will hear alot about **every element** be a "bo
 
 Since the properties names are pretty intuitive we're not going to explain in details what each of one does.
 
-#### Fontes
+#### Fonts
 
-Exitem poucas propriedades para lidarmos com fontes na web. As principais são:
+There are not many properties to handle with fonts in CSS. The main ones used are:
 
 - `font-weight`
 - `font-style`,
 - `font-family`
 - `font-size`
 - `line-height`
-
-Respectivamente, as propriedades da lista acima definem peso, estilo, família, tamanho e o tamanho da linha.
 
 ## CSS3
 
