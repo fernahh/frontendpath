@@ -179,7 +179,7 @@ At last we can position an element fixed in the document using `position: fixed`
 
 #### Box-model
 
-Uma das coisas que você mais vai ouvir é que **todo elemento** em um documento é um "box". Sendo assim, as propriedades que inferem no tamanho de um box-model são:
+During your development time you will hear alot about **every element** be a "box". Therefore you need to know the properties that interfere in the dimensions of the box-model:
 
 - `display`
 - `height`
@@ -189,7 +189,7 @@ Uma das coisas que você mais vai ouvir é que **todo elemento** em um documento
 - `padding`
 - `content`
 
-Não vamos explicar aqui o que cada uma dessas propriedades faz. Se você entende o mínimo de português, já deve imaginar o comportamento básico de cada uma.
+Since the properties name is pretty intuitive we're not going to explain in details with each of one do.
 
 #### Fontes
 
