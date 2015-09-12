@@ -219,7 +219,7 @@ Nowadays the main ones are [Sass](http://sass-lang.com/) and [Less](http://lessc
 
 **Variables**
 
-If you already work with CSS you know that it is a extremely repetitive language and this characteristic the productivity of the developer. Luckily Sass and Less bring to us a few ways to resolve it. Variables is one of them.
+If you already work with CSS you know that it is a extremely repetitive language and this characteristic reduces the productivity of the developer. Luckily Sass and Less bring to us a few ways to resolve it. Variables is one of them.
 
 ```scss
 // Scss (Sass)
