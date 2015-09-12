@@ -217,9 +217,9 @@ Even with all improvements available in CSS3 the language still have limitations
 
 Nowadays the main ones are [Sass](http://sass-lang.com/) and [Less](http://lesscss.org/). Here some of the characteristics of them.
 
-**Variáveis**
+**Variables**
 
-CSS é extremamente repetitivo. Se você já escreve folhas de estilo deve ter percebido o quanto isso é ruim para a produtividade. Pois bem, Sass e Less resolveram isso nos dando variáveis.
+If you already work with CSS you know that it is a extremely repetitive language and this characteristic the productivity of the developer. Luckily Sass and Less bring to us a few ways to resolve it. Variables is one of them.
 
 ```scss
 // Scss (Sass)
