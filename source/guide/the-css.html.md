@@ -237,9 +237,9 @@ body { color: @base-color; }
 
 **Nesting**
 
-Aplicar regras a elementos de um mesmo seletor pai também nos faz repetir muito no CSS. Porém, com pré-processadores podemos usar *nesting*. Mas tome cuidado, desenvolvedores não recomendam usar mais de três níveis desse recurso.
+Apply styles to elements that belong to the same parent element make us repeat a lot of code in CSS. When working with preprocessors we can use *nesting* and resolve that. However be careful with it, since is not recommended to use more than three levels of *nesting*.
 
-Nesse caso, as duas linguagens usam a mesma sintaxe:
+In this case, both languages have the same syntax:
 
 ```scss
 // Scss e Less
