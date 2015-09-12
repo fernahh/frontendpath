@@ -209,13 +209,13 @@ CSS3 allow developers to use less design tools to export images, that reduces th
 
 To learn more about it check [the MDN CSS3 page](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3).
 
-## Pré-processadores
+## Preprocessors
 
-Bons desenvolvedores nunca se contentam com o que tem para trabalhar. Estão sempre reinventando a roda, e isso é ótimo.
+Good developers are always restless and they never are totally happy with the available solutions. Because of it there are always someone improving or *hacking* some language to make it better
 
-Apesar das últimas evoluções do CSS em sua terceira versão, ele ainda continua com algumas limitações. Pensando nisso, surgiram linguagens que são compiladas para CSS.
+Even with all improvements available in CSS3 the language still have limitations and to fill this lack some compiled languages were developed to work with CSS.
 
-Hoje em dia as principais são [Sass](http://sass-lang.com/) e [Less](http://lesscss.org/). Vamos ver aqui suas principais características.
+Nowadays the main ones are [Sass](http://sass-lang.com/) and [Less](http://lesscss.org/). Here some of the characteristics of them.
 
 **Variáveis**
 
