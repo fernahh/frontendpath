@@ -292,9 +292,9 @@ Because of this new worries some interesting paradigms like OOCSS, SMACSS and BE
 
 ### OOCSS
 
-Criado pela [Nicole Sullivan](http://www.stubbornella.org), OOCSS significa *Object Oriented CSS*.
+Created by [Nicole Sullivan](http://www.stubbornella.org), OOCSS means *Object Oriented CSS*.
 
-Esse paradigma preza que as classes devam receber nomes baseados em seu padrão visual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como `background`, `color`. Devemos externar o padrão de estilo para outras classes. Por exemplo:
+This approach define that the classes need to be named based in their visual standart and not in its content. More than that, it suggests to create code to scrutctural objects without color proprieties like `background` or `color`. According with the OOCSS we need to set those color definitions in their particular classes. For example:
 
 ```css
 alert {
