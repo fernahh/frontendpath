@@ -322,13 +322,16 @@ The last file, `theme` work as a `skin` of the application and is not obligatory
 
 ### BEM
 
-BEM, *Block, Element, Modifier*, foi criado por desenvolvedores da empresa [Yandex](https://company.yandex.com/).
+BEM, *Block, Element, Modifier*, is a approach developed by a company called [Yandex](https://company.yandex.com/).
 
-*block*, segundo o BEM, é o nível mais alto de um componente. Por exemplo, `header` e `footer`.
+According with BEM, *block* is the higher level of a component. for example, `header` e `footer`.
 
-*element* é um filho de um *block* que possui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `.menu`, vamos ter seu filho que é `.menu__item`.
+The *element* is a block of code son of the *block*, it must have a functionality and to create *element* we need to use `__` as a separator. For example, if the `.menu` class is the *block*, the *element* will be `.menu__item`.
 
-*state* também usa `_` para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos `.menu__item`, teremos `.menu__item_active`.
+A *state* uses `__` as well but different from SMACSS, in BEM we need to link it to the parent selector. Example:
+Block:   `.menu`;
+Element: `.menu_item`;
+State:   `.menu__Item__active`;
 
 ## Nunca subestime o CSS
 
