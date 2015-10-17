@@ -27,6 +27,15 @@
   </head>
 
   <body class="<%= page_classes %>">
+    <ul class="langs">
+      <li class="langs-item">
+        <a href="<%= pt_url(current_page.url) %>" title="Leia a versão em Português" id="lang-pt" class="lang lang--pt-br">Versão em Português.</a>
+      </li>
+      <li class="langs-item">
+        <a href="<%= english_url(current_page.url) %>" title="Read in English" id="lang-en" class="lang lang--en">English version.</a>
+      </li>
+    </ul>
+
     <main id="main">
       <%= yield %>
     </main>

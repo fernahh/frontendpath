@@ -74,6 +74,10 @@ Without these references, no doubt the guide could not be possible. Thanks to al
     + High Perfomance JavaScript, *by Nicholas Zakas*.
     + Secrets of JavaScript Ninja, *by John Resig and Bear Bibeault*.
 
+Resources:
+
+- Flag Icons by [Muharrem Şenyıl on Dribble](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
+
 ## Maintainer
 
 Luiz Fernando Rodrigues - http://blog.fernahh.com.br

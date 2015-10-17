@@ -1,0 +1,47 @@
+.langs {
+  position: fixed;
+  top: $base-whitespace;
+  right: $base-whitespace;
+  z-index: 2;
+
+  margin-top: 0;
+  padding-left: 0;
+
+  list-style-type: none;
+  text-align: center;
+}
+
+  .langs-item {
+    display: inline-block;
+  }
+
+    .lang {
+      display: block;
+      width: 36px;
+      height: 25px;
+
+      background-repeat: no-repeat;
+      @include background-size(contain);
+      @include hide-text();
+      pointer-events: none;
+    }
+
+      .lang--en {
+        background-image: image-url("united-kingdom.png");
+      }
+
+      .lang--pt-br {
+        background-image: image-url("brazil.png");
+      }
+
+      .lang--is-disable {
+        @include opacity(.5);
+        @include filter(grayscale(1));
+        @include transition(all 300ms ease-in-out);
+        pointer-events: initial;
+
+        @include attention() {
+          @include opacity(1);
+          @include filter(grayscale(0));
+        }
+      }

@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "pry-meta", require: false
 gem "middleman", "~>3.3.10"
 gem "redcarpet", "~> 3.2.3"
 gem "middleman-syntax", "~> 2.0.0"

@@ -68,6 +68,11 @@
         border-right: 4px solid darken($semantics-color, 3%);
       }
 
+      .guide_the-semantics & {
+        background-color: $semantics-color;
+        border-right: 4px solid darken($semantics-color, 3%);
+      }
+
       @include attention() {
         background-color: $semantics-color;
         border-color: darken($semantics-color, 3%);
@@ -86,6 +91,11 @@
         border-right: 4px solid darken($accessibility-color, 5%);
       }
 
+      .guide_the-accessibility & {
+        background-color: $accessibility-color;
+        border-right: 4px solid darken($accessibility-color, 5%);
+      }
+
       @include attention() {
         background-color: $accessibility-color;
         border-right: 4px solid darken($accessibility-color, 5%);
@@ -94,6 +104,11 @@
 
     .css-link {
       @include svg("css3-logo");
+
+      .guide_the-css & {
+        background-color: $css3-color;
+        border-right: 4px solid darken($css3-color, 5%);
+      }
 
       .guia_o-css & {
         background-color: $css3-color;
@@ -117,6 +132,11 @@
       }
 
       .guia_o-javascript & {
+        background-color: $js-color;
+        border-right: 4px solid darken($js-color, 5%)
+      }
+
+      .guide_the-javascript & {
         background-color: $js-color;
         border-right: 4px solid darken($js-color, 5%)
       }
