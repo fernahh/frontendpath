@@ -252,7 +252,7 @@ In this case, both languages have the same syntax:
 
 **Mixins**
 
-Como o nome sugere, *mixins* "mixam" algo em uma regra. Isso nos ajuda muito na reutilização de código. Se preciso, você pode adicionar parâmetros em um mixin.
+Like the name says, *mixins* "mix"  something in a rule. I help developers to reuse code. important to notice that if you need, is possible to add parameters to a mixin.
 
 ```scss
 // Scss
@@ -262,7 +262,7 @@ Como o nome sugere, *mixins* "mixam" algo em uma regra. Isso nos ajuda muito na 
           border-radius: value;
 }
 
-// Para usar o mixin acima em uma regra:
+// To use the mixin above:
 div {
   @include border-radius(3px);
 }
@@ -276,13 +276,13 @@ div {
           border-radius: @value;
 }
 
-// Para usar o mixin acima em uma regra:
+// To use the mixin above:
 div {
   .border-radius(3px);
 }
 ```
 
-Existem outras features nas duas linguagens, principalmente no Sass, que possui estruturas de controle, condicionais e funções.
+There are other similar features in both languages but mostly in Sass that have control structures, conditionals and functions.
 
 ## Arquitetura de CSS
 
