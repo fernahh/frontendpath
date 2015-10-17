@@ -333,10 +333,8 @@ Block:   `.menu`;
 Element: `.menu_item`;
 State:   `.menu__Item__active`;
 
-## Nunca subestime o CSS
+## Never underestimate CSS
 
-A última dica sobre CSS é: **nunca o subestime**. Escrever folhas de estilo não é fácil.
+Write good stylesheets isn't a easy task. Try to learn a lot about CSS architecture and code standards before learn any framework and if you're gonna use a pre-compiler, always keep an eye in the output code to make sure that it have a good performance.
 
-Estude arquitetura de CSS e formas de escrita antes de aprender frameworks. Se for usar um pré-compilador, tome cuidado com o que ele está gerando.
-
-Planejar bem seu desenvolvimento de CSS fará você economizar bastante tempo ao longo do projeto.
+Last tip: Spend time thinking and planning your code. It will save you a lot of time in the future.
