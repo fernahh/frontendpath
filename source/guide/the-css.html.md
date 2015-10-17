@@ -284,11 +284,11 @@ div {
 
 There are other similar features in both languages but mostly in Sass that have control structures, conditionals and functions.
 
-## Arquitetura de CSS
+## CSS architecture
 
-Com o crescimento de aplicações aplicações web e as novas demandas do mercado, mudamos a forma de escrever CSS. Surgiu então a necessidade de planejarmos a arquitetura de nossas folhas de estilo. Através disso podemos mirar um futuro escalável para nossas aplicações.
+Web applications are growing a lot in last years and because of that we need to improve the way that we write CSS. Now is necessary to think about scalability, code reuse, code standards to large teams, etc. This way is easier maintain the code in a long term application.
 
-Com esse objetivo, surgiram alguns paradigmas muito interessantes. Os principais, OOCSS, SMACSS e BEM é o que vamos ver aqui.
+Because of this new worries some interesting paradigms like OOCSS, SMACSS and BEM have emerged and this is what we gonna see below.
 
 ### OOCSS
 
