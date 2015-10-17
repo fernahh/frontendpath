@@ -308,17 +308,17 @@ alert-danger {
 
 ### SMACSS
 
-SMACSS, *Scalable and Modular Architeture for CSS* foi criado por John Snook para resolver problemas de arquitetura do app de e-mail do Yahoo. Ele é baseado em cinco grandes categorias: *base*, *layout*, *module*, *state* e o opcional *theme*.
+SMACSS, *Scalable and Modular Architeture for CSS* is an approach created by John Snook to fix architectural problems from Yahoo mail. SMACSS code is based in five main cagetories: *base*, *layout*, *module*, *state* e o opcional *theme*.
 
-As folhas de estilo do *base* devem receber apenas regras atreladas a seletores globais, isso é: `body`, `p`, `a`, etc.
+The *base* stylesheet must have only rules of global selectors like `body`, `p`, `a`, etc.
 
-Na categoria *layout*, o SMACSS recomenda que sejam usadas elementos agregadores que não repetem na aplicação, como `header` e `footer`. É importante lembrar que o autor recomenda utilizar o prefixo `.l-` para as classes de layout.
+In *layout* sheet SMACSS recommend you to put major layout styles, things like `header`, `article` and `footer`. Important to remember that the author recommend to use the `.l-` prefix to classes in this file.
 
-Já em *module*, serão elementos que representam componentes de uma aplicação. Se tivermos seletores filhos desse módulo, o SMACSS recomenda que sejam criados uma classe para esse seletor. É preferível usar `.box-title` ao invés de `.box h2`.
+The *module* file is destined to hold all elements that are components of the application. According to SMACSS, a good a practice to work with component is avoid element selectors. For example, is better to have `.box-title` instead of `.box h2`.
 
-A categoria *state* agregam classes que indicam o estado de um componente, por exemplo `.is-active`.
+The *stage* category have classes that indicate state of a componente. For example: `.is-active`.
 
-Por último temos a categoria `theme`, que funciona como um `skin`. Essa categoria não é obrigatória no SMACSS.
+The last file, `theme` work as a `skin` of the application and is not obligatory in a SMACSS strcuture.
 
 ### BEM
 
