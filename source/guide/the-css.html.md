@@ -328,7 +328,7 @@ According with BEM, *block* is the higher level of a component. for example, `he
 
 The *element* is a block of code son of the *block*, it must have a functionality and to create *element* we need to use `__` as a separator. For example, if the `.menu` class is the *block*, the *element* will be `.menu__item`.
 
-A *state* uses `__` as well but different from SMACSS, in BEM we need to link it to the parent selector. Example:
+A *state* add `__` to the selector. Note that, unlike SMACSS, in BEM we need to link it to the parent selector. Example:
 Block:   `.menu`;
 Element: `.menu_item`;
 State:   `.menu__Item__active`;
