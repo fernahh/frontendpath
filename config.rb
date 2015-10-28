@@ -3,6 +3,10 @@ with_layout :guide do
   page "/guia/*"
 end
 
+with_layout :guide do
+  page "/guide/*"
+end
+
 # Relative Links
 set :relative_links, true
 
