@@ -302,11 +302,11 @@ Criado pela [Nicole Sullivan](http://www.stubbornella.org), OOCSS significa *Obj
 Esse paradigma preza que as classes devam receber nomes baseados em seu padrão visual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como `background`, `color`. Devemos externar o padrão de estilo para outras classes. Por exemplo:
 
 ```css
-alert {
+.alert {
   font-weight: bold;
 }
 
-alert-danger {
+.alert-danger {
   color: red;
 }
 ```
