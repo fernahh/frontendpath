@@ -333,7 +333,7 @@ BEM, *Block, Element, Modifier*, foi criado por desenvolvedores da empresa [Yand
 
 *element* é um filho de um *block* que possui uma função. Para escrever um *element*, devemos usar `__` como separador. Por exemplo, se tiver uma classe `.menu`, vamos ter seu filho que é `.menu__item`.
 
-*state* também usa `_` para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos `.menu__item`, teremos `.menu__item_active`.
+*modifier* também usa `_` para definição. A diferença para o *state* do SMACSS é que, nesse caso, precisamos atrelar ao seletor pai. Por exemplo, se temos `.menu__item`, teremos `.menu__item_active`.
 
 ## Nunca subestime o CSS
 
