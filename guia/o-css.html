@@ -355,11 +355,11 @@ div {
 <p>Criado pela <a href="http://www.stubbornella.org">Nicole Sullivan</a>, OOCSS significa <em>Object Oriented CSS</em>.</p>
 
 <p>Esse paradigma preza que as classes devam receber nomes baseados em seu padrão visual e não no conteúdo. Além disso, ele diz que precisamos criar objetos estruturais sem propriedades de cores, como <code>background</code>, <code>color</code>. Devemos externar o padrão de estilo para outras classes. Por exemplo:</p>
-<pre class="highlight css"><code><span class="nt">alert</span> <span class="p">{</span>
+<pre class="highlight css"><code><span class="nc">.alert</span> <span class="p">{</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">alert-danger</span> <span class="p">{</span>
+<span class="nc">.alert-danger</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
@@ -386,7 +386,7 @@ div {
 
 <p><em>element</em> é um filho de um <em>block</em> que possui uma função. Para escrever um <em>element</em>, devemos usar <code>__</code> como separador. Por exemplo, se tiver uma classe <code>.menu</code>, vamos ter seu filho que é <code>.menu__item</code>.</p>
 
-<p><em>state</em> também usa <code>_</code> para definição. A diferença para o SMACSS, é que nesse caso precisamos atrelar ao seletor pai. Por exemplo, se temos <code>.menu__item</code>, teremos <code>.menu__item_active</code>.</p>
+<p><em>modifier</em> também usa <code>_</code> para definição. A diferença para o <em>state</em> do SMACSS é que, nesse caso, precisamos atrelar ao seletor pai. Por exemplo, se temos <code>.menu__item</code>, teremos <code>.menu__item_active</code>.</p>
 
 <h2 id="nunca-subestime-o-css">Nunca subestime o CSS</h2>
 
