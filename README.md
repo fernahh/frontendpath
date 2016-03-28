@@ -76,7 +76,7 @@ Without these references, no doubt the guide could not be possible. Thanks to al
 
 ## Maintainer
 
-Luiz Fernando Rodrigues - http://blog.fernahh.com.br
+Luiz Fernando Rodrigues - http://fernahh.com.br
 
 ## License
 
