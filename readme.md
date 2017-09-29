@@ -2,9 +2,6 @@
 
 > A corret path to front-end development - https://fernahh.com.br/frontendpath
 
-
-![brand](http://i.imgur.com/WNqDGmi.png)
-
 ## Contributing
 
 Besides being large, the web also evolves constantly. Therefore, this project has a long way to go. The guide's content is in the folder [source/guia](https://github.com/fernahh/frontendpath/tree/master/source/guia).
